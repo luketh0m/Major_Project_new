@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.optionsController">
+   <children>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="400.0" prefWidth="606.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Text layoutX="229.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="68.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Controls" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="141.0" layoutX="20.0" layoutY="52.0" stroke="BLACK" strokeType="INSIDE" width="173.0" />
+                  <Text layoutX="28.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras commodo dictum arcu quis facilisis. Proin sit amet rhoncus diam. " wrappingWidth="157.51953089237213" />
+                  <Text layoutX="445.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sound" />
+                  <Slider layoutX="445.0" layoutY="81.0" prefHeight="17.0" prefWidth="100.0" />
+                  <ToggleButton layoutX="452.0" layoutY="110.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="On | Off" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="141.0" layoutX="20.0" layoutY="34.0" stroke="BLACK" strokeType="INSIDE" width="173.0" />
+                  <Text layoutX="49.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Backround Color" />
+                  <RadioButton layoutX="56.0" layoutY="55.0" mnemonicParsing="false" text="None" />
+                  <RadioButton layoutX="57.0" layoutY="87.0" mnemonicParsing="false" text="Yellow" />
+                  <RadioButton layoutX="60.0" layoutY="122.0" mnemonicParsing="false" text="Blue" />
+                  <Text layoutX="441.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text Size" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="141.0" layoutX="401.0" layoutY="28.0" stroke="BLACK" strokeType="INSIDE" width="173.0" />
+                  <RadioButton layoutX="435.0" layoutY="47.0" mnemonicParsing="false" text="Small" />
+                  <RadioButton layoutX="433.0" layoutY="76.0" mnemonicParsing="false" text="Medium">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton layoutX="430.0" layoutY="118.0" mnemonicParsing="false" text="Large">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
