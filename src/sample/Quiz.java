@@ -10,19 +10,14 @@ import javafx.scene.layout.*;
 import java.awt.event.ActionEvent;
 import java.beans.EventHandler;
 import java.io.*;
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Quiz {
 
 
-    Button hint = new Button();
-
-
-    public static void generateQuestionsAndAnswers(String Difficulty, String DifficultyAnswers) throws FileNotFoundException { //this generates the questions, based on difficulty chosen
-
+    public static void generateQuestions(String Difficulty, String difficultyAnswers) throws FileNotFoundException {
 // Generates the questions
-
-
 
 
         List<String> list = new LinkedList<>();
@@ -34,21 +29,17 @@ public class Quiz {
             list.add(scanner.nextLine());
         }
 
-        String easyQuestions[] = list.toArray(new String[list.size()]); //puts all questions in array
+        String Questions[] = list.toArray(new String[list.size()]); //puts all questions in array
 
-        int numberOfQuestions = easyQuestions.length;
+        int numberOfQuestions = Questions.length;
 
         //Generate Question
 
         Random r = new Random(); //
-        int randomIndexOfQuestions = r.nextInt(numberOfQuestions);
-        Label Questions = new Label(easyQuestions[randomIndexOfQuestions]);
-
-
-// Generate Correct Answer
+        int indexOfQuestions = r.nextInt(numberOfQuestions);
 
         List<String> listA = new LinkedList<>(); //Create a new list
-        File QuestionsA = new File(DifficultyAnswers); //Loads question text file
+        File QuestionsA = new File(difficultyAnswers); //Loads question text file
 
         Scanner scannerA = new Scanner(QuestionsA); //Look at text file with answers on
 
@@ -56,59 +47,65 @@ public class Quiz {
             listA.add(scannerA.nextLine());
         }
 
-        String QuestionsAnswers[] = listA.toArray(new String[listA.size()]); //puts all answers in array, same order as questions
+        String questionsAnswers[] = listA.toArray(new String[listA.size()]); //puts all answers in array, same order as questions
 
 
-        Random wrongAnswer1 = new Random();
-        Random wrongAnswer2 = new Random();
-        Random wrongAnswer3 = new Random();
-
-        int randomAnswerOne = wrongAnswer1.nextInt(numberOfQuestions);
-        int randomAnswerTwo = wrongAnswer2.nextInt(numberOfQuestions);
-        int randomAnswerThree = wrongAnswer3.nextInt(numberOfQuestions);
-
-        if (randomAnswerOne == randomIndexOfQuestions || randomAnswerOne == randomAnswerTwo || randomAnswerOne == randomAnswerThree) {
-
-            randomAnswerOne = randomAnswerOne + randomAnswerTwo / 2;
-        }
-
-        if (randomAnswerTwo == randomIndexOfQuestions || randomAnswerTwo == randomAnswerThree) {
-
-            randomAnswerTwo = randomAnswerTwo + randomAnswerOne / 2;
-        }
-
-        if (randomAnswerThree == randomIndexOfQuestions) {
-
-            randomAnswerThree = randomAnswerThree + randomAnswerTwo / 2;
-        }
+        displayQuestion(Questions, indexOfQuestions);
+        displayAnswers(questionsAnswers, indexOfQuestions);
+        displayIncorrecrAnswers(questionsAnswers, indexOfQuestions);
+    }
 
 
-
-        // Store answers ready for display
-        String Answers = (QuestionsAnswers[randomIndexOfQuestions]); //Create a string of the correct answer
-        String wAnswer1 = (QuestionsAnswers[randomAnswerOne]);
-        String wAnswer2 = (QuestionsAnswers[randomAnswerTwo]);
-        String wAnswer3 = (QuestionsAnswers[randomAnswerThree]);
+// Generate Correct Answer
 
 
-        Quiz.quizGame(Questions, Answers, wAnswer1, wAnswer2, wAnswer3);
-        System.out.println(randomAnswerOne);
-        System.out.println(randomAnswerTwo);
-        System.out.println(randomAnswerThree);
-        System.out.println(randomIndexOfQuestions);
+    public static void displayQuestion(String question[], int indexOfQuestions) throws FileNotFoundException {
 
+
+        Label questionsLabel = new Label(question[indexOfQuestions]); //create a label to display said questions.
+        System.out.print(question[indexOfQuestions]);
 
     }
 
 
-    public static void quizMenu() {
+    public static void displayAnswers(String answers[], int indexOfQuestions) throws FileNotFoundException {
+
+
+        Button correctAnswer = new Button(answers[indexOfQuestions]);
+        System.out.print(answers[indexOfQuestions]);
+
+    }
+
+
+    public static void displayIncorrecrAnswers(String answers[], int indexOfQuestions) throws FileNotFoundException {
+
+        Random wrongAnswer = new Random(); //creates a random to choose random answers
+
+        int randomAnswer = wrongAnswer.nextInt(indexOfQuestions);
+
+        System.out.print(randomAnswer);
+        if (randomAnswer == indexOfQuestions) {
+
+            randomAnswer = wrongAnswer.nextInt(indexOfQuestions);
+
+
+            Button incorrectAnswer = new Button(answers[randomAnswer]);
+            System.out.print(answers[randomAnswer]);
+
+        }
+
+    }
+
+    public static void quizContent() {
+
+
         String Easy = "easyQuestions.txt";
         String Medium = "mediumQuestions.txt";
         String Hard = "hardQuestions.txt";
 
-        String easyAnswers = "easyQuestionsAnswers.txt";
-        String mediumAnswers = "mediumQuestionsAnswers.txt";
-        String hardAnswers = "hardQuestionsAnswers.txt";
+        String easyAnswer = "easyQuestionsAnswers.txt";
+        String mediumAnswer = "mediumQuestionsAnswer.txt";
+        String hardAnswer = "hardQuestionsAnswer.txt";
 
 
         Stage primaryStage = new Stage();
@@ -127,49 +124,22 @@ public class Quiz {
         easyButton.setOnAction(e -> {
 
             try {
-                generateQuestionsAndAnswers(Easy, easyAnswers);
-
-            } catch (FileNotFoundException exc) {
-                System.out.print(exc);
-
-            }
-
-        });
+                generateQuestions(Easy, easyAnswer
+                );
 
 
-        mediumButton.setOnAction(e -> {
-
-            try {
-                generateQuestionsAndAnswers(Medium, mediumAnswers);
-
-            } catch (FileNotFoundException exc) {
-                System.out.print(exc);
+            } catch (FileNotFoundException notFound) {
+                System.out.print(notFound);
 
             }
 
-        });
-
-
-        hardButton.setOnAction(e -> {
-
-            try {
-                generateQuestionsAndAnswers(Hard, hardAnswers);
-
-            } catch (FileNotFoundException exc) {
-                System.out.print(exc);
-
-            }
 
         });
 
     }
 
 
-
-
-    public static void quizGame(Label Questions, String Answer, String wAnswer1, String wAnswer2, String wAnswer3) {
-
-
+    public static void quizGame(Label questionsLabel) {
 
 
         Stage primaryStage = new Stage();
@@ -177,38 +147,16 @@ public class Quiz {
         VBox layout = new VBox(20);
 
 
+        layout.getChildren().addAll(questionsLabel);
+        Scene scene = new Scene(layout, 800, 600);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Difficulty");
+        primaryStage.show();
 
-
-
-
-        Button correctAnswer = new Button(Answer);
-        Button incorrectAnswer1 = new Button(wAnswer1);
-        Button incorrectAnswer2 = new Button(wAnswer2);
-        Button incorrectAnswer3 = new Button(wAnswer3);
-
-
-
-
-            layout.getChildren().addAll(Questions, correctAnswer, incorrectAnswer1, incorrectAnswer2, incorrectAnswer3);
-            Scene scene = new Scene(layout, 800, 600);
-            primaryStage.setScene(scene);
-            primaryStage.setTitle("Difficulty");
-            primaryStage.show();
-
-
-
-
-        }
-
-
-
-
-
-
+    }
 
 
 }
-
 
 
 

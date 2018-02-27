@@ -46,7 +46,7 @@ public class Controller {
 
     public void quizButton() throws Exception {
 
-        Quiz.quizMenu();
+        Quiz.quizContent();
 
 
     }
