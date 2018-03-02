@@ -130,8 +130,8 @@ public  static int questionNo;
         String Hard = "hardQuestions.txt";
 
         String easyAnswer = "easyQuestionsAnswers.txt";
-        String mediumAnswer = "mediumQuestionsAnswer.txt";
-        String hardAnswer = "hardQuestionsAnswer.txt";
+        String mediumAnswer = "mediumQuestionsAnswers.txt";
+        String hardAnswer = "hardQuestionsAnswers.txt";
 
         //Difficulty selection
         Stage primaryStage = new Stage();
@@ -147,15 +147,42 @@ public  static int questionNo;
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        easyButton.setOnAction(e -> {
+
+                easyButton.setOnAction(e -> {
+
+                    try {
+                        generateQuestionsAndAnswers(Easy, easyAnswer);
+
+
+                    } catch (FileNotFoundException notFound) {
+                        System.out.print(notFound);
+            }
+
+
+        });
+
+
+        mediumButton.setOnAction(e -> {
 
             try {
-                generateQuestionsAndAnswers(Easy, easyAnswer);
+                generateQuestionsAndAnswers(Medium, mediumAnswer);
 
 
             } catch (FileNotFoundException notFound) {
                 System.out.print(notFound);
+            }
 
+
+        });
+
+        hardButton.setOnAction(e -> {
+
+            try {
+                generateQuestionsAndAnswers(Hard, hardAnswer);
+
+
+            } catch (FileNotFoundException notFound) {
+                System.out.print(notFound);
             }
 
 
