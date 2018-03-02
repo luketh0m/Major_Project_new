@@ -24,6 +24,8 @@ public class Controller {
     public Rectangle touchScreen;
 
 
+
+
     public void startButton(ActionEvent event) throws Exception { //When user clicks the start button, load the Phone.fxml file
         AnchorPane pane = FXMLLoader.load(getClass().getResource("Phone.fxml"));
         rootPane.getChildren().setAll(pane);
@@ -46,7 +48,7 @@ public class Controller {
 
     public void quizButton() throws Exception {
 
-        Quiz.quizContent();
+    Quiz.quizMenu();
 
 
     }
