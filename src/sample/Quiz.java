@@ -1,10 +1,16 @@
 package sample;
 import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.scene.layout.*;
 import java.io.*;
+import java.text.Normalizer;
 import java.util.*;
 
 public class Quiz extends Application {
@@ -117,6 +123,7 @@ public  static int questionNo;
     }
     public static void quizMenu() {
 
+        Stage primaryStage = new Stage();
         Quiz quiz = new Quiz();
 
         quiz.score =0;
@@ -133,17 +140,44 @@ public  static int questionNo;
         String mediumAnswer = "mediumQuestionsAnswers.txt";
         String hardAnswer = "hardQuestionsAnswers.txt";
 
+
+        HBox topMenu = new HBox();
+        topMenu.setAlignment(Pos.CENTER);
+        topMenu.setPadding(new Insets(80,20,20,20));
+        Text quizText = new Text("Welcome to the Test!");
+        quizText.setFont(new Font("Arial", 45));
+        topMenu.getChildren().addAll(quizText);
+
+
+
         //Difficulty selection
-        Stage primaryStage = new Stage();
+        VBox middleMenu = new VBox();
+        middleMenu.setAlignment(Pos.CENTER);
+        middleMenu.setPadding( new Insets (0,20,20, 20));
+        middleMenu.setSpacing(10);
+        Text difficultyText = new Text ("Select your difficulty");
+        difficultyText.setFont(new Font ("Arial", 29));
         Button easyButton = new Button("Easy");
         Button mediumButton = new Button("Medium");
         Button hardButton = new Button("Hard");
-        //Layout for page
-        VBox layout = new VBox();
-        layout.getChildren().addAll(easyButton, mediumButton, hardButton);
+        middleMenu.getChildren().addAll(difficultyText,easyButton,mediumButton,hardButton);
+
+        HBox bottomMenu = new HBox();
+        bottomMenu.setAlignment(Pos.CENTER);
+        Button menu = new Button ("Menu");
+        Button about = new Button ("About");
+        Button info = new Button ("Info");
+        Button toolKit = new Button ("Toolkit");
+        bottomMenu.getChildren().addAll(menu, about, info, toolKit);
+
+        BorderPane borderpane = new BorderPane();
+        borderpane.setTop(topMenu);
+        borderpane.setCenter(middleMenu);
+        borderpane.setBottom(bottomMenu);
 
 
-        Scene scene = new Scene(layout, 800, 600);
+        Scene scene = new Scene(borderpane, 800, 600);
+        scene.getStylesheets().add("/Sample/Quiz.css");
         primaryStage.setScene(scene);
         primaryStage.show();
 
@@ -248,20 +282,49 @@ public  static int questionNo;
 
        primaryStage.close();
 
+       VBox content = new VBox();
        Stage newPrimaryStage = new Stage();
 
-        Label GameOver = new Label ("Quiz complete");
-        Label userScore = new Label ("You Scored " + Quiz.score + " Out of 10!");
-        Label tryAgin = new Label ("Try again?");
 
-        Button retry = new Button ("Retry");
-        retry.setOnAction(e -> quizMenu() );
+        Label gameOver = new Label ("Quiz complete");
+        Label userScore = new Label ("You Scored " + Quiz.score + " Out of 10!");
+
+
+            Label tryAgin = new Label ("Try again?");
+            Button retry = new Button ("Retry");
+            Text enterName = new Text ("Please enter your nickname to be added to the LeaderBoard");
+            TextField nameSubmission = new TextField("Super Awesome Nickname");
+            Button submit = new Button("Enter");
+            retry.setOnAction(e -> quizMenu() );
+
+
+
+
+        Text lBoard = new Text ("LeaderBoard");
+      //  Image trophy = new Image("/sample/Trophy.PNG");
+        Text firstPlace = new Text ("1.");
+        Text secondPlace = new Text ("2.");
+        Text thirdPlace = new Text ("3.");
+
+
+
+        HBox fact = new HBox();
         Label Fact = new Label("Fact will appear here");
 
 
-         VBox layout = new VBox();
-         layout.getChildren().addAll( GameOver, userScore, tryAgin, retry, Fact);
-         Scene scene = new Scene(layout, 800, 600);
+            HBox bottomMenu = new HBox();
+            bottomMenu.setAlignment(Pos.CENTER);
+            Button menu = new Button ("Menu");
+            Button about = new Button ("About");
+            Button info = new Button ("Info");
+            Button toolKit = new Button ("Toolkit");
+            bottomMenu.getChildren().addAll(menu, about, info, toolKit);
+
+
+
+
+        content.getChildren().addAll(gameOver, userScore, tryAgin, retry, enterName, nameSubmission, submit, lBoard, firstPlace, secondPlace, thirdPlace, fact, Fact);
+         Scene scene = new Scene(content, 600, 800 );
          newPrimaryStage.setScene(scene);
          newPrimaryStage.show();
 
