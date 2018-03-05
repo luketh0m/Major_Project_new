@@ -69,7 +69,10 @@ public  static int questionNo;
 
             return randomAnswer;
 
+
+
     }
+
    public static String[] displayQuestions (String questions[], String questionsAnswers[]) {
 
 
@@ -224,25 +227,43 @@ public  static int questionNo;
 
     }
 
+
+
+
+
     public static void quizGame (String questions[], String questionsAnswers[]) {
 
 
         Stage primaryStage = new Stage();
-        String wrongAnswer = Quiz.generateRandomAnswer(questionsAnswers);
-        String wrongAnswer2 = Quiz.generateRandomAnswer(questionsAnswers);
-        String wrongAnswer3 = Quiz.generateRandomAnswer(questionsAnswers);
         String Question[] = Quiz.displayQuestions(questions, questionsAnswers);
+
+
+
 
         Label questionNumberLabel = new Label("Question " + Quiz.questionNo + " Out of 10");
         Label questionLabel = new Label(Question[0]); //Display Question on screen
         Button correctAnswer = new Button(Question[1]); //correct answer always on the same button, but button will move
-        Button incorrectOne = new Button(wrongAnswer);
-        Button incorrectTwo = new Button(wrongAnswer2);
-        Button incorrectThree = new Button(wrongAnswer3);
+        Button incorrectOne = new Button(Quiz.generateRandomAnswer(questionsAnswers));
+        Button incorrectTwo = new Button(Quiz.generateRandomAnswer(questionsAnswers));
+        Button incorrectThree = new Button(Quiz.generateRandomAnswer(questionsAnswers));
+
+
+
+        ArrayList<Button> Answers = new ArrayList<>(); //Take all answers, put them into Array List, so they can be placed at random locations.
+
+        Answers.add(correctAnswer);
+        Answers.add(incorrectOne);
+        Answers.add(incorrectTwo);
+        Answers.add(incorrectThree);
+
+        System.out.println(Answers.get(0));
+        System.out.println(Answers.get(1));
+        System.out.println(Answers.get(2));
+        System.out.println(Answers.get(3));
 
 
         VBox layout = new VBox();
-        layout.getChildren().addAll( questionNumberLabel, questionLabel,correctAnswer,incorrectOne, incorrectTwo, incorrectThree);
+        layout.getChildren().addAll( questionNumberLabel, questionLabel,Answers.get(0), Answers.get(1), Answers.get(2), Answers.get(3));
         Scene scene = new Scene(layout, 800, 600);
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -253,7 +274,7 @@ public  static int questionNo;
 
 
 
-        });   //if answer is incorrect, add 1 to questionNo and generate new question and Answersi
+        }); //if answer is incorrect, add 1 to questionNo and generate new question and Answersi  //if answer is incorrect, add 1 to questionNo and generate new question and Answersi
 
         incorrectOne.setOnAction( e -> {
 
