@@ -12,14 +12,13 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-
 <AnchorPane maxHeight="600" maxWidth="800" minHeight="600" minWidth="800" prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.phoneController">
    <children>
       <TextFlow layoutX="36.0" layoutY="92.0" />
       <Group layoutX="42.0" layoutY="103.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="370.0" layoutX="3.0" stroke="BLACK" strokeType="INSIDE" width="296.0" />
-            <Rectangle fx:id="touchScreen" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="337.0" layoutX="32.0" layoutY="17.0" onMouseClicked="#touchScreenClicked" onMouseEntered="#touchScreenMouseOver" stroke="BLACK" strokeType="INSIDE" width="260.0" />
+            <Rectangle fx:id="Phone" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="370.0" layoutX="3.0" stroke="BLACK" strokeType="INSIDE" width="296.0" />
+            <Rectangle fx:id="touchScreen" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="337.0" layoutX="18.0" layoutY="17.0" onMouseClicked="#touchScreenClicked" onMouseEntered="#touchScreenMouseOver" stroke="BLACK" strokeType="INSIDE" width="272.0" />
             <Rectangle fx:id="volumeRocker" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="41.0" layoutY="62.0" onMouseClicked="#volumeRockerClicked" stroke="BLACK" strokeType="INSIDE" width="6.0" />
             <Rectangle fx:id="chargingPort" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="6.0" layoutX="141.0" layoutY="364.0" onMouseClicked="#chargingPortClicked" stroke="BLACK" strokeType="INSIDE" width="20.0" />
             <Rectangle fx:id="sleepWakeButton" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="12.0" layoutY="115.0" onMouseClicked="#sleepWakeButtonClicked" stroke="BLACK" strokeType="INSIDE" width="6.0" />

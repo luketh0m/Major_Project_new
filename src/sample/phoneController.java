@@ -1,10 +1,14 @@
 package sample;
-import java.awt.*;
+
+import javafx.scene.Cursor;
 import java.awt.event.ActionEvent;
 import javafx.fxml.*;
+import javafx.scene.Node;
 import javafx.scene.control.Tooltip;
-
+import javafx.scene.shape.*;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.PopupWindow;
+
 
 
 
@@ -26,8 +30,8 @@ public class phoneController {
 
 
 
-
-
+@FXML
+  private  Rectangle touchScreen;
 
 
 
@@ -36,7 +40,10 @@ public class phoneController {
     // Each sensor has its own class, easier to manage and change code.
     public void touchScreenMouseOver()  {
 
+        final Tooltip toolTipStartButton = new Tooltip("Touchscreen");
+        Tooltip.install(touchScreen, toolTipStartButton);
 
+        touchScreen.setCursor(Cursor.HAND);
 
 
 
