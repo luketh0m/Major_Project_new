@@ -16,8 +16,9 @@ import java.util.*;
 public class Quiz extends Application {
 
 
-    public static int score ;
-    public  static int questionNo;
+public static int score ;
+public static int questionNo;
+
 
 
 
@@ -37,8 +38,6 @@ public class Quiz extends Application {
 
         String questions[] = list.toArray(new String[list.size()]); //puts all questions in array
 
-
-        Random r = new Random(); //
 
         List<String> listA = new LinkedList<>(); //Create a new list
         File QuestionsA = new File(difficultyAnswers); //Loads question text file
@@ -60,33 +59,33 @@ public class Quiz extends Application {
 
     public static String generateRandomAnswer (String questionAnswers[]) {
 
-        Random r = new Random();
-        int numberOfQuestions = questionAnswers.length;
-        int random = r.nextInt(numberOfQuestions);
+            Random r = new Random();
+            int numberOfQuestions = questionAnswers.length;
+            int random = r.nextInt(numberOfQuestions);
 
-        String randomAnswer = questionAnswers[random];
+            String randomAnswer = questionAnswers[random];
 
 
-        return randomAnswer;
+            return randomAnswer;
 
 
 
     }
 
-    public static String[] displayQuestions (String questions[], String questionsAnswers[]) {
+   public static String[] displayQuestions (String questions[], String questionsAnswers[]) {
 
 
-        Random r = new Random();
-        int numberOfQuestions = questions.length;
-        int random = r.nextInt(numberOfQuestions);
+       Random r = new Random();
+       int numberOfQuestions = questions.length;
+       int random = r.nextInt(numberOfQuestions);
 
-        String qAndA[] = new String [2];
-        qAndA [0]  = questions[random];
-        qAndA [1] = questionsAnswers[random];
+       String qAndA[] = new String [2];
+       qAndA [0]  = questions[random];
+       qAndA [1] = questionsAnswers[random];
 
 
 
-        return qAndA;
+       return qAndA;
 
     }
 
@@ -185,14 +184,14 @@ public class Quiz extends Application {
         primaryStage.show();
 
 
-        easyButton.setOnAction(e -> {
+                easyButton.setOnAction(e -> {
 
-            try {
-                generateQuestionsAndAnswers(Easy, easyAnswer);
+                    try {
+                        generateQuestionsAndAnswers(Easy, easyAnswer);
 
 
-            } catch (FileNotFoundException notFound) {
-                System.out.print(notFound);
+                    } catch (FileNotFoundException notFound) {
+                        System.out.print(notFound);
             }
 
 
@@ -231,11 +230,19 @@ public class Quiz extends Application {
 
 
 
+
+
+
+
+
+
+
     public static void quizGame (String questions[], String questionsAnswers[]) {
 
 
         Stage primaryStage = new Stage();
         String Question[] = Quiz.displayQuestions(questions, questionsAnswers);
+
 
 
 
@@ -255,6 +262,8 @@ public class Quiz extends Application {
         Answers.add(incorrectOne);
         Answers.add(incorrectTwo);
         Answers.add(incorrectThree);
+
+        Collections.shuffle(Answers);
 
         System.out.println(Answers.get(0));
         System.out.println(Answers.get(1));
@@ -297,32 +306,32 @@ public class Quiz extends Application {
         });
 
 
-    }
+}
 
-    public static void quizOver(Stage primaryStage) {
+        public static void quizOver(Stage primaryStage) {
 
-        primaryStage.close();
+       primaryStage.close();
 
-        VBox content = new VBox();
-        Stage newPrimaryStage = new Stage();
+       VBox content = new VBox();
+       Stage newPrimaryStage = new Stage();
 
 
         Label gameOver = new Label ("Quiz complete");
         Label userScore = new Label ("You Scored " + Quiz.score + " Out of 10!");
 
 
-        Label tryAgin = new Label ("Try again?");
-        Button retry = new Button ("Retry");
-        Text enterName = new Text ("Please enter your nickname to be added to the LeaderBoard");
-        TextField nameSubmission = new TextField("Super Awesome Nickname");
-        Button submit = new Button("Enter");
-        retry.setOnAction(e -> quizMenu() );
+            Label tryAgin = new Label ("Try again?");
+            Button retry = new Button ("Retry");
+            Text enterName = new Text ("Please enter your nickname to be added to the LeaderBoard");
+            TextField nameSubmission = new TextField("Super Awesome Nickname");
+            Button submit = new Button("Enter");
+            retry.setOnAction(e -> quizMenu() );
 
 
 
 
         Text lBoard = new Text ("LeaderBoard");
-        //  Image trophy = new Image("/sample/Trophy.PNG");
+      //  Image trophy = new Image("/sample/Trophy.PNG");
         Text firstPlace = new Text ("1.");
         Text secondPlace = new Text ("2.");
         Text thirdPlace = new Text ("3.");
@@ -333,25 +342,25 @@ public class Quiz extends Application {
         Label Fact = new Label("Fact will appear here");
 
 
-        HBox bottomMenu = new HBox();
-        bottomMenu.setAlignment(Pos.CENTER);
-        Button menu = new Button ("Menu");
-        Button about = new Button ("About");
-        Button info = new Button ("Info");
-        Button toolKit = new Button ("Toolkit");
-        bottomMenu.getChildren().addAll(menu, about, info, toolKit);
+            HBox bottomMenu = new HBox();
+            bottomMenu.setAlignment(Pos.CENTER);
+            Button menu = new Button ("Menu");
+            Button about = new Button ("About");
+            Button info = new Button ("Info");
+            Button toolKit = new Button ("Toolkit");
+            bottomMenu.getChildren().addAll(menu, about, info, toolKit);
 
 
 
 
         content.getChildren().addAll(gameOver, userScore, tryAgin, retry, enterName, nameSubmission, submit, lBoard, firstPlace, secondPlace, thirdPlace, fact, Fact);
-        Scene scene = new Scene(content, 600, 800 );
-        newPrimaryStage.setScene(scene);
-        newPrimaryStage.show();
+         Scene scene = new Scene(content, 600, 800 );
+         newPrimaryStage.setScene(scene);
+         newPrimaryStage.show();
 
 
 
-    }
+        }
 
 
 
@@ -360,4 +369,27 @@ public class Quiz extends Application {
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
