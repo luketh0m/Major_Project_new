@@ -1,14 +1,19 @@
 package sample;
 
+import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.scene.Cursor;
 
 
-
+import java.awt.event.ActionEvent;
+import java.beans.EventHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Timer;
 
+import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Window;
 import javafx.util.Duration;
 import javafx.fxml.*;
 import javafx.scene.Node;
@@ -22,18 +27,12 @@ import javafx.scene.text.Text;
 import javafx.stage.PopupWindow;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 
 
+public class phoneController extends Application {
 
-
-public class phoneController {
-
-
-
-
-    // This displays typerwriter effect in java.
-    // Take message length, while i < length add one,
-    // pause for amount of time spec in params
+Stage primaryStage = new Stage();
 
 
     @FXML
@@ -44,6 +43,7 @@ public class phoneController {
     Text frontText;
     @FXML
     Text backText;
+    @FXML
     private  Rectangle phoneBody;
     @FXML
     private  Rectangle touchScreen;
@@ -86,20 +86,36 @@ public class phoneController {
     @FXML
     private static Button menuButton;
     @FXML
-    private static Button aboutButton;
+    private static Button settingsButton;
     @FXML
-   private static Button infoButton;
+    private static Button infoButton;
     @FXML
     private static Button quizButton;
 
-public void buttonActions()  {
-     Quiz.quizMenu();
 
 
-}
+    Controller c = new Controller();
+    Main m  = new Main();
+
+    public  void menuButtonClicked() throws Exception {
 
 
+        closePage();
+        m.start(primaryStage);
 
+    }
+
+
+    public void infoButtonClicked() throws Exception {
+
+        c.infoButton();
+    }
+
+    public void quizButtonClicked() throws Exception {
+        closePage();
+        Quiz.quizMenu();
+
+    }
     public void backToTool () {
         frontText.setVisible(true);
         backText.setVisible(true);
@@ -111,22 +127,22 @@ public void buttonActions()  {
     }
 
 
-public void sensorDescription (String sensorTitle, String sensorDescription) {
+    public void sensorDescription (String sensorTitle, String sensorDescription) {
 
 
 
-    frontText.setVisible(false);
-    backText.setVisible(false);
-    descriptionArea.setVisible(true);
-    descriptionLabel.setVisible(true);
-    descriptionText.setVisible(true);
-    hardwareButton.setVisible(true);
-    backToPhoneButton.setVisible(true);
+        frontText.setVisible(false);
+        backText.setVisible(false);
+        descriptionArea.setVisible(true);
+        descriptionLabel.setVisible(true);
+        descriptionText.setVisible(true);
+        hardwareButton.setVisible(true);
+        backToPhoneButton.setVisible(true);
 
-    backToPhoneButton.setOnAction(e -> backToTool() );
+        backToPhoneButton.setOnAction(e -> backToTool() );
 
-    descriptionLabel.setText(sensorTitle);
-    descriptionText.setText(sensorDescription);
+        descriptionLabel.setText(sensorTitle);
+        descriptionText.setText(sensorDescription);
 
 
 
@@ -155,7 +171,7 @@ public void sensorDescription (String sensorTitle, String sensorDescription) {
 
     public void touchScreenClicked() throws Exception {
 
-sensorDescription("Touch Screen", "This is the touchscreen. It does all of these things");
+        sensorDescription("Touch Screen", "This is the touchscreen. It does all of these things");
 
 
     }
@@ -272,8 +288,23 @@ sensorDescription("Touch Screen", "This is the touchscreen. It does all of these
         System.out.println("This is the Charging Port");
     }
 
-
+    public static void main(String[] args) {
+        launch(args);
 
     }
 
+    public void closePage() {
 
+        Window window = rootPane.getScene().getWindow();
+        if (window instanceof Stage){
+            ((Stage) window).close();
+        }
+    }
+
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+
+
+    }
+}

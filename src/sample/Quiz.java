@@ -10,13 +10,17 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.scene.layout.*;
 import java.io.*;
+import java.sql.*;
 import java.text.Normalizer;
 import java.util.*;
 
 public class Quiz extends Application {
 
 
-public static int score ;
+
+
+
+public static int score;
 public static int questionNo;
 
 
@@ -310,6 +314,9 @@ public static int questionNo;
 
         public static void quizOver(Stage primaryStage) {
 
+        DBconnect connect = new DBconnect();
+        connect.getData();
+
        primaryStage.close();
 
        VBox content = new VBox();
@@ -323,18 +330,34 @@ public static int questionNo;
             Label tryAgin = new Label ("Try again?");
             Button retry = new Button ("Retry");
             Text enterName = new Text ("Please enter your nickname to be added to the LeaderBoard");
-            TextField nameSubmission = new TextField("Super Awesome Nickname");
+            TextField nameSubmission = new TextField();
+
             Button submit = new Button("Enter");
             retry.setOnAction(e -> quizMenu() );
+
+            submit.setOnAction(e->
+            {
+
+                connect.addData(nameSubmission.getText(), Quiz.score);
+                try {
+
+                }
+                catch (Exception exc) {
+                    System.out.print(exc);
+
+                }
+            });
 
 
 
 
         Text lBoard = new Text ("LeaderBoard");
       //  Image trophy = new Image("/sample/Trophy.PNG");
-        Text firstPlace = new Text ("1.");
-        Text secondPlace = new Text ("2.");
-        Text thirdPlace = new Text ("3.");
+
+
+        Text firstPlace = new Text ((String.format("1. %s", connect.nickNames.pop() + " Score: " +connect.userScores.pop())));
+        Text secondPlace = new Text((String.format("2. %s", connect.nickNames.pop() + " Score: " +connect.userScores.pop())));
+        Text thirdPlace = new Text ((String.format("3. %s", connect.nickNames.pop() + " Score: " + connect.userScores.pop())));
 
 
 

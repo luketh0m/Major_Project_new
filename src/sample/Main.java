@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+    DBconnect DB = new DBconnect();
 
     @Override
     public void start(Stage primaryStage) throws Exception{ // Load FXML document and display on screen
@@ -17,8 +18,15 @@ public class Main extends Application {
         primaryStage.setMinWidth(800);
         primaryStage.setMinHeight(600);
 
+
+
     }
 
+
+    public void closeWindow(Stage primaryStage) {
+
+        primaryStage.close();
+    }
 
     public static void main(String[] args) {
         launch(args);
