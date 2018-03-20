@@ -5,34 +5,63 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Ellipse?>
 <?import javafx.scene.shape.Polygon?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane fx:id="rootPane" maxHeight="600" maxWidth="800" minHeight="600" minWidth="800" prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.phoneController">
+<AnchorPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.phoneController">
    <children>
       <TextFlow layoutX="36.0" layoutY="92.0" />
-      <Group layoutX="42.0" layoutY="103.0">
+      <Group layoutX="42.0" layoutY="100.0">
          <children>
-            <Rectangle fx:id="phoneBody" arcHeight="35.0" arcWidth="35.0" fill="WHITE" height="381.0" layoutX="6.0" stroke="BLACK" strokeType="INSIDE" width="261.0" />
-            <Rectangle fx:id="touchScreen" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="321.0" layoutX="22.0" layoutY="30.0" onMouseClicked="#touchScreenClicked" onMouseEntered="#touchScreenMouseOver" stroke="BLACK" strokeType="INSIDE" width="230.0" />
-            <Rectangle fx:id="volumeRocker" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="41.0" layoutY="62.0" onMouseClicked="#volumeRockerClicked" onMouseEntered="#volumeRockerMouseOver" stroke="BLACK" strokeType="INSIDE" width="6.0" />
-            <Rectangle fx:id="chargingPort" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="6.0" layoutX="130.0" layoutY="378.0" onMouseClicked="#chargingPortClicked" onMouseEntered="#chargingPortMouseOver" stroke="BLACK" strokeType="INSIDE" width="20.0" />
-            <Rectangle fx:id="sleepWakeButton" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="12.0" layoutY="115.0" onMouseClicked="#sleepWakeButtonClicked" onMouseEntered="#sleepWakeButtonMouseover" stroke="BLACK" strokeType="INSIDE" width="6.0" />
-            <Ellipse fx:id="frontSpeaker" fill="WHITE" layoutX="146.0" layoutY="4.0" onMouseClicked="#frontSpeakerClicked" onMouseEntered="#frontSpeakerMouseOver" radiusX="16.0" radiusY="3.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="WHITE" layoutX="150.0" layoutY="13.0" onMouseClicked="#cameraClicked" onMouseEntered="#cameraMouseover" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="camera" layoutX="150.0" layoutY="14.0" onMouseClicked="#cameraClicked" onMouseDragged="#cameraMouseover" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="ambientLightSensor" layoutX="191.0" layoutY="14.0" onMouseClicked="#ambientLightSensorClicked" onMouseEntered="#ambientLightSensorMouseOver" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="proximitySensor" layoutX="209.0" layoutY="14.0" onMouseClicked="#proximitySensorClicked" onMouseEntered="#proximitySensorMouseOver" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
-            <Rectangle fx:id="navBar" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="20.0" layoutX="35.0" layoutY="324.0" onMouseClicked="#navigationBarClicked" onMouseEntered="#navigationBarMouseOver" stroke="BLACK" strokeType="INSIDE" width="197.0" />
-            <Rectangle fx:id="multiTask1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="12.0" layoutX="203.0" layoutY="328.0" onMouseClicked="#multiTaskingButtonClicked" onMouseEntered="#multiTaskingButtonMouseOver" stroke="BLACK" strokeType="INSIDE" width="12.0" />
-            <Rectangle fx:id="multiTask2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="12.0" layoutX="209.0" layoutY="334.0" onMouseClicked="#multiTaskingButtonClicked" onMouseEntered="#multiTaskingButtonMouseOver" stroke="BLACK" strokeType="INSIDE" width="12.0" />
-            <Circle fx:id="homeButton" fill="WHITE" layoutX="140.0" layoutY="334.0" onMouseClicked="#homeButtonClicked" onMouseEntered="#homeButtonMouseOver" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
-            <Polygon fx:id="backButton" fill="WHITE" layoutX="62.0" layoutY="344.0" onMouseClicked="#backButtonClicked" onMouseEntered="#backButtonMouseOver" rotate="270.0" scaleX="0.16" scaleY="0.16" scaleZ="0.16" stroke="BLACK" strokeType="INSIDE" strokeWidth="4.0">
+            <Rectangle fx:id="phoneBody" arcHeight="35.0" arcWidth="35.0" height="449.0" layoutX="20.0" layoutY="-40.0" stroke="BLACK" strokeType="INSIDE" width="256.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
+                     <stops>
+                        <Stop color="#2f2f2f" />
+                        <Stop color="#d0d0d0" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill></Rectangle>
+            <Rectangle fx:id="touchScreen" arcHeight="16.0" arcWidth="16.0" height="421.0" layoutX="28.0" layoutY="-18.0" onMouseClicked="#touchScreenClicked" onMouseEntered="#touchScreenMouseOver" stroke="BLACK" strokeType="INSIDE" width="239.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
+                     <stops>
+                        <Stop color="#d0d0d0" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill></Rectangle>
+            <Rectangle fx:id="chargingPort" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="6.0" layoutX="136.0" layoutY="403.0" onMouseClicked="#chargingPortClicked" onMouseEntered="#chargingPortMouseOver" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+            <Rectangle fx:id="sleepWakeButton" arcHeight="5.0" arcWidth="5.0" height="12.0" layoutX="273.0" layoutY="90.0" onMouseClicked="#sleepWakeButtonClicked" onMouseEntered="#sleepWakeButtonMouseover" stroke="#0a0a0a" strokeType="INSIDE" width="6.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
+                     <stops>
+                        <Stop color="#2f2f2f" />
+                        <Stop color="#1b1b1b" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill></Rectangle>
+            <Circle fill="WHITE" layoutX="147.0" layoutY="-24.0" onMouseClicked="#cameraClicked" onMouseEntered="#cameraMouseover" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="camera" layoutX="147.0" layoutY="-24.0" onMouseClicked="#cameraClicked" onMouseDragged="#cameraMouseover" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
+            <Rectangle fx:id="navBar" arcHeight="5.0" arcWidth="5.0" height="17.0" layoutX="36.0" layoutY="376.0" onMouseClicked="#navigationBarClicked" onMouseEntered="#navigationBarMouseOver" stroke="BLACK" strokeType="INSIDE" width="223.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
+                     <stops>
+                        <Stop color="#2f2f2f" />
+                        <Stop color="#d0d0d0" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Circle fx:id="homeButton" fill="#d0d0d0" layoutX="146.0" layoutY="384.0" onMouseClicked="#homeButtonClicked" onMouseEntered="#homeButtonMouseOver" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            <Polygon fx:id="backButton" fill="#d0d0d0" layoutX="63.0" layoutY="395.0" onMouseClicked="#backButtonClicked" onMouseEntered="#backButtonMouseOver" rotate="270.0" scaleX="0.16" scaleY="0.16" scaleZ="0.16" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0">
                <points>
                   <Double fx:value="-50.0" />
                   <Double fx:value="40.0" />
@@ -42,31 +71,103 @@
                   <Double fx:value="-60.0" />
                </points>
             </Polygon>
+            <Circle fx:id="ambientLightSensor" layoutX="188.0" layoutY="-25.0" onMouseClicked="#ambientLightSensorClicked" onMouseEntered="#ambientLightSensorMouseOver" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="proximitySensor" layoutX="210.0" layoutY="-25.0" onMouseClicked="#proximitySensorClicked" onMouseEntered="#proximitySensorMouseOver" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
+            <Rectangle fx:id="volumeRocker" arcHeight="5.0" arcWidth="5.0" height="41.0" layoutX="273.0" layoutY="44.0" onMouseClicked="#volumeRockerClicked" onMouseEntered="#volumeRockerMouseOver" stroke="#0a0a0a" strokeType="INSIDE" width="6.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
+                     <stops>
+                        <Stop color="#2f2f2f" />
+                        <Stop color="#1b1b1b" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Rectangle fx:id="multiTask211" arcHeight="5.0" arcWidth="5.0" fill="#d0d0d0" height="10.0" layoutX="220.0" layoutY="381.0" onMouseClicked="#multiTaskingButtonClicked" onMouseEntered="#multiTaskingButtonMouseOver" stroke="BLACK" strokeType="INSIDE" width="11.0" />
+            <Text layoutX="110.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12:03" wrappingWidth="85.80989074707031">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text layoutX="123.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="23 march" wrappingWidth="49.143218994140625">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="frontSpeaker" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="5.0" layoutX="133.0" layoutY="-36.0" onMouseClicked="#frontSpeakerClicked" onMouseEntered="#frontSpeakerMouseOver" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+            <Rectangle fx:id="multiTask2111" arcHeight="5.0" arcWidth="5.0" fill="#d0d0d0" height="10.0" layoutX="216.0" layoutY="377.0" onMouseClicked="#multiTaskingButtonClicked" onMouseEntered="#multiTaskingButtonMouseOver" stroke="BLACK" strokeType="INSIDE" width="11.0" />
          </children>
       </Group>
-      <Text fx:id="frontText" layoutX="185.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Front" wrappingWidth="87.91993713378906">
+      <Text fx:id="frontText" layoutX="149.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Front" wrappingWidth="87.91993713378906">
          <font>
             <Font size="21.0" />
          </font>
       </Text>
-      <Text fx:id="backText" layoutX="598.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Back" wrappingWidth="59.25325012207031">
+      <Text fx:id="backText" layoutX="594.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Back" wrappingWidth="59.25325012207031">
          <font>
             <Font size="21.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="370.0" layoutX="450.0" layoutY="103.0" stroke="BLACK" strokeType="INSIDE" width="296.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="365.0" layoutX="452.0" layoutY="105.0" stroke="BLACK" strokeType="INSIDE" width="291.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="31.0" layoutX="458.0" layoutY="108.0" stroke="BLACK" strokeType="INSIDE" width="89.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="31.0" layoutX="581.0" layoutY="205.0" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-      <Ellipse fill="WHITE" layoutX="677.0" layoutY="443.0" radiusX="4.0" radiusY="19.0" stroke="BLACK" strokeType="INSIDE" />
-      <Ellipse fill="WHITE" layoutX="691.0" layoutY="443.0" radiusX="4.0" radiusY="19.0" stroke="BLACK" strokeType="INSIDE" />
-      <Ellipse fill="WHITE" layoutX="704.0" layoutY="443.0" radiusX="4.0" radiusY="19.0" stroke="BLACK" strokeType="INSIDE" />
-      <Ellipse fill="WHITE" layoutX="717.0" layoutY="444.0" radiusX="4.0" radiusY="19.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="homeButton1" fill="WHITE" layoutX="473.0" layoutY="123.0" onMouseClicked="#homeButtonClicked" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="homeButton11" fill="WHITE" layoutX="531.0" layoutY="123.0" onMouseClicked="#homeButtonClicked" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-      <Ellipse fx:id="frontSpeaker1" fill="WHITE" layoutX="503.0" layoutY="123.0" onMouseClicked="#frontSpeakerClicked" radiusX="10.0" radiusY="14.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="camera1" layoutX="473.0" layoutY="123.0" onMouseClicked="#cameraClicked" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="camera2" layoutX="531.0" layoutY="124.0" onMouseClicked="#cameraClicked" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="41.0" layoutX="-1.0" layoutY="565.0" stroke="BLACK" strokeType="INSIDE" width="801.0" />
+      <Button fx:id="infoButton" layoutX="432.0" layoutY="570.0" mnemonicParsing="false" onAction="#infoButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Info" />
+      <Button fx:id="menuButton" layoutX="114.0" layoutY="570.0" mnemonicParsing="false" onAction="#menuButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Menu" />
+      <Button fx:id="settingsButton" layoutX="265.0" layoutY="570.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="123.0" text="Settings" />
+      <Button fx:id="quizButton" layoutX="596.0" layoutY="570.0" mnemonicParsing="false" onAction="#quizButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Quiz" />
+      <Rectangle fx:id="phoneBodyBack" arcHeight="35.0" arcWidth="35.0" height="449.0" layoutX="478.0" layoutY="60.0" onMouseClicked="#phoneBodyBackClicked" onMouseEntered="#phoneBodyBackMouseOver" stroke="BLACK" strokeType="INSIDE" width="256.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
+               <stops>
+                  <Stop color="#2f2f2f" />
+                  <Stop color="#d0d0d0" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle fx:id="volumeRockerRear" arcHeight="5.0" arcWidth="5.0" height="41.0" layoutX="474.0" layoutY="146.0" onMouseClicked="#volumeRockerClicked" onMouseEntered="#volumeRockerMouseOver" stroke="#0a0a0a" strokeType="INSIDE" width="6.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
+               <stops>
+                  <Stop color="#2f2f2f" />
+                  <Stop color="#1b1b1b" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle fx:id="sleepWakeButtonRear" arcHeight="5.0" arcWidth="5.0" height="12.0" layoutX="474.0" layoutY="192.0" onMouseClicked="#sleepWakeButtonClicked" onMouseEntered="#sleepWakeButtonMouseover" stroke="#0a0a0a" strokeType="INSIDE" width="6.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
+               <stops>
+                  <Stop color="#2f2f2f" />
+                  <Stop color="#1b1b1b" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle fx:id="fingerPrintScanner" arcHeight="10.0" arcWidth="10.0" height="31.0" layoutX="588.0" layoutY="172.0" onMouseClicked="#FingerPrintScannerClicked" onMouseEntered="#fingerPrintScannerMouseOver" stroke="BLACK" strokeType="INSIDE" width="36.0">
+         <fill>
+            <RadialGradient centerX="0.4666666666666667" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#363839" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle fx:id="chargingPortRear" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="6.0" layoutX="592.0" layoutY="503.0" onMouseClicked="#chargingPortClicked" onMouseEntered="#chargingPortMouseOver" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+      <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#2c2c2c" height="28.0" layoutX="487.0" layoutY="64.0" stroke="BLACK" strokeType="INSIDE" width="77.0" />
+      <Circle fill="WHITE" layoutX="503.0" layoutY="78.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="WHITE" layoutX="546.0" layoutY="78.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="rearCameraColour" layoutX="503.0" layoutY="78.0" onMouseClicked="#RearCameraColourClicked" onMouseEntered="#RearCameraColourMouseOver" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="rearCameraBlackAndWhite" layoutX="546.0" layoutY="78.0" onMouseClicked="#RearCameraBlackAndWhiteClicked" onMouseEntered="#RearCameraBlackAndWhiteMouseOver" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="flash" fill="WHITE" layoutX="526.0" layoutY="78.0" onDragEntered="#flashClicked" onMouseClicked="#flashClicked" onMouseEntered="#flashMouseOver" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="WHITE" layoutX="523.0" layoutY="74.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="WHITE" layoutX="529.0" layoutY="74.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="WHITE" layoutX="529.0" layoutY="80.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="WHITE" layoutX="523.0" layoutY="80.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Rectangle fx:id="rearSpeaker1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="28.0" layoutX="673.0" layoutY="474.0" onMouseClicked="#rearSpeakerClicked" onMouseEntered="#rearSpeakerMouseOver" stroke="BLACK" strokeType="INSIDE" width="4.0" />
+      <Rectangle fx:id="rearSpeaker2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="28.0" layoutX="683.0" layoutY="474.0" stroke="BLACK" strokeType="INSIDE" width="4.0" />
+      <Rectangle fx:id="rearSpeaker3" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="28.0" layoutX="693.0" layoutY="474.0" stroke="BLACK" strokeType="INSIDE" width="4.0" />
+      <Rectangle fx:id="rearSpeaker4" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="28.0" layoutX="704.0" layoutY="474.0" stroke="BLACK" strokeType="INSIDE" width="4.0" />
       <StackPane fx:id="infomationPane" layoutX="293.0" layoutY="526.0" />
       <Rectangle fx:id="descriptionArea" arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="405.0" layoutX="36.0" layoutY="92.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="714.0" />
       <Text fx:id="descriptionLabel" layoutX="326.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sensor Label" visible="false">
@@ -87,9 +188,5 @@
             <Font size="16.0" />
          </font>
       </Button>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="41.0" layoutX="-1.0" layoutY="565.0" stroke="BLACK" strokeType="INSIDE" width="801.0" />
-      <Button fx:id="infoButton" layoutX="370.0" layoutY="570.0" mnemonicParsing="false" onAction="#infoButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Info" />
-      <Button fx:id="menuButton" layoutX="211.0" layoutY="570.0" mnemonicParsing="false" onAction="#menuButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Menu" />
-      <Button fx:id="quizButton" layoutX="537.0" layoutY="570.0" mnemonicParsing="false" onAction="#quizButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Quiz" />
    </children>
 </AnchorPane>

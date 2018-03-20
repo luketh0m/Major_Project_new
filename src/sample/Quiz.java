@@ -3,15 +3,18 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.image.Image;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import javafx.scene.layout.*;
-import java.io.*;
-import java.sql.*;
-import java.text.Normalizer;
+
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.*;
 
 public class Quiz extends Application {
@@ -338,9 +341,10 @@ public static int questionNo;
             submit.setOnAction(e->
             {
 
-                connect.addData(nameSubmission.getText(), Quiz.score);
-                try {
 
+                try {
+                    connect.addData(nameSubmission.getText(), Quiz.score);
+                    alertBox.display("Nickname Added!", "Your Nickname has been added! Your score won't show right now, but if you've made it onto the leaderboard, It'll be there next time! Thanks for playing!", "Okay!");
                 }
                 catch (Exception exc) {
                     System.out.print(exc);

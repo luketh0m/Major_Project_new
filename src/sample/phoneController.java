@@ -28,6 +28,7 @@ import javafx.stage.PopupWindow;
 import javafx.stage.Stage;
 
 import javax.swing.*;
+import javax.tools.Tool;
 
 
 public class phoneController extends Application {
@@ -61,7 +62,7 @@ Stage primaryStage = new Stage();
     private  Rectangle multiTask2;
 
     @FXML
-    private Ellipse frontSpeaker;
+    private Rectangle frontSpeaker;
     @FXML
     private  Circle camera;
     @FXML
@@ -72,6 +73,32 @@ Stage primaryStage = new Stage();
     private  Circle homeButton;
     @FXML
     private Polygon backButton;
+
+
+    //Back of phone
+
+    @FXML
+    private  Rectangle phoneBodyBack;
+    @FXML
+    private Rectangle fingerPrintScanner;
+    @FXML
+    private  Rectangle chargingPortRear;
+    @FXML
+    private Circle rearCameraColour;
+    @FXML
+    private Circle rearCameraBlackAndWhite;
+    @FXML
+    private Circle flash;
+    @FXML
+    private Rectangle rearSpeaker1;
+    @FXML
+    private Rectangle rearSpeaker2;
+    @FXML
+    private Rectangle rearSpeaker3;
+    @FXML
+    private Rectangle rearSpeaker4;
+
+
 
     @FXML
     private Rectangle descriptionArea;
@@ -143,7 +170,9 @@ Stage primaryStage = new Stage();
 
         descriptionLabel.setText(sensorTitle);
         descriptionText.setText(sensorDescription);
+        String[] args = {};
 
+        hardwareButton.setOnAction(e-> Hardware.main(args));
 
 
     }
@@ -280,13 +309,70 @@ Stage primaryStage = new Stage();
 
     public void chargingPortMouseOver() {
         TooltipFeatures("Charging Port", chargingPort);
+        TooltipFeatures("Charging Port", chargingPortRear);
 
     }
+
+    public void phoneBodyBackClicked() {
+
+    }
+    public void phoneBodyBackMouseOver() {
+        TooltipFeatures("Phone body", phoneBodyBack);
+
+    }
+
+    public void   fingerPrintScannerMouseOver() {
+    TooltipFeatures("Fingerprint Scanner", fingerPrintScanner);
+    }
+
+    public void FingerPrintScannerClicked() {
+
+    }
+
+    public void rearSpeakerClicked() {
+
+
+    }
+
+    public void rearSpeakerMouseOver() {
+        TooltipFeatures("Rear Speakers", rearSpeaker1);
+        TooltipFeatures("Rear Speakers",rearSpeaker2);
+        TooltipFeatures("Rear Speakers", rearSpeaker3);
+        TooltipFeatures("Rear Speakers", rearSpeaker4);
+    }
+    public void RearCameraColourClicked(){
+
+
+    }
+
+    public void RearCameraColourMouseOver() {
+        TooltipFeatures("Rear camera - Colour version", rearCameraColour);
+    }
+
+    public void RearCameraBlackAndWhiteClicked() {
+        TooltipFeatures("Rear camera - Black and white", rearCameraBlackAndWhite);
+
+    }
+
+    public void RearCameraBlackAndWhiteMouseOver() {
+        TooltipFeatures("Rear camera - Black and white", rearCameraBlackAndWhite);
+    }
+
+    public void flashClicked() {
+
+    }
+
+    public void flashMouseOver() {
+        TooltipFeatures("Flash", flash);
+
+    }
+
 
     public void chargingPortClicked() {
 
         System.out.println("This is the Charging Port");
     }
+
 
     public static void main(String[] args) {
         launch(args);
