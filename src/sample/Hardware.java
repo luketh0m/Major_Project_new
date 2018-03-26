@@ -1,49 +1,51 @@
 package sample;
 
-import org.sintef.jarduino.DigitalPin;
-import org.sintef.jarduino.DigitalState;
-import org.sintef.jarduino.JArduino;
-import org.sintef.jarduino.PinMode;
+import gnu.io.SerialPort;
+import org.sintef.jarduino.*;
+import org.sintef.jarduino.comm.Serial4JArduino;
+
+import static org.sintef.jarduino.DigitalState.HIGH;
+import static org.sintef.jarduino.DigitalState.LOW;
+import static org.sintef.jarduino.PinMode.OUTPUT;
 
 public class Hardware extends JArduino {
-
 
     public Hardware(String port) {
         super(port);
     }
 
+   public static JArduino arduino = new Hardware("COM3");
     @Override
     protected void setup() {
-        // initialize the digital pin as an output.
-        // Pin 13 has an LED connected on most Arduino boards:
-        pinMode(DigitalPin.PIN_13, PinMode.OUTPUT);
+
+        // initialize serial communication at 9600 bits per second:
+
     }
 
-    protected void flashON() {
-
-        digitalWrite(DigitalPin.PIN_13, DigitalState.HIGH);
-        delay(2000); // wait for a second
-        // set the LED off
-        digitalWrite(DigitalPin.PIN_13, DigitalState.LOW);
-        delay(1000); // wait for a second
-    }
-
-
+        public static void flashON(){
+           arduino.pinMode (DigitalPin.PIN_12, OUTPUT);
+            arduino.digitalWrite (DigitalPin.PIN_12, HIGH); // set the LED on
+            arduino.delay (2000); // wait for a second
+            arduino.digitalWrite (DigitalPin.PIN_12, LOW);
+            arduino.stopArduinoProcess();
+        }
 
 
 
     @Override
     protected void loop() {
-     flashON();
+
+
 
     }
-
-
-
 
     public static void main(String[] args) {
-        JArduino arduino = new Hardware("COM3");
+
         arduino.runArduinoProcess();
+
+
     }
 
-}
+    }
+
+

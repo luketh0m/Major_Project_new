@@ -26,15 +26,21 @@ import javafx.scene.shape.Shape;
 import javafx.scene.text.Text;
 import javafx.stage.PopupWindow;
 import javafx.stage.Stage;
+import org.w3c.dom.css.Rect;
 
 import javax.swing.*;
 import javax.tools.Tool;
+
+
 
 
 public class phoneController extends Application {
 
 Stage primaryStage = new Stage();
 
+
+
+Boolean flashOn = false;
 
     @FXML
     AnchorPane rootPane;
@@ -111,13 +117,10 @@ Stage primaryStage = new Stage();
     @FXML
     private Button backToPhoneButton;
     @FXML
-    private static Button menuButton;
+    private  Rectangle volumeRockerRear;
     @FXML
-    private static Button settingsButton;
-    @FXML
-    private static Button infoButton;
-    @FXML
-    private static Button quizButton;
+    private  Rectangle sleepWakeButtonRear;
+
 
 
 
@@ -157,7 +160,6 @@ Stage primaryStage = new Stage();
     public void sensorDescription (String sensorTitle, String sensorDescription) {
 
 
-
         frontText.setVisible(false);
         backText.setVisible(false);
         descriptionArea.setVisible(true);
@@ -166,16 +168,26 @@ Stage primaryStage = new Stage();
         hardwareButton.setVisible(true);
         backToPhoneButton.setVisible(true);
 
-        backToPhoneButton.setOnAction(e -> backToTool() );
+        backToPhoneButton.setOnAction(e -> backToTool());
 
         descriptionLabel.setText(sensorTitle);
         descriptionText.setText(sensorDescription);
-        String[] args = {};
 
-        hardwareButton.setOnAction(e-> Hardware.main(args));
 
+        hardwareButton.setOnAction(e -> {
+
+            String args[] = new String[0];
+
+            Hardware.flashON();
+
+        });
 
     }
+
+
+
+
+
 
 
 
@@ -214,7 +226,7 @@ Stage primaryStage = new Stage();
 
     public void cameraClicked() {
 
-        System.out.println("This is the camera");
+        sensorDescription("Camera", "Desc");
     }
 
     public void frontSpeakerMouseOver() {
@@ -224,7 +236,7 @@ Stage primaryStage = new Stage();
     }
     public void frontSpeakerClicked() {
 
-        System.out.println("This is the front Speaker");
+       sensorDescription("Front speaker", "Desc");
     }
 
 
@@ -234,8 +246,7 @@ Stage primaryStage = new Stage();
 
     }
     public void ambientLightSensorClicked() {
-
-        System.out.println("This is the Light Sensor");
+sensorDescription("Ambient Light sensor", "Desc");
     }
 
     public void proximitySensorMouseOver() {
@@ -244,26 +255,36 @@ Stage primaryStage = new Stage();
     }
     public void proximitySensorClicked() {
 
-        System.out.println("This is the Proximity Sensor");
+      sensorDescription("Proximimty Sensor", "Desc");
     }
 
     public void volumeRockerMouseOver() {
         TooltipFeatures("Volume Rocker", volumeRocker);
+        TooltipFeatures("Volume Rocker", volumeRockerRear);
 
     }
 
     public void volumeRockerClicked() {
 
-        System.out.println("This is the volume Rocker");
+        sensorDescription("Volume Rocker", "Volume Rocker");
+
     }
+
+
 
     public void sleepWakeButtonMouseover() {
 
         TooltipFeatures("Sleep/Wake Button", sleepWakeButton);
+
     }
     public void sleepWakeButtonClicked() {
 
-        System.out.println("This is the sleep/wake button");
+        sensorDescription("Sleep/ Wake Button Clicked", "Sleep/wae");
+
+
+    }
+    public void setSleepWakeButtonRearMouseOver() {
+        TooltipFeatures("Sleep/Wake Button", sleepWakeButtonRear);
 
     }
 
@@ -274,7 +295,7 @@ Stage primaryStage = new Stage();
 
     public void navigationBarClicked() {
 
-        System.out.println("This is the navigation bar");
+      sensorDescription("Navigation bar", "Nav bar");
     }
 
     public void backButtonMouseOver() {
@@ -283,7 +304,8 @@ Stage primaryStage = new Stage();
     }
     public void backButtonClicked() {
 
-        System.out.println("This is the back button");
+        sensorDescription("Back button", "Button");
+
     }
 
     public void homeButtonMouseOver() {
@@ -293,7 +315,8 @@ Stage primaryStage = new Stage();
     }
     public void homeButtonClicked() {
 
-        System.out.println("This is the home button");
+        sensorDescription("Home button","Home Button");
+
     }
 
     public void multiTaskingButtonMouseOver() {
@@ -304,7 +327,8 @@ Stage primaryStage = new Stage();
     }
     public void multiTaskingButtonClicked() {
 
-        System.out.println("This is the multi tasking button");
+           sensorDescription("Multi Tasking Button", "Dess");
+
     }
 
     public void chargingPortMouseOver() {
@@ -314,6 +338,9 @@ Stage primaryStage = new Stage();
     }
 
     public void phoneBodyBackClicked() {
+
+        sensorDescription("Phone Body", "Phone Body is made of...");
+
 
     }
     public void phoneBodyBackMouseOver() {
@@ -326,10 +353,12 @@ Stage primaryStage = new Stage();
     }
 
     public void FingerPrintScannerClicked() {
+        sensorDescription("Fingerprint Scanner", "Finger print Scanner");
 
     }
 
     public void rearSpeakerClicked() {
+        sensorDescription("Rear Speaker", "Rear Speaker Clicked");
 
 
     }

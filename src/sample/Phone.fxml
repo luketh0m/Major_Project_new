@@ -133,7 +133,7 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <Rectangle fx:id="sleepWakeButtonRear" arcHeight="5.0" arcWidth="5.0" height="12.0" layoutX="474.0" layoutY="192.0" onMouseClicked="#sleepWakeButtonClicked" onMouseEntered="#sleepWakeButtonMouseover" stroke="#0a0a0a" strokeType="INSIDE" width="6.0">
+      <Rectangle fx:id="sleepWakeButtonRear" arcHeight="5.0" arcWidth="5.0" height="12.0" layoutX="474.0" layoutY="192.0" onMouseClicked="#sleepWakeButtonClicked" onMouseEntered="#setSleepWakeButtonRearMouseOver" stroke="#0a0a0a" strokeType="INSIDE" width="6.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
                <stops>
