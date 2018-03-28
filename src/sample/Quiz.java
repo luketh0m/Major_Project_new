@@ -13,6 +13,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
@@ -64,11 +65,14 @@ public static int questionNo;
 
     }
 
+
+
     public static String generateRandomAnswer (String questionAnswers[]) {
 
             Random r = new Random();
             int numberOfQuestions = questionAnswers.length;
             int random = r.nextInt(numberOfQuestions);
+
 
             String randomAnswer = questionAnswers[random];
 
@@ -290,7 +294,7 @@ public static int questionNo;
 
 
 
-        }); //if answer is incorrect, add 1 to questionNo and generate new question and Answersi  //if answer is incorrect, add 1 to questionNo and generate new question and Answersi
+        }); //if answer is incorrect, add 1 to questionNo and generate new question and Answers  //if answer is incorrect, add 1 to questionNo and generate new question and Answersi
 
         incorrectOne.setOnAction( e -> {
 

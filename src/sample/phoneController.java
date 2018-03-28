@@ -154,6 +154,7 @@ Boolean flashOn = false;
         descriptionText.setVisible(false);
         hardwareButton.setVisible(false);
         backToPhoneButton.setVisible(false);
+
     }
 
 
@@ -174,13 +175,6 @@ Boolean flashOn = false;
         descriptionText.setText(sensorDescription);
 
 
-        hardwareButton.setOnAction(e -> {
-
-            String args[] = new String[0];
-
-            Hardware.flashON();
-
-        });
 
     }
 
@@ -237,6 +231,8 @@ Boolean flashOn = false;
     public void frontSpeakerClicked() {
 
        sensorDescription("Front speaker", "Desc");
+       hardwareButton.setOnAction(e-> Hardware.frontSpeakerOn());
+
     }
 
 
@@ -247,6 +243,10 @@ Boolean flashOn = false;
     }
     public void ambientLightSensorClicked() {
 sensorDescription("Ambient Light sensor", "Desc");
+
+    hardwareButton.setOnAction(e-> Hardware.ambientLightSensor());
+
+
     }
 
     public void proximitySensorMouseOver() {
@@ -306,6 +306,7 @@ sensorDescription("Ambient Light sensor", "Desc");
 
         sensorDescription("Back button", "Button");
 
+
     }
 
     public void homeButtonMouseOver() {
@@ -359,7 +360,7 @@ sensorDescription("Ambient Light sensor", "Desc");
 
     public void rearSpeakerClicked() {
         sensorDescription("Rear Speaker", "Rear Speaker Clicked");
-
+        hardwareButton.setOnAction(e-> Hardware.rearSpeakerOn());
 
     }
 
@@ -388,6 +389,13 @@ sensorDescription("Ambient Light sensor", "Desc");
     }
 
     public void flashClicked() {
+
+        sensorDescription("Flash", "This is the flash. It works by... Want to give it a go?");
+        hardwareButton.setOnAction(e -> Hardware.flashOn());
+        backToPhoneButton.setOnAction(e-> {
+                Hardware.flashOff();
+            backToTool();
+        });
 
     }
 
