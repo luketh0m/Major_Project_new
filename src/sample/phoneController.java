@@ -191,7 +191,6 @@ Boolean flashOn = false;
         final Tooltip toolTip = new Tooltip();
         toolTip.setText(description);
         Tooltip.install(shape, toolTip);
-        toolTip.setShowDelay(Duration.millis(1));
         shape.setCursor(Cursor.HAND);
     }
 
@@ -244,7 +243,7 @@ Boolean flashOn = false;
     public void ambientLightSensorClicked() {
 sensorDescription("Ambient Light sensor", "Desc");
 
-    hardwareButton.setOnAction(e-> Hardware.ambientLightSensor());
+
 
 
     }
@@ -317,7 +316,12 @@ sensorDescription("Ambient Light sensor", "Desc");
     public void homeButtonClicked() {
 
         sensorDescription("Home button","Home Button");
+        hardwareButton.setOnAction( e-> Hardware.buttonOn());
 
+        backToPhoneButton.setOnAction(e-> {
+            Hardware.buttonOff();
+            backToTool();
+        });
     }
 
     public void multiTaskingButtonMouseOver() {

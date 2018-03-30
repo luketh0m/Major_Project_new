@@ -73,7 +73,13 @@ public static int questionNo;
             int numberOfQuestions = questionAnswers.length;
             int random = r.nextInt(numberOfQuestions);
 
+        List <String>  list = Arrays.asList(questionAnswers);
+        Stack <String> stack = new Stack <>();
+        stack.addAll(list);
 
+        Stack <String> answers = new Stack<>();
+
+       // answers.addAll()
             String randomAnswer = questionAnswers[random];
 
 
@@ -274,7 +280,7 @@ public static int questionNo;
         Answers.add(incorrectTwo);
         Answers.add(incorrectThree);
 
-        Collections.shuffle(Answers);
+
 
         System.out.println(Answers.get(0));
         System.out.println(Answers.get(1));

@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../JArduino-0.1.7/jarduino.samples/lib" />
+      <root url="jar://D:/Downloads/mfz-rxtx-2.2-20081207-win-x86(1)/mfz-rxtx-2.2-20081207-win-x86/RXTXcomm.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../JArduino-0.1.7/jarduino.samples/lib/org.kevoree.extra.osgi.rxtx-2.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../JArduino-0.1.7/jarduino.samples/lib/org.sintef.jarduino.core-0.1.7-SNAPSHOT.jar!/" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../JArduino-0.1.7/jarduino.samples/lib" recursive="false" />
+  </library>
+</component>

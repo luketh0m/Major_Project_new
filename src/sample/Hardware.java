@@ -1,13 +1,14 @@
 package sample;
 
-import gnu.io.SerialPort;
 
-import org.sintef.jarduino.DigitalPin;
-import org.sintef.jarduino.DigitalState;
-import org.sintef.jarduino.JArduino;
+
+
+
+import org.sintef.jarduino.*;
 import org.sintef.jarduino.comm.Serial4JArduino;
-import java.awt.*;
-import java.util.concurrent.TimeoutException;
+import org.sintef.jarduino.sim.InteractiveJArduinoDataGUIClient;
+
+import javax.swing.*;
 
 import static org.sintef.jarduino.DigitalState.HIGH;
 import static org.sintef.jarduino.DigitalState.LOW;
@@ -19,6 +20,10 @@ public class Hardware extends JArduino {
 
 
 
+
+
+
+
     public Hardware(String port) {
         super(port);
     }
@@ -26,27 +31,8 @@ public class Hardware extends JArduino {
 
    public static JArduino arduino = new Hardware("COM3");
     @Override
-    protected void setup() {
+    protected void setup() {}
 
-        // initialize serial communication at 9600 bits per second:
-
-    }
-
-    public static void ambientLightSensor() {
-
-        arduino.pinMode(DigitalPin.PIN_8, INPUT);
-
-
-         DigitalState sensorState = arduino.digitalRead(DigitalPin.PIN_8);
-         while (sensorState == HIGH) {
-
-             System.out.print("working");
-         }
-        while (sensorState == LOW) {
-           System.out.print("working too");
-        }
-
-    }
 
     public static void rearSpeakerOn() {
 
@@ -85,6 +71,27 @@ public class Hardware extends JArduino {
 
     }
 
+public static void buttonOn() {
+    Byte pin = null;
+
+    arduino.pinMode(DigitalPin.PIN_4, INPUT);
+    arduino.digitalWrite(DigitalPin.PIN_4, HIGH);
+
+        pin =  arduino.digitalRead(DigitalPin.PIN_4).getValue();
+        System.out.print(pin);
+
+
+}
+
+    public static void buttonOff() {
+        try {
+            arduino.pinMode(DigitalPin.PIN_4, OUTPUT);
+        } catch (Exception e) {}
+
+        try {
+            arduino.digitalWrite(DigitalPin.PIN_4, LOW);
+        } catch (Exception e) {}
+    }
 
 
     public static void flashOn() {

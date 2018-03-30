@@ -1,34 +1,7 @@
 <component name="libraryTable">
   <library name="ardulink">
-    <CLASSES>
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink" />
-    </CLASSES>
-    <JAVADOC>
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/javadoc/ardulink-camel" />
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/javadoc/ardulink-console" />
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/javadoc/ardulink-core-base" />
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/javadoc/ardulink-core-beans" />
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/javadoc/ardulink-core-bluetooth" />
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/javadoc/ardulink-core-digispark" />
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/javadoc/ardulink-core-mqtt" />
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/javadoc/ardulink-core-nodemcu" />
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/javadoc/ardulink-core-proxy" />
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/javadoc/ardulink-core-raspberry" />
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/javadoc/ardulink-core-serial-jssc" />
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/javadoc/ardulink-core-serial-rxtx" />
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/javadoc/ardulink-core-util" />
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/javadoc/ardulink-core-virtual" />
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/javadoc/ardulink-legacy" />
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/javadoc/ardulink-mail" />
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/javadoc/ardulink-mqtt" />
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/javadoc/ardulink-networkproxyserver" />
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/javadoc/ardulink-swing" />
-    </JAVADOC>
-    <SOURCES>
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/examples/DataReceiver/src/main/java" />
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/examples/JoystickSmartCarDriver/src/main/java" />
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/examples/SimpleSmartCarDriver/src/main/java" />
-      <root url="jar://D:/Downloads/ardulink-V2.1.0-20180113-1035.zip!/ardulink/examples/UniqueID/src/main/java" />
-    </SOURCES>
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES />
   </library>
 </component>
