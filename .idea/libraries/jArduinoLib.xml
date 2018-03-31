@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="jArduinoLib">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../JArduino-0.1.7/jarduino.samples/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../JArduino-0.1.7/jarduino.samples/lib" recursive="false" />
+  </library>
+</component>
