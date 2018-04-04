@@ -33,10 +33,10 @@ public class DBconnect {
     }
 
     public void getData() {
-
+        String users = "SELECT * FROM `userscore` ORDER BY `userscore`.`Score` ASC";
         try {
 
-            String users = "SELECT * FROM `userscore` ORDER BY `userscore`.`Score` ASC";
+
 
             rs = st.executeQuery(users);
 
@@ -72,7 +72,7 @@ public class DBconnect {
 
             ps = con.prepareStatement(addResult);
 
-            ps.setString(1, nickname);
+            ps.setString(1,  nickname);
             ps.setInt(2, score);
 
             ps.executeUpdate();
