@@ -29,10 +29,32 @@ public class Hardware extends JArduino {
     }
 
 
-   public static JArduino arduino = new Hardware("COM3");
+    public static JArduino arduino = new Hardware("COM3");
     @Override
     protected void setup() {}
 
+    public static void ambientLightSensorOn() {
+
+        arduino.pinMode(DigitalPin.PIN_3, INPUT);
+
+        int counter = 0;
+        while (counter < 100)
+            System.out.print(arduino.digitalRead(DigitalPin.PIN_2));
+        counter++;
+        arduino.delay(50);
+    }
+
+    public static void proximitySensorOn() {
+
+        arduino.pinMode(DigitalPin.PIN_3, INPUT);
+
+        int counter = 0;
+        while (counter < 100)
+            System.out.print(arduino.digitalRead(DigitalPin.PIN_3));
+        counter++;
+        arduino.delay(50);
+
+    }
 
     public static void rearSpeakerOn() {
 
@@ -51,6 +73,42 @@ public class Hardware extends JArduino {
 
     }
 
+    public static void touchScreenButtonsPressed(){
+
+        arduino.pinMode(DigitalPin.PIN_2, INPUT);
+        arduino.pinMode(DigitalPin.PIN_3, INPUT);
+        arduino.pinMode(DigitalPin.PIN_4, INPUT);
+        arduino.pinMode(DigitalPin.PIN_5, INPUT);
+        arduino.pinMode(DigitalPin.PIN_6, INPUT);
+        arduino.pinMode(DigitalPin.PIN_7, INPUT);
+        arduino.pinMode(DigitalPin.PIN_8, INPUT);
+        arduino.pinMode(DigitalPin.PIN_9, INPUT);
+
+
+        DigitalState state = arduino.digitalRead(DigitalPin.PIN_2);
+        while (state == LOW) {
+            System.out.print( "Waiting...");
+            arduino.delay(20);
+        }
+        while (state == HIGH)
+            System.out.print("You pressed :" + state);
+
+
+    }
+
+    public static void microphoneOn(){
+
+        arduino.pinMode(DigitalPin.PIN_3, INPUT);
+
+        int count = 0;
+        while (count <100)
+        {
+            System.out.print(arduino.digitalRead(DigitalPin.PIN_3));
+            System.out.print(arduino.analogRead(AnalogPin.A_0));
+            count++;
+        }
+
+    }
 
     public static void frontSpeakerOn() {
 
@@ -71,17 +129,17 @@ public class Hardware extends JArduino {
 
     }
 
-public static void buttonOn() {
-    Byte pin = null;
+    public static void buttonOn() {
+        Byte pin = null;
 
-    arduino.pinMode(DigitalPin.PIN_4, INPUT);
-    arduino.digitalWrite(DigitalPin.PIN_4, HIGH);
+        arduino.pinMode(DigitalPin.PIN_4, INPUT);
+        arduino.digitalWrite(DigitalPin.PIN_4, HIGH);
 
         pin =  arduino.digitalRead(DigitalPin.PIN_4).getValue();
         System.out.print(pin);
 
 
-}
+    }
 
     public static void buttonOff() {
         try {
@@ -131,6 +189,4 @@ public static void buttonOn() {
     public static void Stop(){
         arduino.stopArduinoProcess();
     }
-    }
-
-
+}
