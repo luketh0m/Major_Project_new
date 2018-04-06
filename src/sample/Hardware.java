@@ -10,6 +10,8 @@ import org.sintef.jarduino.sim.InteractiveJArduinoDataGUIClient;
 
 import javax.swing.*;
 
+import java.awt.*;
+
 import static org.sintef.jarduino.DigitalState.HIGH;
 import static org.sintef.jarduino.DigitalState.LOW;
 import static org.sintef.jarduino.PinMode.INPUT;
@@ -39,18 +41,18 @@ public class Hardware extends JArduino {
 
         int counter = 0;
         while (counter < 100)
-            System.out.print(arduino.digitalRead(DigitalPin.PIN_2));
+            System.out.print(arduino.digitalRead(DigitalPin.PIN_3));
         counter++;
         arduino.delay(50);
     }
 
     public static void proximitySensorOn() {
 
-        arduino.pinMode(DigitalPin.PIN_3, INPUT);
+        arduino.pinMode(DigitalPin.PIN_4, INPUT);
 
         int counter = 0;
         while (counter < 100)
-            System.out.print(arduino.digitalRead(DigitalPin.PIN_3));
+            System.out.print(arduino.digitalRead(DigitalPin.PIN_4));
         counter++;
         arduino.delay(50);
 
@@ -103,8 +105,11 @@ public class Hardware extends JArduino {
         int count = 0;
         while (count <100)
         {
-            System.out.print(arduino.digitalRead(DigitalPin.PIN_3));
-            System.out.print(arduino.analogRead(AnalogPin.A_0));
+
+            System.out.print(arduino.analogRead(AnalogPin.A_0)+ "   ");
+            if (arduino.analogRead(AnalogPin.A_0) > 200) {
+                Toolkit.getDefaultToolkit().beep();
+            }
             count++;
         }
 

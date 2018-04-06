@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.phoneController">
+<AnchorPane onMouseEntered="#appAcessed" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.phoneController">
    <children>
       <TextFlow layoutX="36.0" layoutY="92.0" />
       <Group layoutX="42.0" layoutY="100.0">
@@ -188,5 +188,6 @@
             <Font size="16.0" />
          </font>
       </Button>
+      <Rectangle fx:id="Tint" arcHeight="5.0" arcWidth="5.0" disable="true" fill="WHITE" height="628.0" onMouseEntered="#appAcessed" opacity="0.2" stroke="#ddfff7" strokeType="INSIDE" visible="false" width="820.0" />
    </children>
 </AnchorPane>

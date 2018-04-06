@@ -31,16 +31,15 @@ import org.w3c.dom.css.Rect;
 import javax.swing.*;
 import javax.tools.Tool;
 
-
+import static java.lang.Boolean.TRUE;
 
 
 public class phoneController extends Application {
 
-Stage primaryStage = new Stage();
+    Stage primaryStage = new Stage();
 
 
-
-Boolean flashOn = false;
+    Boolean flashOn = false;
 
     @FXML
     AnchorPane rootPane;
@@ -51,32 +50,32 @@ Boolean flashOn = false;
     @FXML
     Text backText;
     @FXML
-    private  Rectangle phoneBody;
+    private Rectangle phoneBody;
     @FXML
-    private  Rectangle touchScreen;
+    private Rectangle touchScreen;
     @FXML
-    private  Rectangle volumeRocker;
+    private Rectangle volumeRocker;
     @FXML
-    private  Rectangle chargingPort;
+    private Rectangle chargingPort;
     @FXML
-    private  Rectangle sleepWakeButton;
+    private Rectangle sleepWakeButton;
     @FXML
-    private  Rectangle navBar;
+    private Rectangle navBar;
     @FXML
-    private  Rectangle multiTask1;
+    private Rectangle multiTask1;
     @FXML
-    private  Rectangle multiTask2;
+    private Rectangle multiTask2;
 
     @FXML
     private Rectangle frontSpeaker;
     @FXML
-    private  Circle camera;
+    private Circle camera;
     @FXML
-    private  Circle ambientLightSensor;
+    private Circle ambientLightSensor;
     @FXML
-    private  Circle proximitySensor;
+    private Circle proximitySensor;
     @FXML
-    private  Circle homeButton;
+    private Circle homeButton;
     @FXML
     private Polygon backButton;
 
@@ -84,11 +83,11 @@ Boolean flashOn = false;
     //Back of phone
 
     @FXML
-    private  Rectangle phoneBodyBack;
+    private Rectangle phoneBodyBack;
     @FXML
     private Rectangle fingerPrintScanner;
     @FXML
-    private  Rectangle chargingPortRear;
+    private Rectangle chargingPortRear;
     @FXML
     private Circle rearCameraColour;
     @FXML
@@ -105,7 +104,6 @@ Boolean flashOn = false;
     private Rectangle rearSpeaker4;
 
 
-
     @FXML
     private Rectangle descriptionArea;
     @FXML
@@ -117,17 +115,25 @@ Boolean flashOn = false;
     @FXML
     private Button backToPhoneButton;
     @FXML
-    private  Rectangle volumeRockerRear;
+    private Rectangle volumeRockerRear;
     @FXML
-    private  Rectangle sleepWakeButtonRear;
+    private Rectangle sleepWakeButtonRear;
 
-
+    @FXML
+     Rectangle Tint;
 
 
     Controller c = new Controller();
-    Main m  = new Main();
+    Main m = new Main();
 
-    public  void menuButtonClicked() throws Exception {
+
+
+    public void appAcessed() {
+      optionsController.tintOptions(Tint);
+
+    }
+
+    public void menuButtonClicked() throws Exception {
 
 
         closePage();
@@ -146,7 +152,8 @@ Boolean flashOn = false;
         Quiz.quizMenu();
 
     }
-    public void backToTool () {
+
+    public void backToTool() {
         frontText.setVisible(true);
         backText.setVisible(true);
         descriptionArea.setVisible(false);
@@ -158,7 +165,7 @@ Boolean flashOn = false;
     }
 
 
-    public void sensorDescription (String sensorTitle, String sensorDescription) {
+    public void sensorDescription(String sensorTitle, String sensorDescription) {
 
 
         frontText.setVisible(false);
@@ -175,19 +182,10 @@ Boolean flashOn = false;
         descriptionText.setText(sensorDescription);
 
 
-
     }
 
 
-
-
-
-
-
-
-
-    public void TooltipFeatures (String description, Shape shape)
-    {
+    public void TooltipFeatures(String description, Shape shape) {
         final Tooltip toolTip = new Tooltip();
         toolTip.setText(description);
         Tooltip.install(shape, toolTip);
@@ -196,9 +194,8 @@ Boolean flashOn = false;
 
 
     // Each sensor has its own class, easier to manage and change code.
-    public void touchScreenMouseOver()  {
+    public void touchScreenMouseOver() {
         TooltipFeatures("Touchscreen", touchScreen);
-
 
 
     }
@@ -227,10 +224,11 @@ Boolean flashOn = false;
         TooltipFeatures("Front Speaker", frontSpeaker);
 
     }
+
     public void frontSpeakerClicked() {
 
-       sensorDescription("Front speaker", "Desc");
-       hardwareButton.setOnAction(e-> Hardware.frontSpeakerOn());
+        sensorDescription("Front speaker", "Desc");
+        hardwareButton.setOnAction(e -> Hardware.frontSpeakerOn());
 
     }
 
@@ -240,10 +238,10 @@ Boolean flashOn = false;
         TooltipFeatures("Ambient Light Sensor", ambientLightSensor);
 
     }
+
     public void ambientLightSensorClicked() {
-sensorDescription("Ambient Light sensor", "Desc");
-
-
+        sensorDescription("Ambient Light sensor", "Desc");
+        hardwareButton.setOnAction(e -> Hardware.ambientLightSensorOn());
 
 
     }
@@ -252,9 +250,11 @@ sensorDescription("Ambient Light sensor", "Desc");
         TooltipFeatures("Proximity Sensor", proximitySensor);
 
     }
+
     public void proximitySensorClicked() {
 
-      sensorDescription("Proximimty Sensor", "Desc");
+        sensorDescription("Proximimty Sensor", "Desc");
+        hardwareButton.setOnAction(e -> Hardware.proximitySensorOn());
     }
 
     public void volumeRockerMouseOver() {
@@ -270,18 +270,20 @@ sensorDescription("Ambient Light sensor", "Desc");
     }
 
 
-
     public void sleepWakeButtonMouseover() {
+
 
         TooltipFeatures("Sleep/Wake Button", sleepWakeButton);
 
     }
+
     public void sleepWakeButtonClicked() {
 
         sensorDescription("Sleep/ Wake Button Clicked", "Sleep/wae");
-
+        hardwareButton.setOnAction(e -> Hardware.proximitySensorOn());
 
     }
+
     public void setSleepWakeButtonRearMouseOver() {
         TooltipFeatures("Sleep/Wake Button", sleepWakeButtonRear);
 
@@ -294,13 +296,14 @@ sensorDescription("Ambient Light sensor", "Desc");
 
     public void navigationBarClicked() {
 
-      sensorDescription("Navigation bar", "Nav bar");
+        sensorDescription("Navigation bar", "Nav bar");
     }
 
     public void backButtonMouseOver() {
         TooltipFeatures("Back Button", backButton);
 
     }
+
     public void backButtonClicked() {
 
         sensorDescription("Back button", "Button");
@@ -313,12 +316,13 @@ sensorDescription("Ambient Light sensor", "Desc");
 
 
     }
+
     public void homeButtonClicked() {
 
-        sensorDescription("Home button","Home Button");
-        hardwareButton.setOnAction( e-> Hardware.buttonOn());
+        sensorDescription("Home button", "Home Button");
+        hardwareButton.setOnAction(e -> Hardware.buttonOn());
 
-        backToPhoneButton.setOnAction(e-> {
+        backToPhoneButton.setOnAction(e -> {
             Hardware.buttonOff();
             backToTool();
         });
@@ -330,9 +334,10 @@ sensorDescription("Ambient Light sensor", "Desc");
 
 
     }
+
     public void multiTaskingButtonClicked() {
 
-           sensorDescription("Multi Tasking Button", "Dess");
+        sensorDescription("Multi Tasking Button", "Dess");
 
     }
 
@@ -348,13 +353,14 @@ sensorDescription("Ambient Light sensor", "Desc");
 
 
     }
+
     public void phoneBodyBackMouseOver() {
         TooltipFeatures("Phone body", phoneBodyBack);
 
     }
 
-    public void   fingerPrintScannerMouseOver() {
-    TooltipFeatures("Fingerprint Scanner", fingerPrintScanner);
+    public void fingerPrintScannerMouseOver() {
+        TooltipFeatures("Fingerprint Scanner", fingerPrintScanner);
     }
 
     public void FingerPrintScannerClicked() {
@@ -364,17 +370,18 @@ sensorDescription("Ambient Light sensor", "Desc");
 
     public void rearSpeakerClicked() {
         sensorDescription("Rear Speaker", "Rear Speaker Clicked");
-        hardwareButton.setOnAction(e-> Hardware.rearSpeakerOn());
+        hardwareButton.setOnAction(e -> Hardware.rearSpeakerOn());
 
     }
 
     public void rearSpeakerMouseOver() {
         TooltipFeatures("Rear Speakers", rearSpeaker1);
-        TooltipFeatures("Rear Speakers",rearSpeaker2);
+        TooltipFeatures("Rear Speakers", rearSpeaker2);
         TooltipFeatures("Rear Speakers", rearSpeaker3);
         TooltipFeatures("Rear Speakers", rearSpeaker4);
     }
-    public void RearCameraColourClicked(){
+
+    public void RearCameraColourClicked() {
 
 
     }
@@ -396,8 +403,8 @@ sensorDescription("Ambient Light sensor", "Desc");
 
         sensorDescription("Flash", "This is the flash. It works by... Want to give it a go?");
         hardwareButton.setOnAction(e -> Hardware.flashOn());
-        backToPhoneButton.setOnAction(e-> {
-                Hardware.flashOff();
+        backToPhoneButton.setOnAction(e -> {
+            Hardware.flashOff();
             backToTool();
         });
 
@@ -423,7 +430,7 @@ sensorDescription("Ambient Light sensor", "Desc");
     public void closePage() {
 
         Window window = rootPane.getScene().getWindow();
-        if (window instanceof Stage){
+        if (window instanceof Stage) {
             ((Stage) window).close();
         }
     }
@@ -434,4 +441,5 @@ sensorDescription("Ambient Light sensor", "Desc");
 
 
     }
+
 }

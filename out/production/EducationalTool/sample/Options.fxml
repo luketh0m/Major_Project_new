@@ -2,9 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -24,27 +22,26 @@
                   <Text layoutX="68.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Controls" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="141.0" layoutX="20.0" layoutY="52.0" stroke="BLACK" strokeType="INSIDE" width="173.0" />
                   <Text layoutX="28.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras commodo dictum arcu quis facilisis. Proin sit amet rhoncus diam. " wrappingWidth="157.51953089237213" />
-                  <Text layoutX="445.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sound" />
-                  <Slider layoutX="445.0" layoutY="81.0" prefHeight="17.0" prefWidth="100.0" />
-                  <ToggleButton layoutX="452.0" layoutY="110.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="On | Off" />
+                  <Text layoutX="478.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sound" />
+                  
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="196.0" prefWidth="800.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="141.0" layoutX="20.0" layoutY="34.0" stroke="BLACK" strokeType="INSIDE" width="173.0" />
                   <Text layoutX="49.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Backround Color" />
-                  <RadioButton layoutX="56.0" layoutY="55.0" mnemonicParsing="false" text="None" />
-                  <RadioButton layoutX="57.0" layoutY="87.0" mnemonicParsing="false" text="Yellow" />
-                  <RadioButton layoutX="60.0" layoutY="122.0" mnemonicParsing="false" text="Blue" />
+                  <RadioButton fx:id="noBackgroundColorButton" layoutX="56.0" layoutY="55.0" mnemonicParsing="false" onAction="#noTint" selected="true" text="None" />
+                  <RadioButton fx:id="yellowBackgroundColorButton" layoutX="57.0" layoutY="87.0" mnemonicParsing="false" onAction="#yellowTint" text="Yellow" />
+                  <RadioButton fx:id="blueBackgroundColorButton" layoutX="60.0" layoutY="122.0" mnemonicParsing="false" onAction="#blueTint" text="Blue" />
                   <Text layoutX="441.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text Size" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="141.0" layoutX="401.0" layoutY="28.0" stroke="BLACK" strokeType="INSIDE" width="173.0" />
-                  <RadioButton layoutX="435.0" layoutY="47.0" mnemonicParsing="false" text="Small" />
-                  <RadioButton layoutX="433.0" layoutY="76.0" mnemonicParsing="false" text="Medium">
+                  <RadioButton fx:id="smallTextSizeButton" layoutX="435.0" layoutY="47.0" mnemonicParsing="false" selected="true" text="Small" />
+                  <RadioButton fx:id="mediumTextSizeButton" layoutX="433.0" layoutY="76.0" mnemonicParsing="false" text="Medium">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </RadioButton>
-                  <RadioButton layoutX="430.0" layoutY="118.0" mnemonicParsing="false" text="Large">
+                  <RadioButton fx:id="largeTextSizeButton" layoutX="430.0" layoutY="118.0" mnemonicParsing="false" text="Large">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -57,5 +54,6 @@
       <Button fx:id="infoButton" layoutX="340.0" layoutY="575.0" mnemonicParsing="false" onAction="#infoButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Info" />
       <Button fx:id="menuButton" layoutX="156.0" layoutY="575.0" mnemonicParsing="false" onAction="#menuButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Menu" />
       <Button fx:id="quizButton" layoutX="548.0" layoutY="575.0" mnemonicParsing="false" onAction="#quizButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Quiz" />
+      <Rectangle fx:id="Tint" arcHeight="5.0" arcWidth="5.0" disable="true" fill="WHITE" height="608.0" layoutX="10.0" layoutY="10.0" opacity="0.2" stroke="#ddfff7" strokeType="INSIDE" visible="false" width="800.0" />
    </children>
 </AnchorPane>

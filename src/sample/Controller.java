@@ -2,10 +2,13 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
+
+import static java.lang.Boolean.TRUE;
 
 
 public class Controller {
@@ -32,6 +35,16 @@ Button quizButton;
     }
 
 
+    @FXML
+ Rectangle Tint;
+
+
+
+
+
+
+
+
     public void startButtonMouseOver() {
        mouseOver(startButton);
     }
@@ -43,11 +56,21 @@ Button quizButton;
     }
     public void quizButtonMouseOver() {
         mouseOver(quizButton);
+
     }
 
-    public void startButton() throws Exception { //When user clicks the start button, load the Phone.fxml file
+    public void appAcessed() {
+        optionsController.tintOptions(Tint);
+        System.out.print("Accessed");
+
+    }
+
+    public void startButton()  throws Exception { //When user clicks the start button, load the Phone.fxml file
+
         AnchorPane pane = FXMLLoader.load(getClass().getResource("Phone.fxml"));
         rootPane.getChildren().setAll(pane);
+
+
 
 
     }
@@ -55,6 +78,7 @@ Button quizButton;
     public void settingsButton() throws Exception { //When user clicks the start button, load the Phone.fxml file
         AnchorPane pane = FXMLLoader.load(getClass().getResource("Options.fxml"));
         rootPane.getChildren().setAll(pane);
+
 
 
     }
@@ -68,6 +92,7 @@ Button quizButton;
     public void quizButton() throws Exception {
 
         Quiz.quizMenu();
+
 
 
     }
