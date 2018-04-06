@@ -131,6 +131,7 @@ public class phoneController extends Application {
     public void appAcessed() {
       optionsController.tintOptions(Tint);
 
+
     }
 
     public void menuButtonClicked() throws Exception {

@@ -16,14 +16,14 @@ public class Main extends Application {
     DBconnect DB = new DBconnect();
 
 
-
+    public static String currentPage = "sample.fxml";
 
     @Override
     public void start(Stage primaryStage) throws Exception{ // Load FXML document and display on screen
 
 
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Start");
+        Parent root = FXMLLoader.load(getClass().getResource(currentPage));
+        primaryStage.setTitle("Welcome!");
         primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();
         primaryStage.setMinWidth(800);
@@ -37,6 +37,8 @@ public class Main extends Application {
     }
 
 
+
+
     public void closeWindow(Stage primaryStage) {
 
         primaryStage.close();
@@ -44,7 +46,7 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
-     optionsController o = new optionsController();
+
 
 
     }

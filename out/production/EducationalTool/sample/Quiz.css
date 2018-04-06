@@ -1,11 +1,21 @@
 
 
 
-.button {
-    -fx-background-color: #1a936f;
+
+
+
+.Textsmall {
 
 
 }
+
+.button {
+    -fx-background-color: #1a936f;
+}
+.radio-button {
+
+}
+
 
 .button:hover {
     -fx-scale-x: 5.1;

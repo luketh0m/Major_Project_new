@@ -8,7 +8,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-import sun.util.locale.provider.FallbackLocaleProviderAdapter;
+
 
 import java.awt.*;
 
@@ -17,7 +17,7 @@ import static java.lang.Boolean.TRUE;
 
 
 public class optionsController {
-    Stage primaryStage = new Stage();
+    static Stage primaryStage = new Stage();
 
     @FXML
     AnchorPane rootPane;
@@ -50,6 +50,14 @@ public static Boolean noTint = FALSE;
 public static Boolean yellowTint = FALSE;
 public static Boolean blueTint = FALSE;
 
+    public static Boolean smallText = FALSE;
+    public static Boolean mediumText = FALSE;
+    public static Boolean largeText = FALSE;
+
+    public static String fontSize = "Quiz.css";
+
+
+
 
     public static void tintOptions (Rectangle Tint) {
         if (optionsController.blueTint == TRUE) {
@@ -69,26 +77,90 @@ public static Boolean blueTint = FALSE;
 
 
 
+    public void smallFontButton() throws Exception {
+        smallTextSize();
+        smallTextSizeButton.setSelected(true);
+        mediumTextSizeButton.setSelected(false);
+        largeTextSizeButton.setSelected(false);
+
+
+    }
+
+    public void mediumFontButton() throws Exception {
+
+
+        smallTextSizeButton.setSelected(false);
+        mediumTextSizeButton.setSelected(true);
+        largeTextSizeButton.setSelected(false);
+        mediumTextSize();
+    }
+
+    public void largeFontButton() {
+        largeTextSize();
+        smallTextSizeButton.setSelected(false);
+        mediumTextSizeButton.setSelected(false);
+        largeTextSizeButton.setSelected(true);
+
+    }
+
+
+public static void smallTextSize () {
+
+       fontSize = "/Sample/Quiz.css";
+        smallText = TRUE;
+        mediumText = FALSE;
+        largeText = FALSE;
+
+
+}
+
+ public static void mediumTextSize () {
+    fontSize = "/Sample/fontMedium.css";
+        smallText = FALSE;
+        mediumText = TRUE;
+        largeText = FALSE;
+
+       
+
+    }
+
+ public static void largeTextSize() {
+
+         smallText = FALSE;
+         mediumText = FALSE;
+         largeText = TRUE;
+
+     }
+
+
+
+
     public static void noBackgroundColorButton(Rectangle R) {
 
     R.setVisible(false);
     noTint = TRUE;
+    yellowTint = FALSE;
+    blueTint = FALSE;
 
 }
 
 public static void yellowTintButton(Rectangle R) {
-    R.setFill((Color.rgb(255,255,0, 1.0)));
+    R.setFill((Color.rgb(255,255,0, 0.3)));
     R.setVisible(true);
     yellowTint = TRUE;
+    blueTint = FALSE;
+    noTint = FALSE;
 
 }
 
 
 public static void blueTintButton (Rectangle R) {
 
-            R.setFill((Color.rgb(0,0,255, 0.2)));
+            R.setFill((Color.rgb(0,0,255, 0.3)));
             R.setVisible(true);
             blueTint = TRUE;
+            yellowTint = FALSE;
+            noTint = FALSE;
 
     }
 

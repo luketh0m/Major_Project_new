@@ -69,6 +69,8 @@ Button quizButton;
 
         AnchorPane pane = FXMLLoader.load(getClass().getResource("Phone.fxml"));
         rootPane.getChildren().setAll(pane);
+        rootPane.getStylesheets().add("/Sample/Quiz.css");
+
 
 
 
@@ -78,6 +80,7 @@ Button quizButton;
     public void settingsButton() throws Exception { //When user clicks the start button, load the Phone.fxml file
         AnchorPane pane = FXMLLoader.load(getClass().getResource("Options.fxml"));
         rootPane.getChildren().setAll(pane);
+        rootPane.getStylesheets().add(optionsController.fontSize);
 
 
 
