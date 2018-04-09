@@ -10,14 +10,17 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 
+import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
+import java.util.List;
 
 public class Quiz extends Application {
 
@@ -241,11 +244,39 @@ public class Quiz extends Application {
 
        grid.setAlignment(Pos.CENTER_LEFT);
 
+        Rectangle bottomMenu = new Rectangle();
+        bottomMenu.setWidth(800);
+        bottomMenu.setHeight(38);
+        bottomMenu.setLayoutY(562);
+        bottomMenu.setFill(Color.WHITE);
+
+        Button menuButton = new Button("Menu");
+        Button aboutButton = new Button("About");
+        Button infoButton = new Button("Info");
+        Button toolkitButton = new Button("Toolkit");
+
+        menuButton.setLayoutX(130);
+        menuButton.setLayoutY(562);
+        menuButton.setPrefHeight(38);
+        menuButton.setPrefWidth(118);
+
+       aboutButton.setLayoutX(260);
+        aboutButton.setLayoutY(562);
+        aboutButton.setPrefHeight(38);
+        aboutButton.setPrefWidth(118);
+
+        infoButton.setLayoutX(390);
+        infoButton.setLayoutY(562);
+        infoButton.setPrefHeight(38);
+        infoButton.setPrefWidth(118);
+
+       toolkitButton.setLayoutX(520);
+       toolkitButton.setLayoutY(562);
+       toolkitButton.setPrefHeight(38);
+        toolkitButton.setPrefWidth(118);
 
 
-
-
-        layout.getChildren().addAll( questionNumberLabel, questionLabel,grid);
+        layout.getChildren().addAll( questionNumberLabel, questionLabel,grid, bottomMenu, menuButton, infoButton,aboutButton,toolkitButton);
 
 
 
