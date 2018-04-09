@@ -38,7 +38,7 @@ Button quizButton;
     @FXML
  Rectangle Tint;
 
-
+   public AnchorPane pane;
 
 
 
@@ -67,7 +67,7 @@ Button quizButton;
 
     public void startButton()  throws Exception { //When user clicks the start button, load the Phone.fxml file
 
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("Phone.fxml"));
+        pane = FXMLLoader.load(getClass().getResource("Phone.fxml"));
         rootPane.getChildren().setAll(pane);
         rootPane.getStylesheets().add("/Sample/Quiz.css");
 
@@ -78,7 +78,7 @@ Button quizButton;
     }
 
     public void settingsButton() throws Exception { //When user clicks the start button, load the Phone.fxml file
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("Options.fxml"));
+         pane = FXMLLoader.load(getClass().getResource("Options.fxml"));
         rootPane.getChildren().setAll(pane);
         rootPane.getStylesheets().add(optionsController.fontSize);
 
@@ -94,7 +94,9 @@ Button quizButton;
 
     public void quizButton() throws Exception {
 
-        Quiz.quizMenu();
+         pane = FXMLLoader.load(getClass().getResource("welcomeQuiz.fxml"));
+        rootPane.getChildren().setAll(pane);
+        rootPane.getStylesheets().add("/Sample/Quiz.css");
 
 
 

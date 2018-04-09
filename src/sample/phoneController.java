@@ -150,7 +150,7 @@ public class phoneController extends Application {
 
     public void quizButtonClicked() throws Exception {
         closePage();
-        Quiz.quizMenu();
+        quizMenu.quizDifficulty();
 
     }
 
@@ -435,6 +435,8 @@ public class phoneController extends Application {
             ((Stage) window).close();
         }
     }
+
+
 
 
     @Override

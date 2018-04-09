@@ -77,7 +77,7 @@ public static Boolean blueTint = FALSE;
 
 
 
-    public void smallFontButton() throws Exception {
+    public void smallFontButton() {
         smallTextSize();
         smallTextSizeButton.setSelected(true);
         mediumTextSizeButton.setSelected(false);
@@ -86,7 +86,7 @@ public static Boolean blueTint = FALSE;
 
     }
 
-    public void mediumFontButton() throws Exception {
+    public void mediumFontButton() {
 
 
         smallTextSizeButton.setSelected(false);
@@ -120,7 +120,7 @@ public static void smallTextSize () {
         mediumText = TRUE;
         largeText = FALSE;
 
-       
+
 
     }
 
@@ -209,7 +209,7 @@ public void blueTint(){
 
     public void quizButtonClicked() throws Exception {
         closePage();
-        Quiz.quizMenu();
+        quizMenu.quizDifficulty();
 
     }
 

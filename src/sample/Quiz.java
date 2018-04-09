@@ -1,14 +1,15 @@
 package sample;
 import javafx.application.Application;
+import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.geometry.VPos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -154,112 +155,10 @@ public class Quiz extends Application {
         Stage primaryStage = new Stage();
         Quiz quiz = new Quiz();
 
-        quiz.score =0;
+        quiz.score = 0;
         quiz.questionNo = 1;
 
-
-
-        // Text files of question and answers
-        String Easy = "easyQuestions.txt";
-        String Medium = "mediumQuestions.txt";
-        String Hard = "hardQuestions.txt";
-
-        String easyAnswer = "easyQuestionsAnswers.txt";
-        String mediumAnswer = "mediumQuestionsAnswers.txt";
-        String hardAnswer = "hardQuestionsAnswers.txt";
-
-
-        HBox topMenu = new HBox();
-        topMenu.setAlignment(Pos.CENTER);
-        topMenu.setPadding(new Insets(80,20,20,20));
-        Text quizText = new Text("Welcome to the Test!");
-        quizText.setFont(new Font("Arial", 45));
-        topMenu.getChildren().addAll(quizText);
-
-
-
-        //Difficulty selection
-        VBox middleMenu = new VBox();
-        middleMenu.setAlignment(Pos.CENTER);
-        middleMenu.setPadding( new Insets (0,20,20, 20));
-        middleMenu.setSpacing(10);
-        Text difficultyText = new Text ("Select your difficulty");
-        difficultyText.setFont(new Font ("Arial", 29));
-        Button easyButton = new Button("Easy");
-        Button mediumButton = new Button("Medium");
-        Button hardButton = new Button("Hard");
-        middleMenu.getChildren().addAll(difficultyText,easyButton,mediumButton,hardButton);
-
-        HBox bottomMenu = new HBox();
-        bottomMenu.setAlignment(Pos.CENTER);
-        Button menu = new Button ("Menu");
-        Button about = new Button ("About");
-        Button info = new Button ("Info");
-        Button toolKit = new Button ("Toolkit");
-        bottomMenu.getChildren().addAll(menu, about, info, toolKit);
-
-        BorderPane borderpane = new BorderPane();
-        borderpane.setTop(topMenu);
-        borderpane.setCenter(middleMenu);
-        borderpane.setBottom(bottomMenu);
-
-
-        Scene scene = new Scene(borderpane, 800, 600);
-        scene.getStylesheets().add("/Sample/Quiz.css");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-
-
-        easyButton.setOnAction(e -> {
-
-            try {
-                generateQuestionsAndAnswers(Easy, easyAnswer);
-
-
-            } catch (FileNotFoundException notFound) {
-                System.out.print(notFound);
-            }
-
-
-        });
-
-
-        mediumButton.setOnAction(e -> {
-
-            try {
-                generateQuestionsAndAnswers(Medium, mediumAnswer);
-
-
-            } catch (FileNotFoundException notFound) {
-                System.out.print(notFound);
-            }
-
-
-        });
-
-        hardButton.setOnAction(e -> {
-
-            try {
-                generateQuestionsAndAnswers(Hard, hardAnswer);
-
-
-            } catch (FileNotFoundException notFound) {
-                System.out.print(notFound);
-            }
-
-
-        });
-
     }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -294,14 +193,74 @@ public class Quiz extends Application {
 
         Collections.shuffle(Answers);
 
-        System.out.println(Answers.get(0));
-        System.out.println(Answers.get(1));
-        System.out.println(Answers.get(2));
-        System.out.println(Answers.get(3));
 
 
-        VBox layout = new VBox();
-        layout.getChildren().addAll( questionNumberLabel, questionLabel,Answers.get(0), Answers.get(1), Answers.get(2), Answers.get(3));
+
+        AnchorPane  layout = new AnchorPane();
+        GridPane grid = new GridPane();
+        grid.add(Answers.get(0), 1, 0);
+        grid.add(Answers.get(1), 1, 1);
+        grid.add(Answers.get(2), 2, 0);
+        grid.add(Answers.get(3), 2, 1);
+
+
+
+
+        correctAnswer.setPrefHeight(75);
+        correctAnswer.setPrefWidth(168);
+
+
+        incorrectOne.setPrefHeight(75);
+        incorrectOne.setPrefWidth(168);
+
+
+        incorrectTwo.setPrefHeight(75);
+        incorrectTwo.setPrefWidth(168);
+
+        incorrectThree.setPrefHeight(75);
+        incorrectThree.setPrefWidth(168);
+
+
+
+        questionNumberLabel.setFont(new Font("curlz MT", 30));
+        questionNumberLabel.setTextFill(Color.web("#114b5f"));
+        questionNumberLabel.setLayoutX(10);
+        questionNumberLabel.setLayoutY(10);
+
+        questionLabel.setFont(new Font("curlz MT", 45));
+        questionLabel.setTextFill(Color.web("#114b5f"));
+        questionLabel.setLayoutX(250);
+        questionLabel.setLayoutY(100);
+
+        grid.setLayoutX(47);
+        grid.setLayoutY(239);
+        grid.setPrefHeight(309);
+        grid.setPrefWidth(721);
+        grid.setVgap(50);
+        grid.setHgap(150);
+
+       grid.setAlignment(Pos.CENTER_LEFT);
+
+
+
+
+
+        layout.getChildren().addAll( questionNumberLabel, questionLabel,grid);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         Scene scene = new Scene(layout, 800, 600);
         primaryStage.setScene(scene);
         primaryStage.show();

@@ -28,7 +28,7 @@ public class Main extends Application {
         primaryStage.show();
         primaryStage.setMinWidth(800);
         primaryStage.setMinHeight(600);
-        System.out.print("on the main page the yellow tint option is" + optionsController.yellowTint);
+
 
 
 
