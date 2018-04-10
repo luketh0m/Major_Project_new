@@ -203,7 +203,7 @@ public class phoneController extends Application {
 
     public void touchScreenClicked() throws Exception {
 
-        sensorDescription("Touch Screen", "This is the touchscreen. It does all of these things");
+        sensorDescription("Touch Screen", "That was the Touchscreen! Every time you tap on your phone, your phone has to transmit that touch into an electrical signal. It does this using Capacitive Sensing. Underneath the glass surface of your phone, there is a conductive material called indium tin oxide. Within this matieral there are electrodes arranged in a diamond grid. Your phone keeps these electrodes at a set voltage. When your finger touches the screen, it attracts the positive electrodes on one side of your finger, forcing your phone to deposit more electrons. Each pair of electrodes then has a meter that keeps track of how many charges are in the two electrodes at that particular spot on the phone. Your phone looks at which point of the phone the electrodes are disturbed, and it then knows where you have placed your finger on the screen! It also means that you are able to text with the back of a metal spoon, or even a hot dog!  ");
 
 
     }
@@ -217,7 +217,7 @@ public class phoneController extends Application {
 
     public void cameraClicked() {
 
-        sensorDescription("Camera", "Desc");
+        sensorDescription("Camera", "That's the camera! The camera uses a lens to help light enter through the aperture (The aperture is basically a hole) and it lets light through to the sensor. If too much light is taken in, the image will be all white. If too little light is taken in, the image will be black. The sensor is set to shut off after a certain amount of time to make sure the right amount of light has entered. Once all of the light infomation has been caputred, it is sent too a signal image processor whcih will take all the infomation and turn it into an image. (Normal a JPEG format, but this depends on what phone you use! " );
     }
 
     public void frontSpeakerMouseOver() {
@@ -228,7 +228,7 @@ public class phoneController extends Application {
 
     public void frontSpeakerClicked() {
 
-        sensorDescription("Front speaker", "Desc");
+        sensorDescription("Front speaker", "The front and rear speakers both work the same as a normal speakers.The primary purpose of a speaker is to convert electrical energy into acoustic energy. At the front of a speaker there is a cone. The outer part of the cone is fastened to the outer part of the loudpeakers circular metal rim. The inner part (the smaller part of the cone) is fixed to an iron coil that sits just in front of a permanent magnet. To make sound, electrical singals feed through the speaker cables into the coil. As electricity flows back and forth in the cables, the magnet electromagnet either attracts of repels the permanent magnet. This moves the coil backward and forward, pulling and pushing the speakers cone. The movign cone pumps sounds out into the air ");
         hardwareButton.setOnAction(e -> Hardware.frontSpeakerOn());
 
     }
@@ -241,7 +241,7 @@ public class phoneController extends Application {
     }
 
     public void ambientLightSensorClicked() {
-        sensorDescription("Ambient Light sensor", "Desc");
+        sensorDescription("Ambient Light sensor", "That was the ambient light sensor! The Ambient Light Sensor helps to measure the light in a surrounding area and can adjust your phone's screen brightness Accordingly. it does this by using a photodiode.A photodiode is a semiconductor device that converts light into an electrical current. The photodiode measures the amount of light in the surrounding area, and these readings are sent to your phones CPU (Central processing unit). if the surrounding area is bright, the signal sent will be high, as a result the phone will increase in screen brightness, if the light is low, the screen brightness will decrease.");
         hardwareButton.setOnAction(e -> Hardware.ambientLightSensorOn());
 
 
@@ -254,7 +254,7 @@ public class phoneController extends Application {
 
     public void proximitySensorClicked() {
 
-        sensorDescription("Proximimty Sensor", "Desc");
+        sensorDescription("Proximimty Sensor", "That was the proximity sensor! The proximimty sensor measures how close something is to your device. Its range is very limited (up to 30mm) but this is because its used to detect the presence of a human ear. This means it can turn the screen off while a human ear is in range (normally due to a user on the phone). It works by using a sensor called a Capacitive Proximity sensor. It consists of two metal plates separated by an insulator called a dielectric. Using this, it can detect any target with a higher dielectric constant greater than air. Dialectic constant is an electrostatic field and can detect interference within it. Once the detector senses enough interference, the output circuit remains active until the target is removed, which is why your screen turns off while you are on the phone! ");
         hardwareButton.setOnAction(e -> Hardware.proximitySensorOn());
     }
 
@@ -266,7 +266,7 @@ public class phoneController extends Application {
 
     public void volumeRockerClicked() {
 
-        sensorDescription("Volume Rocker", "Volume Rocker");
+        sensorDescription("Volume Rocker", "That was the volume rocker. The volume rocker works the same way as any other button on a phone. The button adjusts the voltage being sent from the button from either low to high, or high to low. As a result, the phone has a mechanism for dealing with this type of change based on its current state. For example, if the state is high (User pressed the button), turn the sound off! The volume rocker actualy conatins two small buttons, and the casing around them is what we see! Pressing the casing up presses the volume up button, while pressing the casing at the bottom presses the downward button Press the launch hardware button and give it a go yourself!");
 
     }
 
