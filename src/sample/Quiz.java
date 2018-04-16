@@ -8,9 +8,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.effect.Reflection;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.StrokeType;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -327,27 +329,98 @@ public class Quiz extends Application {
 
     }
 
+
+
+    public static String factGenerator () throws FileNotFoundException {
+
+
+        List<String> list = new LinkedList<>();
+        File factsFile = new File("Facts.txt"); //Loads question text file
+
+        Scanner scanner = new Scanner(factsFile);
+
+        while (scanner.hasNextLine()) {
+            list.add(scanner.nextLine());
+        }
+
+        String facts[] = list.toArray(new String[list.size()]);
+
+
+        List<String> factsList = Arrays.asList(facts);
+
+        Stack<String> factStack = new Stack<>();
+
+        factStack.addAll(factsList);
+
+        String fact = factStack.pop();
+
+        return fact;
+
+    }
+
+
     public static void quizOver(Stage primaryStage) {
+
+
+
+        Reflection r = new Reflection();
+        Font f = new Font("Curlz MT", 32);
+        Font l = new Font("Curlz MT", 20);
 
         DBconnect connect = new DBconnect();
         connect.getData();
 
         primaryStage.close();
 
-        VBox content = new VBox();
-        Stage newPrimaryStage = new Stage();
+       AnchorPane pane = new AnchorPane();
+       Rectangle backround = new Rectangle();
+       backround.setHeight(600);
+       backround.setWidth(800);
+       backround.setFill(Color.web("#ddfff7"));
+       pane.setPrefHeight(600);
+       pane.setPrefWidth(800);
+       Stage newPrimaryStage = new Stage();
 
 
-        Label gameOver = new Label ("Quiz complete");
-        Label userScore = new Label ("You Scored " + Quiz.score + " Out of 10!");
+        Text gameOver = new Text ("Quiz complete");
+        gameOver.setLayoutX(258.0);
+        gameOver.setLayoutY(53);
+        gameOver.setFont(new Font("Curlz MT", 52));
+
+        gameOver.setEffect(r);
+
+        Text userScore = new Text ("You Scored " + Quiz.score + " Out of 10!");
+        userScore.setLayoutX(267);
+        userScore.setLayoutY(151);
+        userScore.setFont(f);
 
 
-        Label tryAgin = new Label ("Try again?");
+        Text tryAgin = new Text ("Try again?");
+        tryAgin.setLayoutX(343);
+        tryAgin.setLayoutY(218);
+        tryAgin.setFont(f);
+
         Button retry = new Button ("Retry");
+        retry.setLayoutX(343);
+        retry.setLayoutY(238);
+        retry.setPrefWidth(131);
+        retry.setPrefHeight(30);
+        retry.setFont(new Font("Curlz MT", 14));
+
         Text enterName = new Text ("Please enter your nickname to be added to the LeaderBoard");
+        enterName.setLayoutX(260);
+        enterName.setLayoutY(340);
+        enterName.setFont(new Font("Curlz MT", 20));
+        enterName.setEffect(r);
+
         TextField nameSubmission = new TextField();
+        nameSubmission.setLayoutX(260);
+        nameSubmission.setLayoutY(370);
 
         Button submit = new Button("Enter");
+        submit.setLayoutX(532);
+        submit.setLayoutY(370);
+        submit.setFont(f);
         retry.setOnAction(e -> quizMenu() );
 
         submit.setOnAction(e->
@@ -368,33 +441,79 @@ public class Quiz extends Application {
 
 
         Text lBoard = new Text ("LeaderBoard");
-        //  Image trophy = new Image("/sample/Trophy.PNG");
+        lBoard.setLayoutX(65);
+        lBoard.setLayoutY(179);
+        lBoard.setFont(l);
+
+        // Image trophy
 
 
         Text firstPlace = new Text ((String.format("1. %s", connect.nickNames.pop() + " Score: " +connect.userScores.pop())));
+        firstPlace.setLayoutX(65);
+        firstPlace.setLayoutY(240);
+        firstPlace.setFont(l);
+
         Text secondPlace = new Text((String.format("2. %s", connect.nickNames.pop() + " Score: " +connect.userScores.pop())));
+        secondPlace.setLayoutX(65);
+        secondPlace.setLayoutY(307);
+        secondPlace.setFont(l);
+
         Text thirdPlace = new Text ((String.format("3. %s", connect.nickNames.pop() + " Score: " + connect.userScores.pop())));
+        thirdPlace.setLayoutX(65);
+        thirdPlace.setLayoutY(274);
+        thirdPlace.setFont(l);
 
 
 
-        HBox fact = new HBox();
-        Label Fact = new Label("Fact will appear here");
+        Rectangle factBoarder = new Rectangle();
+        factBoarder.setArcHeight(5);
+        factBoarder.setArcWidth(5);
+        factBoarder.setWidth(400);
+        factBoarder.setHeight(43);
+        factBoarder.setLayoutX(248);
+        factBoarder.setLayoutY(450);
+        factBoarder.setStrokeType(StrokeType.INSIDE);
+       factBoarder.setFill(Color.web("#7aafe1"));
+
+        Text fact = null;
+        try {
+            fact = new Text("Fact: " + Quiz.factGenerator());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        fact.setLayoutX(248);
+       fact.setLayoutY(481);
+       fact.setFont(l);
 
 
-        HBox bottomMenu = new HBox();
-        bottomMenu.setAlignment(Pos.CENTER);
+
+
+
         Button menu = new Button ("Menu");
+        menu.setLayoutX(171);
+        menu.setLayoutY(566);
+
         Button about = new Button ("About");
+        about.setLayoutX(271);
+        about.setLayoutY(566);
+
         Button info = new Button ("Info");
+        info.setLayoutX(371);
+        info.setLayoutY(566);
+
         Button toolKit = new Button ("Toolkit");
-        bottomMenu.getChildren().addAll(menu, about, info, toolKit);
+        toolKit.setLayoutX(471);
+        toolKit.setLayoutY(566);
 
 
 
 
-        content.getChildren().addAll(gameOver, userScore, tryAgin, retry, enterName, nameSubmission, submit, lBoard, firstPlace, secondPlace, thirdPlace, fact, Fact);
-        Scene scene = new Scene(content, 600, 800 );
+
+        pane.getChildren().addAll( backround, gameOver, userScore, tryAgin, retry, enterName, nameSubmission, submit, lBoard, firstPlace, secondPlace, thirdPlace, factBoarder, fact, menu, about, info, toolKit);
+        Scene scene = new Scene(pane, 800, 600 );
+        scene.getStylesheets().add(optionsController.fontSize);
         newPrimaryStage.setScene(scene);
+
         newPrimaryStage.show();
 
 

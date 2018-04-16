@@ -118,9 +118,11 @@ public class phoneController extends Application {
     private Rectangle volumeRockerRear;
     @FXML
     private Rectangle sleepWakeButtonRear;
+    @FXML
+    private Rectangle greyOutRectangle;
 
     @FXML
-     Rectangle Tint;
+   private Rectangle Tint;
 
 
     Controller c = new Controller();
@@ -129,7 +131,7 @@ public class phoneController extends Application {
 
 
     public void appAcessed() {
-      optionsController.tintOptions(Tint);
+        optionsController.tintOptions(Tint);
 
 
     }
@@ -150,7 +152,7 @@ public class phoneController extends Application {
 
     public void quizButtonClicked() throws Exception {
         closePage();
-        quizMenu.quizDifficulty();
+        sample.quizMenu.quizDifficulty();
 
     }
 
@@ -162,13 +164,14 @@ public class phoneController extends Application {
         descriptionText.setVisible(false);
         hardwareButton.setVisible(false);
         backToPhoneButton.setVisible(false);
+        greyOutRectangle.setVisible(false);
 
     }
 
 
     public void sensorDescription(String sensorTitle, String sensorDescription) {
 
-
+        greyOutRectangle.setVisible(true);
         frontText.setVisible(false);
         backText.setVisible(false);
         descriptionArea.setVisible(true);
@@ -203,7 +206,7 @@ public class phoneController extends Application {
 
     public void touchScreenClicked() throws Exception {
 
-        sensorDescription("Touch Screen", "That was the Touchscreen! Every time you tap on your phone, your phone has to transmit that touch into an electrical signal. It does this using Capacitive Sensing. Underneath the glass surface of your phone, there is a conductive material called indium tin oxide. Within this matieral there are electrodes arranged in a diamond grid. Your phone keeps these electrodes at a set voltage. When your finger touches the screen, it attracts the positive electrodes on one side of your finger, forcing your phone to deposit more electrons. Each pair of electrodes then has a meter that keeps track of how many charges are in the two electrodes at that particular spot on the phone. Your phone looks at which point of the phone the electrodes are disturbed, and it then knows where you have placed your finger on the screen! It also means that you are able to text with the back of a metal spoon, or even a hot dog!  ");
+        sensorDescription("Touch Screen", "That was the Touchscreen! Every time you tap on your phone, your phone has to transmit that touch into an electrical signal. It does this using Capacitive Sensing. Underneath the glass surface of your phone, there is a conductive material called indium tin oxide. Within this material there are electrodes arranged in a diamond grid. Your phone keeps these electrodes at a set voltage. When your finger touches the screen, it attracts the positive electrodes on one side of your finger, forcing your phone to deposit more electrons. Each pair of electrodes then has a meter that keeps track of how many charges are in the two electrodes at that particular spot on the phone. Your phone looks at which point of the phone the electrodes are disturbed, and it then knows where you have placed your finger on the screen! It also means that you are able to text with the back of a metal spoon, or even a hot dog!  ");
 
 
     }
@@ -217,7 +220,7 @@ public class phoneController extends Application {
 
     public void cameraClicked() {
 
-        sensorDescription("Camera", "That's the camera! The camera uses a lens to help light enter through the aperture (The aperture is basically a hole) and it lets light through to the sensor. If too much light is taken in, the image will be all white. If too little light is taken in, the image will be black. The sensor is set to shut off after a certain amount of time to make sure the right amount of light has entered. Once all of the light infomation has been caputred, it is sent too a signal image processor whcih will take all the infomation and turn it into an image. (Normal a JPEG format, but this depends on what phone you use! " );
+        sensorDescription("Camera", "That's the camera! The camera uses a lens to help light enter through the aperture (The aperture is basically a hole) and it lets light through to the sensor. If too much light is taken in, the image will be all white. If too little light is taken in, the image will be black. The sensor is set to shut off after a certain amount of time to make sure the right amount of light has entered. Once all of the light information has been captured, it is sent too a signal image processor which will take all the information and turn it into an image. (Normal a JPEG format, but this depends on what phone you use! " );
     }
 
     public void frontSpeakerMouseOver() {
@@ -228,7 +231,7 @@ public class phoneController extends Application {
 
     public void frontSpeakerClicked() {
 
-        sensorDescription("Front speaker", "The front and rear speakers both work the same as a normal speakers.The primary purpose of a speaker is to convert electrical energy into acoustic energy. At the front of a speaker there is a cone. The outer part of the cone is fastened to the outer part of the loudpeakers circular metal rim. The inner part (the smaller part of the cone) is fixed to an iron coil that sits just in front of a permanent magnet. To make sound, electrical singals feed through the speaker cables into the coil. As electricity flows back and forth in the cables, the magnet electromagnet either attracts of repels the permanent magnet. This moves the coil backward and forward, pulling and pushing the speakers cone. The movign cone pumps sounds out into the air ");
+        sensorDescription("Front speaker", "The front and rear speakers both work the same as a normal speakers.The primary purpose of a speaker is to convert electrical energy into acoustic energy. At the front of a speaker there is a cone. The outer part of the cone is fastened to the outer part of the loudspeakers circular metal rim. The inner part (the smaller part of the cone) is fixed to an iron coil that sits just in front of a permanent magnet. To make sound, electrical signals feed through the speaker cables into the coil. As electricity flows back and forth in the cables, the magnet electromagnet either attracts of repels the permanent magnet. This moves the coil backward and forward, pulling and pushing the speakers cone. The moving cone pumps sounds out into the air ");
         hardwareButton.setOnAction(e -> Hardware.frontSpeakerOn());
 
     }
@@ -242,7 +245,7 @@ public class phoneController extends Application {
 
     public void ambientLightSensorClicked() {
         sensorDescription("Ambient Light sensor", "That was the ambient light sensor! The Ambient Light Sensor helps to measure the light in a surrounding area and can adjust your phone's screen brightness Accordingly. it does this by using a photodiode.A photodiode is a semiconductor device that converts light into an electrical current. The photodiode measures the amount of light in the surrounding area, and these readings are sent to your phones CPU (Central processing unit). if the surrounding area is bright, the signal sent will be high, as a result the phone will increase in screen brightness, if the light is low, the screen brightness will decrease.");
-        hardwareButton.setOnAction(e -> Hardware.ambientLightSensorOn());
+        // hardwareButton.setOnAction(e -> Hardware.ambientLightSensorOn());
 
 
     }
@@ -254,8 +257,8 @@ public class phoneController extends Application {
 
     public void proximitySensorClicked() {
 
-        sensorDescription("Proximimty Sensor", "That was the proximity sensor! The proximimty sensor measures how close something is to your device. Its range is very limited (up to 30mm) but this is because its used to detect the presence of a human ear. This means it can turn the screen off while a human ear is in range (normally due to a user on the phone). It works by using a sensor called a Capacitive Proximity sensor. It consists of two metal plates separated by an insulator called a dielectric. Using this, it can detect any target with a higher dielectric constant greater than air. Dialectic constant is an electrostatic field and can detect interference within it. Once the detector senses enough interference, the output circuit remains active until the target is removed, which is why your screen turns off while you are on the phone! ");
-        hardwareButton.setOnAction(e -> Hardware.proximitySensorOn());
+        sensorDescription("Proximity Sensor", "That was the proximity sensor! The proximity sensor measures how close something is to your device. Its range is very limited (up to 30mm) but this is because its used to detect the presence of a human ear. This means it can turn the screen off while a human ear is in range (normally due to a user on the phone). It works by using a sensor called a Capacitive Proximity sensor. It consists of two metal plates separated by an insulator called a dielectric. Using this, it can detect any target with a higher dielectric constant greater than air. Dialectic constant is an electrostatic field and can detect interference within it. Once the detector senses enough interference, the output circuit remains active until the target is removed, which is why your screen turns off while you are on the phone! ");
+        //  hardwareButton.setOnAction(e -> Hardware.proximitySensorOn());
     }
 
     public void volumeRockerMouseOver() {
@@ -266,7 +269,7 @@ public class phoneController extends Application {
 
     public void volumeRockerClicked() {
 
-        sensorDescription("Volume Rocker", "That was the volume rocker. The volume rocker works the same way as any other button on a phone. The button adjusts the voltage being sent from the button from either low to high, or high to low. As a result, the phone has a mechanism for dealing with this type of change based on its current state. For example, if the state is high (User pressed the button), turn the sound off! The volume rocker actualy conatins two small buttons, and the casing around them is what we see! Pressing the casing up presses the volume up button, while pressing the casing at the bottom presses the downward button Press the launch hardware button and give it a go yourself!");
+        sensorDescription("Volume Rocker", "That was the volume rocker. The volume rocker works the same way as any other button on a phone. The button adjusts the voltage being sent from the button from either low to high, or high to low. As a result, the phone has a mechanism for dealing with this type of change based on its current state. For example, if the state is high (User pressed the button), turn the sound off! The volume rocker actually contains two small buttons, and the casing around them is what we see! Pressing the casing up presses the volume up button, while pressing the casing at the bottom presses the downward button Press the launch hardware button and give it a go yourself!");
 
     }
 
@@ -274,14 +277,14 @@ public class phoneController extends Application {
     public void sleepWakeButtonMouseover() {
 
 
-        TooltipFeatures("Sleep/Wake Button", sleepWakeButton);
+        TooltipFeatures("Lock Button", sleepWakeButton);
 
     }
 
     public void sleepWakeButtonClicked() {
 
-        sensorDescription("Sleep/ Wake Button Clicked", "Sleep/wae");
-        hardwareButton.setOnAction(e -> Hardware.proximitySensorOn());
+        sensorDescription("Sleep/Wake Button Clicked","That was the Lock button. The lock button works the same way as any other button on a phone. The button adjusts the voltage being sent from the button from either low to high, or high to low. As a result, the phone has a mechanism for dealing with this type of change based on its current state. For example, if the state is high (User pressed the button), turn the either turn on the screen, or turn i toff, depending on the state it was in previously. The lock button can also be programmed to perform different action depending on the length of time the button was pressed for. e.g. 'if the button state is high for 5 seconds or more, show the power off menu. ");
+        //   hardwareButton.setOnAction(e -> Hardware.proximitySensorOn());
 
     }
 
@@ -297,7 +300,7 @@ public class phoneController extends Application {
 
     public void navigationBarClicked() {
 
-        sensorDescription("Navigation bar", "Nav bar");
+        sensorDescription("Navigation bar", "That was the navigation bar. All phones have a way to return to the home menu and go back a page. Many smart phones today also have the multi tasking button, all of which can be found on the navigation bar. The navigation bar was created to enhance the user experience, making it easier for users to complete actions on their phone. ");
     }
 
     public void backButtonMouseOver() {
@@ -307,7 +310,7 @@ public class phoneController extends Application {
 
     public void backButtonClicked() {
 
-        sensorDescription("Back button", "Button");
+        sensorDescription("Back button", "That was the back button! its used to..well... go back! The back button is an exmaple of a virtual button. Mobile phone manufacturers use virtual buttons for a number of reasons, one of the main reasons is that they are cheaper than physical buttons and they can be changed at any time with a software update");
 
 
     }
@@ -320,13 +323,13 @@ public class phoneController extends Application {
 
     public void homeButtonClicked() {
 
-        sensorDescription("Home button", "Home Button");
-        hardwareButton.setOnAction(e -> Hardware.buttonOn());
+        sensorDescription("Home button", "That was the home button! Like the back and multi task buttons, it is a virtual button! The Home button is one of the most iconic buttons in smartphones. It's so important because it provides consistency to mobile phone users. Every flagship (flagship means the best product a company offers) phone hs a home button, and without it users would no be comfortable using a new device.  ");
+        //  hardwareButton.setOnAction(e -> Hardware.buttonOn());
 
-        backToPhoneButton.setOnAction(e -> {
-            Hardware.buttonOff();
-            backToTool();
-        });
+        //   backToPhoneButton.setOnAction(e -> {
+        /// Hardware.buttonOff();
+        backToTool();
+        //   });
     }
 
     public void multiTaskingButtonMouseOver() {
@@ -338,7 +341,7 @@ public class phoneController extends Application {
 
     public void multiTaskingButtonClicked() {
 
-        sensorDescription("Multi Tasking Button", "Dess");
+        sensorDescription("Multi Tasking Button", "That was the multi tasking button. Like the home and back buttons, it is a virtual button! The multi tasking button iss used to navigate between pages easily. Multitasking was introduced in 2010 and its no a huge part of any mobile phone The ability to navigation to and from applications with ease is a must for many users!");
 
     }
 
@@ -348,9 +351,13 @@ public class phoneController extends Application {
 
     }
 
+    public void chargingPortClicked() {
+
+        sensorDescription("Charging Port", "That was the charging port! As you already know, it's used to charge your phone! But how does it work? Well, a phone charger works of the simple principle of AC (alternating current) to DC (direct Current). The phone charger first steps down the current. After this, it uses rectification(the process of removing the negative part of the alternate current, producing the partial DC. The third step is called filtration. The output after the rectification is not a proper DC. So a capacitor is used. The capacitor maintain the voltage supply into the load circuit, creating the DC. Finally , a voltage regulator at the output side maintain the constant voltage throughout. ");
+    }
     public void phoneBodyBackClicked() {
 
-        sensorDescription("Phone Body", "Phone Body is made of...");
+        sensorDescription("Phone Body", "That was the phone body. Although all phones have different casing they all follow the same set of general rules. The phones casing is designed to contain all of the components within the device, keeping them safe and secure. There are generally two different types of material used, Metal and plastic when materials are chosen, they must take into consideration two main factors. 1) The impact resistance of the case, because its meant to protect the internals of the phone. 2) temperature resistance.While charging or while the phone is used a lot the materials may get hot. To make sure a user doesn't burn themselves, a material with good temperature resistance must be used.");
 
 
     }
@@ -365,12 +372,13 @@ public class phoneController extends Application {
     }
 
     public void FingerPrintScannerClicked() {
-        sensorDescription("Fingerprint Scanner", "Finger print Scanner");
+        sensorDescription("Fingerprint Scanner", "That was the fingerprint scanner. The fingerprint scanner is one of the newest advancements in mobile technology. The fingerprint scanner measurers the differences in conductivity caused by the raised parts of your fingerprint, and uses those measurements to form an image. For fingerprint scanners to work, the surface that your finger rests on must be tough, as scratching will prevent it from working properly. There are three main types of fingerprint scanners, optical scanners, which is the oldest method of capturing and comparing fingerprint The second, capacitive fingerprint scanners work in the way we've just discussed. The third, an ultrasonic scanner is the latest type of fingerprint scanner. Many of the larger phone manufactures are currently working on these technologies.    ");
 
     }
 
     public void rearSpeakerClicked() {
-        sensorDescription("Rear Speaker", "Rear Speaker Clicked");
+        sensorDescription("Rear speaker", "The front and rear speakers both work the same as a normal speakers.The primary purpose of a speaker is to convert electrical energy into acoustic energy. At the front of a speaker there is a cone. The outer part of the cone is fastened to the outer part of the speakers circular metal rim. The inner part (the smaller part of the cone) is fixed to an iron coil that sits just in front of a permanent magnet. To make sound, electrical signals feed through the speaker cables into the coil. As electricity flows back and forth in the cables, the magnet electromagnet either attracts of repels the permanent magnet. This moves the coil backward and forward, pulling and pushing the speakers cone. The moving cone pumps sounds out into the air ");
+
         hardwareButton.setOnAction(e -> Hardware.rearSpeakerOn());
 
     }
@@ -392,17 +400,18 @@ public class phoneController extends Application {
     }
 
     public void RearCameraBlackAndWhiteClicked() {
-        TooltipFeatures("Rear camera - Black and white", rearCameraBlackAndWhite);
+        sensorDescription("Rear Camera 1", "That's the first rear Camera. Smart phones these days often have two cameras. The camera uses a lens to help light enter through the aperture (The aperture is basically a hole) and it lets light through to the sensor. If too much light is taken in, the image will be all white. If too little light is taken in, the image will be black. The sensor is set to shut off after a certain amount of time to make sure the right amount of light has entered. Once all of the light information has been captured, it is sent too a signal image processor which will take all the information and turn it into an image. This camera is considered the 'standard camera' of the two! Check out the other camera to see why");
 
     }
 
     public void RearCameraBlackAndWhiteMouseOver() {
-        TooltipFeatures("Rear camera - Black and white", rearCameraBlackAndWhite);
+        TooltipFeatures("Rear camera 2", rearCameraBlackAndWhite);
+        sensorDescription("Rear Camera 2", "This is the secondary camera. Now, the technology used differs between manufacturers. So here's a few of the main examples. 1) Enhanced zoom - sometimes the secondary camera will use a permanently zoomed lens. The dive switches between cameras upon zooming in, and it does it so smoothly the user doesn't notice. 2) Monochrome - some manufacturers shoot one lens in total monochrome (that means black nad white) an combines both images from the two cameras. the result is a much brighter, vibrant photo because it allows more light in than a regular single camera. ");
     }
 
     public void flashClicked() {
 
-        sensorDescription("Flash", "This is the flash. It works by... Want to give it a go?");
+        sensorDescription("Flash", "This is the flash. Mobile phone flashes consist of some simple LED lights, and often use more than one LED to allow brighter and darker flashes. Normal camera flashes use a tube filled with xenon gas, but this is generally too expensive and too complicated for the average smart phone not to mention the size is also a problem. ");
         hardwareButton.setOnAction(e -> Hardware.flashOn());
         backToPhoneButton.setOnAction(e -> {
             Hardware.flashOff();
@@ -417,10 +426,7 @@ public class phoneController extends Application {
     }
 
 
-    public void chargingPortClicked() {
 
-        System.out.println("This is the Charging Port");
-    }
 
 
     public static void main(String[] args) {
