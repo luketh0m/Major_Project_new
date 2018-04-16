@@ -180,6 +180,12 @@ public class Quiz extends Application {
             Quiz.checkAnswer(questionsAnswers);
         } while (Question[1] == Quiz.randomAnswers[0] || Question[1] == Quiz.randomAnswers[1] || Question[1] == Quiz.randomAnswers[2]);
 
+
+        Rectangle backround = new Rectangle();
+        backround.setWidth(800);
+        backround.setHeight(600);
+        backround.setFill(Color.web("#ddfff7"));
+
         Label questionNumberLabel = new Label("Question " + Quiz.questionNo + " Out of 10");
         Label questionLabel = new Label(Question[0]); //Display Question on screen
         Button correctAnswer = new Button(Question[1]); //correct answer always on the same button, but button will move
@@ -232,9 +238,9 @@ public class Quiz extends Application {
         questionNumberLabel.setLayoutX(10);
         questionNumberLabel.setLayoutY(10);
 
-        questionLabel.setFont(new Font("curlz MT", 45));
+        questionLabel.setFont(new Font("curlz MT", 30));
         questionLabel.setTextFill(Color.web("#114b5f"));
-        questionLabel.setLayoutX(250);
+        questionLabel.setLayoutX(10);
         questionLabel.setLayoutY(100);
 
         grid.setLayoutX(47);
@@ -278,7 +284,7 @@ public class Quiz extends Application {
         toolkitButton.setPrefWidth(118);
 
 
-        layout.getChildren().addAll( questionNumberLabel, questionLabel,grid, bottomMenu, menuButton, infoButton,aboutButton,toolkitButton);
+        layout.getChildren().addAll( backround, questionNumberLabel, questionLabel,grid, bottomMenu, menuButton, infoButton,aboutButton,toolkitButton);
 
 
 
@@ -296,6 +302,8 @@ public class Quiz extends Application {
 
         Scene scene = new Scene(layout, 800, 600);
         primaryStage.setScene(scene);
+        primaryStage.setMaxHeight(600);
+        primaryStage.setMaxWidth(800);
         primaryStage.show();
 
         correctAnswer.setOnAction(e -> {

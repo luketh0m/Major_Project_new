@@ -1,10 +1,10 @@
-Mega Pixel
-2
-3
-4
-5
-Potato
-7
-8
-9
-10
+Proximity Sensor
+Ambient Light Sensor
+Aperture
+Capacitive Sensing
+Acoustic Energy
+photodiode
+Capacative Proximity sensor
+Enhanced Zoom
+Light-emitting diode (LED)
+Signal image processor
