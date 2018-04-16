@@ -8,12 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/easyQuestions.txt" afterPath="$PROJECT_DIR$/easyQuestions.txt" />
-      <change beforePath="$PROJECT_DIR$/easyQuestionsAnswers.txt" afterPath="$PROJECT_DIR$/easyQuestionsAnswers.txt" />
-      <change beforePath="$PROJECT_DIR$/out/production/EducationalTool/sample/Quiz.class" afterPath="$PROJECT_DIR$/out/production/EducationalTool/sample/Quiz.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/EducationalTool/sample/quizGame.fxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Quiz.java" afterPath="$PROJECT_DIR$/src/sample/Quiz.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/quizGame.fxml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EducationalTool/sample/Hardware.class" afterPath="$PROJECT_DIR$/out/production/EducationalTool/sample/Hardware.class" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Hardware.java" afterPath="$PROJECT_DIR$/src/sample/Hardware.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/phoneController.java" afterPath="$PROJECT_DIR$/src/sample/phoneController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,7 +85,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Quiz.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Quiz.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Quiz.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
@@ -100,12 +97,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WinApplication.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/javafx-src.zip!/com/sun/glass/ui/win/WinApplication.java">
+      <file leaf-file-name="Hardware.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/Hardware.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2414">
-              <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="231">
+              <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+              <folding>
+                <element signature="e#4624#4625#0" expanded="true" />
+                <element signature="e#4668#4669#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,15 +113,25 @@
       <file leaf-file-name="phoneController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/phoneController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="402" column="572" lean-forward="true" selection-start-line="402" selection-start-column="572" selection-end-line="402" selection-end-column="572" />
+            <state relative-caret-position="299">
+              <caret line="260" column="8" lean-forward="true" selection-start-line="260" selection-start-column="8" selection-end-line="260" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#15652#15653#0" expanded="true" />
-                <element signature="e#15726#15727#0" expanded="true" />
-                <element signature="e#17903#17904#0" expanded="true" />
-                <element signature="e#17984#17985#0" expanded="true" />
+                <element signature="e#15930#15931#0" expanded="true" />
+                <element signature="e#16004#16005#0" expanded="true" />
+                <element signature="e#18181#18182#0" expanded="true" />
+                <element signature="e#18262#18263#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="27" column="26" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="27" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -182,16 +192,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/javafx-src.zip!/com/sun/glass/ui/View.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8823">
-              <caret line="554" column="0" lean-forward="false" selection-start-line="554" selection-start-column="0" selection-end-line="554" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GlassViewEventHandler.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/javafx-src.zip!/com/sun/javafx/tk/quantum/GlassViewEventHandler.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -216,8 +216,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>message</find>
-      <find>difficulty</find>
       <find>QuestionsE</find>
       <find>r</find>
       <find>random</find>
@@ -245,6 +243,9 @@
       <find>.setText</find>
       <find>quizgame</find>
       <find>questionL</find>
+      <find>volume</find>
+      <find>button</find>
+      <find>proximity se</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -277,7 +278,6 @@
         <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
         <option value="$PROJECT_DIR$/src/sample/SerialTest.java" />
         <option value="$PROJECT_DIR$/src/sample/DBconnect.java" />
-        <option value="$PROJECT_DIR$/src/sample/Hardware.java" />
         <option value="$PROJECT_DIR$/src/sample/Phone.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Options.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Quiz.css" />
@@ -290,10 +290,11 @@
         <option value="$PROJECT_DIR$/src/sample/quizMenu.java" />
         <option value="$PROJECT_DIR$/src/sample/quizover.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Facts.txt" />
-        <option value="$PROJECT_DIR$/src/sample/phoneController.java" />
         <option value="$PROJECT_DIR$/easyQuestionsAnswers.txt" />
         <option value="$PROJECT_DIR$/easyQuestions.txt" />
         <option value="$PROJECT_DIR$/src/sample/Quiz.java" />
+        <option value="$PROJECT_DIR$/src/sample/phoneController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Hardware.java" />
       </list>
     </option>
   </component>
@@ -652,12 +653,12 @@
       <workItem from="1523300005459" duration="8815000" />
       <workItem from="1523867712842" duration="10104000" />
       <workItem from="1523878459418" duration="1176000" />
-      <workItem from="1523901086034" duration="2025000" />
+      <workItem from="1523901086034" duration="4920000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="297256000" />
+    <option name="totallyTimeSpent" value="300151000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -993,14 +994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="27" column="26" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="27" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1428">
@@ -1030,14 +1023,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="499">
           <caret line="40" column="16" lean-forward="false" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Hardware.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1139,20 +1124,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/phoneController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="402" column="572" lean-forward="true" selection-start-line="402" selection-start-column="572" selection-end-line="402" selection-end-column="572" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#15652#15653#0" expanded="true" />
-            <element signature="e#15726#15727#0" expanded="true" />
-            <element signature="e#17903#17904#0" expanded="true" />
-            <element signature="e#17984#17985#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/quizGame.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -1181,6 +1152,39 @@
           <caret line="279" column="0" lean-forward="true" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="27" column="26" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="27" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/phoneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="260" column="8" lean-forward="true" selection-start-line="260" selection-start-column="8" selection-end-line="260" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#15930#15931#0" expanded="true" />
+            <element signature="e#16004#16005#0" expanded="true" />
+            <element signature="e#18181#18182#0" expanded="true" />
+            <element signature="e#18262#18263#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Hardware.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding>
+            <element signature="e#4624#4625#0" expanded="true" />
+            <element signature="e#4668#4669#0" expanded="true" />
           </folding>
         </state>
       </provider>

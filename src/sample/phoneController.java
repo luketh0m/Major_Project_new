@@ -258,7 +258,7 @@ public class phoneController extends Application {
     public void proximitySensorClicked() {
 
         sensorDescription("Proximity Sensor", "That was the proximity sensor! The proximity sensor measures how close something is to your device. Its range is very limited (up to 30mm) but this is because its used to detect the presence of a human ear. This means it can turn the screen off while a human ear is in range (normally due to a user on the phone). It works by using a sensor called a Capacitive Proximity sensor. It consists of two metal plates separated by an insulator called a dielectric. Using this, it can detect any target with a higher dielectric constant greater than air. Dialectic constant is an electrostatic field and can detect interference within it. Once the detector senses enough interference, the output circuit remains active until the target is removed, which is why your screen turns off while you are on the phone! ");
-        //  hardwareButton.setOnAction(e -> Hardware.proximitySensorOn());
+         hardwareButton.setOnAction(e -> Hardware.proximitySensorOn());
     }
 
     public void volumeRockerMouseOver() {
@@ -270,8 +270,16 @@ public class phoneController extends Application {
     public void volumeRockerClicked() {
 
         sensorDescription("Volume Rocker", "That was the volume rocker. The volume rocker works the same way as any other button on a phone. The button adjusts the voltage being sent from the button from either low to high, or high to low. As a result, the phone has a mechanism for dealing with this type of change based on its current state. For example, if the state is high (User pressed the button), turn the sound off! The volume rocker actually contains two small buttons, and the casing around them is what we see! Pressing the casing up presses the volume up button, while pressing the casing at the bottom presses the downward button Press the launch hardware button and give it a go yourself!");
+        hardwareButton.setOnAction(e->  {
+            alertBox.display("Volume Rocker", "Go ahead! Click the button", "Okay");
+            Hardware.buttonOn();
 
-    }
+        });
+
+
+
+        }
+
 
 
     public void sleepWakeButtonMouseover() {
@@ -283,9 +291,12 @@ public class phoneController extends Application {
 
     public void sleepWakeButtonClicked() {
 
-        sensorDescription("Sleep/Wake Button Clicked","That was the Lock button. The lock button works the same way as any other button on a phone. The button adjusts the voltage being sent from the button from either low to high, or high to low. As a result, the phone has a mechanism for dealing with this type of change based on its current state. For example, if the state is high (User pressed the button), turn the either turn on the screen, or turn i toff, depending on the state it was in previously. The lock button can also be programmed to perform different action depending on the length of time the button was pressed for. e.g. 'if the button state is high for 5 seconds or more, show the power off menu. ");
-        //   hardwareButton.setOnAction(e -> Hardware.proximitySensorOn());
+        sensorDescription("Sleep/Wake Button Clicked", "That was the Lock button. The lock button works the same way as any other button on a phone. The button adjusts the voltage being sent from the button from either low to high, or high to low. As a result, the phone has a mechanism for dealing with this type of change based on its current state. For example, if the state is high (User pressed the button), turn the either turn on the screen, or turn i toff, depending on the state it was in previously. The lock button can also be programmed to perform different action depending on the length of time the button was pressed for. e.g. 'if the button state is high for 5 seconds or more, show the power off menu. ");
+        hardwareButton.setOnAction(e -> {
+            alertBox.display("Sleep/wake button", "Go ahead! Click the button", "Okay");
+            Hardware.buttonOn();
 
+        });
     }
 
     public void setSleepWakeButtonRearMouseOver() {

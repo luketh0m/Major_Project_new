@@ -21,7 +21,7 @@ public class Hardware extends JArduino {
 
 
 
-
+   public static Byte pin = null;
 
 
 
@@ -29,6 +29,8 @@ public class Hardware extends JArduino {
     public Hardware(String port) {
         super(port);
     }
+
+
 
 
     public static JArduino arduino = new Hardware("COM3");
@@ -61,16 +63,16 @@ public class Hardware extends JArduino {
     public static void rearSpeakerOn() {
 
 
-        arduino.pinMode(DigitalPin.PIN_8, OUTPUT);
+        arduino.pinMode(DigitalPin.PIN_12, OUTPUT);
 
 
-        arduino.digitalWrite(DigitalPin.PIN_8, HIGH);
+        arduino.digitalWrite(DigitalPin.PIN_12, HIGH);
         arduino.delay(20);
-        arduino.digitalWrite(DigitalPin.PIN_8, LOW);
+        arduino.digitalWrite(DigitalPin.PIN_12, LOW);
         arduino.delay(50);
-        arduino.digitalWrite(DigitalPin.PIN_8, HIGH);
+        arduino.digitalWrite(DigitalPin.PIN_12, HIGH);
         arduino.delay(50);
-        arduino.digitalWrite(DigitalPin.PIN_8, LOW);
+        arduino.digitalWrite(DigitalPin.PIN_12, LOW);
         arduino.delay(20);
 
     }
@@ -118,31 +120,42 @@ public class Hardware extends JArduino {
     public static void frontSpeakerOn() {
 
         try {
-            arduino.pinMode(DigitalPin.PIN_7, OUTPUT);
+            arduino.pinMode(DigitalPin.PIN_11, OUTPUT);
         } catch (Exception e) {
             System.out.print(e);}
 
-        arduino.digitalWrite(DigitalPin.PIN_7,HIGH);
+        arduino.digitalWrite(DigitalPin.PIN_11,HIGH);
         arduino.delay(20);
-        arduino.digitalWrite(DigitalPin.PIN_7,LOW);
+        arduino.digitalWrite(DigitalPin.PIN_11,LOW);
         arduino.delay(5);
-        arduino.digitalWrite(DigitalPin.PIN_7,HIGH);
+        arduino.digitalWrite(DigitalPin.PIN_11,HIGH);
         arduino.delay(20);
-        arduino.digitalWrite(DigitalPin.PIN_7,LOW);
+        arduino.digitalWrite(DigitalPin.PIN_11,LOW);
         arduino.delay(50);
 
 
     }
 
     public static void buttonOn() {
-        Byte pin = null;
 
-        arduino.pinMode(DigitalPin.PIN_4, INPUT);
-        arduino.digitalWrite(DigitalPin.PIN_4, HIGH);
 
-        pin =  arduino.digitalRead(DigitalPin.PIN_4).getValue();
-        System.out.print(pin);
+        arduino.pinMode(DigitalPin.PIN_10, INPUT);
+        arduino.digitalWrite(DigitalPin.PIN_10, HIGH);
 
+ do {
+     pin = arduino.digitalRead(DigitalPin.PIN_10).getValue();
+ }
+ while (pin == 1);
+
+
+       if (pin == 0) {
+            {
+                alertBox.display("Button Clicked", "Great! You pressed the button, which is why this popped up!", "Okay");
+
+
+            }
+
+        }
 
     }
 
@@ -159,22 +172,22 @@ public class Hardware extends JArduino {
 
     public static void flashOn() {
         try {
-            arduino.pinMode(DigitalPin.PIN_12, OUTPUT);
+            arduino.pinMode(DigitalPin.PIN_13, OUTPUT);
         } catch (Exception e) {
             System.out.print(e);
         }
-        arduino.digitalWrite(DigitalPin.PIN_12, HIGH);
+        arduino.digitalWrite(DigitalPin.PIN_13, HIGH);
 
     }
 
     public static void flashOff() {
 
         try {
-            arduino.pinMode(DigitalPin.PIN_12, OUTPUT);
+            arduino.pinMode(DigitalPin.PIN_13, OUTPUT);
         } catch (Exception e) {
             System.out.print(e);
         }
-        arduino.digitalWrite(DigitalPin.PIN_12, LOW);
+        arduino.digitalWrite(DigitalPin.PIN_13, LOW);
 
     }
 
