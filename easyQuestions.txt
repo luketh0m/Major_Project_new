@@ -1,10 +1,11 @@
-Which sensor measures how far away something is from the phone?
-Which sensor measures the brightness of light around the phone?
+Which sensor detecs if an object is close (30mm or closer)
+Which sensor measures the level of brightness around the phone?
 What is the name of the 'hole' that lets light through to the camera?
-The name of the process a touchscreen uses to determine if its received an electrical signal is?
+A touchscreen sensor touch using a...?
 A speaker converts Electrical energy into what?
-What sensor does the ambient light sensor use to measure light?
-What sensor does the proximity sensor use?
-What  is one possible use of the second camera on a dual camera smart phone?
-Whats the name of the light source used in Most smart phones?
+The sensor inside the ambient light sensor is called?
+The sensor inside the proximity sensor is called?
+What is one possible use of the second camera on a dual camera smart phone?
+Whats the name of the light that smart phone flash's use?
 What's the name of the processor that is used for digital image processing?
+A Device that converts one form of energy to another is called?

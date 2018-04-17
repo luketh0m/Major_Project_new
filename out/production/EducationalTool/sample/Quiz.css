@@ -2,14 +2,18 @@
 
 
 
-
+.root {
+    -fx-font-size: 150%;
+}
 
 .Textsmall {
 
+    -fx-font-size:  150%;
 
 }
 
 .button {
+    -fx-font-size:  150%;
     -fx-background-color: #1a936f;
 }
 .radio-button {

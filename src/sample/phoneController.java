@@ -1,5 +1,6 @@
 package sample;
 
+import gnu.io.NoSuchPortException;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Cursor;
@@ -9,10 +10,12 @@ import java.awt.event.ActionEvent;
 import java.beans.EventHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Timer;
+import java.util.function.ToLongBiFunction;
 
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Window;
 import javafx.util.Duration;
 import javafx.fxml.*;
@@ -78,6 +81,8 @@ public class phoneController extends Application {
     private Circle homeButton;
     @FXML
     private Polygon backButton;
+    @FXML
+    private Ellipse microphone;
 
 
     //Back of phone
@@ -94,6 +99,14 @@ public class phoneController extends Application {
     private Circle rearCameraBlackAndWhite;
     @FXML
     private Circle flash;
+    @FXML
+    private Circle led1;
+    @FXML
+    private Circle led2;
+    @FXML
+    private Circle led3;
+    @FXML
+    private Circle led4;
     @FXML
     private Rectangle rearSpeaker1;
     @FXML
@@ -122,28 +135,33 @@ public class phoneController extends Application {
     private Rectangle greyOutRectangle;
 
     @FXML
-   private Rectangle Tint;
+    private Rectangle Tint;
 
 
     Controller c = new Controller();
     Main m = new Main();
 
 
-
     public void appAcessed() {
         optionsController.tintOptions(Tint);
 
-
     }
 
+
     public void menuButtonClicked() throws Exception {
-
-
         closePage();
         m.start(primaryStage);
 
+
     }
 
+
+    public void settingsButtonClicked() throws Exception {
+        closePage();
+        Main.currentPage = "Options.fxml";
+        m.start(primaryStage);
+
+    }
 
     public void infoButtonClicked() throws Exception {
 
@@ -152,7 +170,9 @@ public class phoneController extends Application {
 
     public void quizButtonClicked() throws Exception {
         closePage();
-        sample.quizMenu.quizDifficulty();
+        Main.currentPage = "welcomeQuiz.fxml";
+        m.start(primaryStage);
+
 
     }
 
@@ -211,6 +231,24 @@ public class phoneController extends Application {
 
     }
 
+    public void microphoneMouseOver() {
+        TooltipFeatures("Microphone", microphone);
+
+    }
+
+    public void microphoneClicked() {
+
+        sensorDescription("Microphone", "That was the microphone! The microphone is a type of transducer - a device which converts energy from one form to another. Microphones convert acoustic energy (sound waves) into electrical energy (the audio signal. There are many different types of microphones, but they all do this same conversion, just in different ways!. Whenevr a sound is made, it sends vibrations through the air. A microphone have a diaphragm. This is a thin piece of material that vibrates when sounds strikes it. This passes the energy to the rest of the microphones components. These vibrations are converted to an electrical current which becomes the audio signal your interface uses to capture and playback sound. Pretty cool, eh?! ");
+        hardwareButton.setOnAction(e -> {
+
+
+            alertBox.display("Go on!", "Say something!, but make sure you click okay first!", "Okay");
+            Hardware.microphoneOn();
+
+        });
+
+
+    }
 
     public void cameraMouseover() {
 
@@ -220,7 +258,7 @@ public class phoneController extends Application {
 
     public void cameraClicked() {
 
-        sensorDescription("Camera", "That's the camera! The camera uses a lens to help light enter through the aperture (The aperture is basically a hole) and it lets light through to the sensor. If too much light is taken in, the image will be all white. If too little light is taken in, the image will be black. The sensor is set to shut off after a certain amount of time to make sure the right amount of light has entered. Once all of the light information has been captured, it is sent too a signal image processor which will take all the information and turn it into an image. (Normal a JPEG format, but this depends on what phone you use! " );
+        sensorDescription("Camera", "That's the camera! The camera uses a lens to help light enter through the aperture (The aperture is basically a hole) and it lets light through to the sensor. If too much light is taken in, the image will be all white. If too little light is taken in, the image will be black. The sensor is set to shut off after a certain amount of time to make sure the right amount of light has entered. Once all of the light information has been captured, it is sent too a signal image processor which will take all the information and turn it into an image. (Normal a JPEG format, but this depends on what phone you use! ");
     }
 
     public void frontSpeakerMouseOver() {
@@ -258,7 +296,7 @@ public class phoneController extends Application {
     public void proximitySensorClicked() {
 
         sensorDescription("Proximity Sensor", "That was the proximity sensor! The proximity sensor measures how close something is to your device. Its range is very limited (up to 30mm) but this is because its used to detect the presence of a human ear. This means it can turn the screen off while a human ear is in range (normally due to a user on the phone). It works by using a sensor called a Capacitive Proximity sensor. It consists of two metal plates separated by an insulator called a dielectric. Using this, it can detect any target with a higher dielectric constant greater than air. Dialectic constant is an electrostatic field and can detect interference within it. Once the detector senses enough interference, the output circuit remains active until the target is removed, which is why your screen turns off while you are on the phone! ");
-         hardwareButton.setOnAction(e -> Hardware.proximitySensorOn());
+        hardwareButton.setOnAction(e -> Hardware.proximitySensorOn());
     }
 
     public void volumeRockerMouseOver() {
@@ -270,16 +308,14 @@ public class phoneController extends Application {
     public void volumeRockerClicked() {
 
         sensorDescription("Volume Rocker", "That was the volume rocker. The volume rocker works the same way as any other button on a phone. The button adjusts the voltage being sent from the button from either low to high, or high to low. As a result, the phone has a mechanism for dealing with this type of change based on its current state. For example, if the state is high (User pressed the button), turn the sound off! The volume rocker actually contains two small buttons, and the casing around them is what we see! Pressing the casing up presses the volume up button, while pressing the casing at the bottom presses the downward button Press the launch hardware button and give it a go yourself!");
-        hardwareButton.setOnAction(e->  {
+        hardwareButton.setOnAction(e -> {
             alertBox.display("Volume Rocker", "Go ahead! Click the button", "Okay");
             Hardware.buttonOn();
 
         });
 
 
-
-        }
-
+    }
 
 
     public void sleepWakeButtonMouseover() {
@@ -335,12 +371,7 @@ public class phoneController extends Application {
     public void homeButtonClicked() {
 
         sensorDescription("Home button", "That was the home button! Like the back and multi task buttons, it is a virtual button! The Home button is one of the most iconic buttons in smartphones. It's so important because it provides consistency to mobile phone users. Every flagship (flagship means the best product a company offers) phone hs a home button, and without it users would no be comfortable using a new device.  ");
-        //  hardwareButton.setOnAction(e -> Hardware.buttonOn());
 
-        //   backToPhoneButton.setOnAction(e -> {
-        /// Hardware.buttonOff();
-        backToTool();
-        //   });
     }
 
     public void multiTaskingButtonMouseOver() {
@@ -366,6 +397,7 @@ public class phoneController extends Application {
 
         sensorDescription("Charging Port", "That was the charging port! As you already know, it's used to charge your phone! But how does it work? Well, a phone charger works of the simple principle of AC (alternating current) to DC (direct Current). The phone charger first steps down the current. After this, it uses rectification(the process of removing the negative part of the alternate current, producing the partial DC. The third step is called filtration. The output after the rectification is not a proper DC. So a capacitor is used. The capacitor maintain the voltage supply into the load circuit, creating the DC. Finally , a voltage regulator at the output side maintain the constant voltage throughout. ");
     }
+
     public void phoneBodyBackClicked() {
 
         sensorDescription("Phone Body", "That was the phone body. Although all phones have different casing they all follow the same set of general rules. The phones casing is designed to contain all of the components within the device, keeping them safe and secure. There are generally two different types of material used, Metal and plastic when materials are chosen, they must take into consideration two main factors. 1) The impact resistance of the case, because its meant to protect the internals of the phone. 2) temperature resistance.While charging or while the phone is used a lot the materials may get hot. To make sure a user doesn't burn themselves, a material with good temperature resistance must be used.");
@@ -403,6 +435,8 @@ public class phoneController extends Application {
 
     public void RearCameraColourClicked() {
 
+        sensorDescription("Rear Camera", "That's the camera! The camera uses a lens to help light enter through the aperture (The aperture is basically a hole) and it lets light through to the sensor. If too much light is taken in, the image will be all white. If too little light is taken in, the image will be black. The sensor is set to shut off after a certain amount of time to make sure the right amount of light has entered. Once all of the light information has been captured, it is sent too a signal image processor which will take all the information and turn it into an image. (Normal a JPEG format, but this depends on what phone you use! ");
+
 
     }
 
@@ -417,7 +451,7 @@ public class phoneController extends Application {
 
     public void RearCameraBlackAndWhiteMouseOver() {
         TooltipFeatures("Rear camera 2", rearCameraBlackAndWhite);
-        sensorDescription("Rear Camera 2", "This is the secondary camera. Now, the technology used differs between manufacturers. So here's a few of the main examples. 1) Enhanced zoom - sometimes the secondary camera will use a permanently zoomed lens. The dive switches between cameras upon zooming in, and it does it so smoothly the user doesn't notice. 2) Monochrome - some manufacturers shoot one lens in total monochrome (that means black nad white) an combines both images from the two cameras. the result is a much brighter, vibrant photo because it allows more light in than a regular single camera. ");
+
     }
 
     public void flashClicked() {
@@ -437,23 +471,10 @@ public class phoneController extends Application {
     }
 
 
-
-
-
     public static void main(String[] args) {
         launch(args);
 
     }
-
-    public void closePage() {
-
-        Window window = rootPane.getScene().getWindow();
-        if (window instanceof Stage) {
-            ((Stage) window).close();
-        }
-    }
-
-
 
 
     @Override
@@ -461,5 +482,17 @@ public class phoneController extends Application {
 
 
     }
+
+
+    public void closePage() throws Exception {
+
+        Window window = rootPane.getScene().getWindow();
+        if (window instanceof Stage) {
+
+
+            ((Stage) window).close();
+        }
+    }
+
 
 }

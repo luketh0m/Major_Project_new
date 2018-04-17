@@ -59,6 +59,9 @@ public static Boolean blueTint = FALSE;
 
 
 
+
+
+
     public static void tintOptions (Rectangle Tint) {
         if (optionsController.blueTint == TRUE) {
             optionsController.blueTintButton(Tint);
@@ -77,55 +80,84 @@ public static Boolean blueTint = FALSE;
 
 
 
-    public void smallFontButton() {
-        smallTextSize();
+    public void smallFontButton() throws Exception {
+
         smallTextSizeButton.setSelected(true);
         mediumTextSizeButton.setSelected(false);
         largeTextSizeButton.setSelected(false);
+        smallTextSize();
+
+
+
 
 
     }
 
-    public void mediumFontButton() {
+    public void mediumFontButton() throws Exception {
+
 
 
         smallTextSizeButton.setSelected(false);
         mediumTextSizeButton.setSelected(true);
         largeTextSizeButton.setSelected(false);
         mediumTextSize();
+
+
+
+
+
     }
 
-    public void largeFontButton() {
-        largeTextSize();
+    public void largeFontButton() throws Exception {
+
         smallTextSizeButton.setSelected(false);
         mediumTextSizeButton.setSelected(false);
         largeTextSizeButton.setSelected(true);
+        largeTextSize();
+
+
 
     }
 
 
-public static void smallTextSize () {
+public  void smallTextSize ()throws Exception {
 
-       fontSize = "/Sample/Quiz.css";
+
         smallText = TRUE;
         mediumText = FALSE;
         largeText = FALSE;
+    fontSize = "/Sample/Quiz.css";
+    rootPane.getStylesheets().clear();
+    rootPane.getStylesheets().add(optionsController.fontSize);
+
+
+
+
 
 
 }
 
- public static void mediumTextSize () {
-    fontSize = "/Sample/fontMedium.css";
+ public  void mediumTextSize ()throws Exception {
+
+
+
+
         smallText = FALSE;
         mediumText = TRUE;
         largeText = FALSE;
+     fontSize = "/Sample/fontMedium.css";
+     rootPane.getStylesheets().clear();
+     rootPane.getStylesheets().add(optionsController.fontSize);
+
+
+
 
 
 
     }
 
- public static void largeTextSize() {
-
+ public static  void largeTextSize() {
+     fontSize = "/Sample/fontLarge.css";
          smallText = FALSE;
          mediumText = FALSE;
          largeText = TRUE;
@@ -195,8 +227,9 @@ public void blueTint(){
 
 
         closePage();
+        Main.currentPage = "sample.fxml";
         m.start(primaryStage);
-        System.out.print("On the controller page the yellow tint it" + yellowTint);
+
 
 
     }
@@ -209,7 +242,8 @@ public void blueTint(){
 
     public void quizButtonClicked() throws Exception {
         closePage();
-        quizMenu.quizDifficulty();
+        Main.currentPage = "welcomeQuiz.fxml";
+        m.start(primaryStage);
 
     }
 

@@ -9,13 +9,14 @@
 <?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
 <?import javafx.scene.shape.Polygon?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane onMouseEntered="#appAcessed" stylesheets="@Quiz.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.phoneController">
+<AnchorPane fx:id="rootPane" onMouseEntered="#appAcessed" stylesheets="@Quiz.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.phoneController">
    <children>
       <TextFlow layoutX="36.0" layoutY="92.0" />
       <Group layoutX="42.0" layoutY="100.0">
@@ -83,7 +84,7 @@
                   </LinearGradient>
                </fill>
             </Rectangle>
-            <Rectangle fx:id="multiTask211" arcHeight="5.0" arcWidth="5.0" fill="#d0d0d0" height="10.0" layoutX="220.0" layoutY="381.0" onMouseClicked="#multiTaskingButtonClicked" onMouseEntered="#multiTaskingButtonMouseOver" stroke="BLACK" strokeType="INSIDE" width="11.0" />
+            <Rectangle fx:id="multiTask2" arcHeight="5.0" arcWidth="5.0" fill="#d0d0d0" height="10.0" layoutX="220.0" layoutY="381.0" onMouseClicked="#multiTaskingButtonClicked" onMouseEntered="#multiTaskingButtonMouseOver" stroke="BLACK" strokeType="INSIDE" width="11.0" />
             <Text layoutX="110.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12:03" wrappingWidth="85.80989074707031">
                <font>
                   <Font size="32.0" />
@@ -95,7 +96,8 @@
                </font>
             </Text>
             <Rectangle fx:id="frontSpeaker" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="5.0" layoutX="133.0" layoutY="-36.0" onMouseClicked="#frontSpeakerClicked" onMouseEntered="#frontSpeakerMouseOver" stroke="BLACK" strokeType="INSIDE" width="25.0" />
-            <Rectangle fx:id="multiTask2111" arcHeight="5.0" arcWidth="5.0" fill="#d0d0d0" height="10.0" layoutX="216.0" layoutY="377.0" onMouseClicked="#multiTaskingButtonClicked" onMouseEntered="#multiTaskingButtonMouseOver" stroke="BLACK" strokeType="INSIDE" width="11.0" />
+            <Rectangle fx:id="multiTask1" arcHeight="5.0" arcWidth="5.0" fill="#d0d0d0" height="10.0" layoutX="216.0" layoutY="377.0" onMouseClicked="#multiTaskingButtonClicked" onMouseEntered="#multiTaskingButtonMouseOver" stroke="BLACK" strokeType="INSIDE" width="11.0" />
+            <Ellipse fx:id="microphone" fill="WHITE" layoutX="222.0" layoutY="406.0" onMouseClicked="#microphoneClicked" onMouseEntered="#microphoneMouseOver" radiusX="6.0" radiusY="3.0" stroke="BLACK" strokeType="INSIDE" />
          </children>
       </Group>
       <Text fx:id="frontText" layoutX="149.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Front" wrappingWidth="87.91993713378906">
@@ -111,7 +113,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="41.0" layoutX="10.0" layoutY="565.0" stroke="BLACK" strokeType="INSIDE" width="790.0" />
       <Button fx:id="infoButton" layoutX="432.0" layoutY="570.0" mnemonicParsing="false" onAction="#infoButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Info" />
       <Button fx:id="menuButton" layoutX="114.0" layoutY="570.0" mnemonicParsing="false" onAction="#menuButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Menu" />
-      <Button fx:id="settingsButton" layoutX="265.0" layoutY="570.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="123.0" text="Settings" />
+      <Button fx:id="settingsButton" layoutX="265.0" layoutY="570.0" mnemonicParsing="false" onAction="#settingsButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Settings" />
       <Button fx:id="quizButton" layoutX="596.0" layoutY="570.0" mnemonicParsing="false" onAction="#quizButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Quiz" />
       <Rectangle fx:id="phoneBodyBack" arcHeight="35.0" arcWidth="35.0" height="449.0" layoutX="478.0" layoutY="60.0" onMouseClicked="#phoneBodyBackClicked" onMouseEntered="#phoneBodyBackMouseOver" stroke="BLACK" strokeType="INSIDE" width="256.0">
          <fill>
@@ -155,19 +157,19 @@
       </Rectangle>
       <Rectangle fx:id="chargingPortRear" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="6.0" layoutX="592.0" layoutY="503.0" onMouseClicked="#chargingPortClicked" onMouseEntered="#chargingPortMouseOver" stroke="BLACK" strokeType="INSIDE" width="20.0" />
       <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#2c2c2c" height="28.0" layoutX="487.0" layoutY="64.0" stroke="BLACK" strokeType="INSIDE" width="77.0" />
-      <Circle fill="WHITE" layoutX="503.0" layoutY="78.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="WHITE" layoutX="503.0" layoutY="78.0" onMouseClicked="#RearCameraColourClicked" onMouseEntered="#RearCameraColourMouseOver" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="WHITE" layoutX="546.0" layoutY="78.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="rearCameraColour" layoutX="503.0" layoutY="78.0" onMouseClicked="#RearCameraColourClicked" onMouseEntered="#RearCameraColourMouseOver" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="rearCameraBlackAndWhite" layoutX="546.0" layoutY="78.0" onMouseClicked="#RearCameraBlackAndWhiteClicked" onMouseEntered="#RearCameraBlackAndWhiteMouseOver" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="flash" fill="WHITE" layoutX="526.0" layoutY="78.0" onDragEntered="#flashClicked" onMouseClicked="#flashClicked" onMouseEntered="#flashMouseOver" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fill="WHITE" layoutX="523.0" layoutY="74.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fill="WHITE" layoutX="529.0" layoutY="74.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fill="WHITE" layoutX="529.0" layoutY="80.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fill="WHITE" layoutX="523.0" layoutY="80.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="led3" fill="WHITE" layoutX="523.0" layoutY="74.0" onMouseClicked="#flashClicked" onMouseEntered="#flashMouseOver" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="led4" fill="WHITE" layoutX="529.0" layoutY="74.0" onMouseClicked="#flashClicked" onMouseEntered="#flashMouseOver" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="led2" fill="WHITE" layoutX="529.0" layoutY="80.0" onMouseClicked="#flashClicked" onMouseEntered="#flashMouseOver" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="led1" fill="WHITE" layoutX="523.0" layoutY="80.0" onMouseClicked="#flashClicked" onMouseEntered="#flashMouseOver" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
       <Rectangle fx:id="rearSpeaker1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="28.0" layoutX="673.0" layoutY="474.0" onMouseClicked="#rearSpeakerClicked" onMouseEntered="#rearSpeakerMouseOver" stroke="BLACK" strokeType="INSIDE" width="4.0" />
-      <Rectangle fx:id="rearSpeaker2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="28.0" layoutX="683.0" layoutY="474.0" stroke="BLACK" strokeType="INSIDE" width="4.0" />
-      <Rectangle fx:id="rearSpeaker3" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="28.0" layoutX="693.0" layoutY="474.0" stroke="BLACK" strokeType="INSIDE" width="4.0" />
-      <Rectangle fx:id="rearSpeaker4" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="28.0" layoutX="704.0" layoutY="474.0" stroke="BLACK" strokeType="INSIDE" width="4.0" />
+      <Rectangle fx:id="rearSpeaker2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="28.0" layoutX="683.0" layoutY="474.0" onMouseClicked="#rearSpeakerClicked" onMouseEntered="#rearSpeakerMouseOver" stroke="BLACK" strokeType="INSIDE" width="4.0" />
+      <Rectangle fx:id="rearSpeaker3" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="28.0" layoutX="693.0" layoutY="474.0" onMouseClicked="#rearSpeakerClicked" onMouseEntered="#rearSpeakerMouseOver" stroke="BLACK" strokeType="INSIDE" width="4.0" />
+      <Rectangle fx:id="rearSpeaker4" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="28.0" layoutX="704.0" layoutY="474.0" onMouseClicked="#rearSpeakerClicked" onMouseEntered="#rearSpeakerMouseOver" stroke="BLACK" strokeType="INSIDE" width="4.0" />
       <StackPane fx:id="infomationPane" layoutX="293.0" layoutY="526.0" />
       <Rectangle fx:id="greyOutRectangle" arcHeight="5.0" arcWidth="5.0" disable="true" fill="#8a8a8a" height="638.0" onMouseEntered="#appAcessed" opacity="0.6" stroke="#ddfff7" strokeType="INSIDE" visible="false" width="830.0" />
       <Rectangle fx:id="descriptionArea" arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="405.0" layoutX="36.0" layoutY="92.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="714.0" />

@@ -8,3 +8,4 @@ Capacative Proximity sensor
 Enhanced Zoom
 Light-emitting diode (LED)
 Signal image processor
+Transducer

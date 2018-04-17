@@ -1,14 +1,17 @@
 package sample;
 
+import gnu.io.NoSuchPortException;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
 import static java.lang.Boolean.TRUE;
+
 
 
 public class Controller {
@@ -69,9 +72,8 @@ Button quizButton;
 
         pane = FXMLLoader.load(getClass().getResource("Phone.fxml"));
         rootPane.getChildren().setAll(pane);
-        rootPane.getStylesheets().add("/Sample/Quiz.css");
-
-
+        Hardware.pingTest();
+        rootPane.getStylesheets().add(optionsController.fontSize);
 
 
 
@@ -81,6 +83,7 @@ Button quizButton;
          pane = FXMLLoader.load(getClass().getResource("Options.fxml"));
         rootPane.getChildren().setAll(pane);
         rootPane.getStylesheets().add(optionsController.fontSize);
+
 
 
 
@@ -96,7 +99,8 @@ Button quizButton;
 
          pane = FXMLLoader.load(getClass().getResource("welcomeQuiz.fxml"));
         rootPane.getChildren().setAll(pane);
-        rootPane.getStylesheets().add("/Sample/Quiz.css");
+
+        rootPane.getStylesheets().add(optionsController.fontSize);
 
 
 

@@ -1,16 +1,9 @@
 
 
-
-
-
-
-.Textsmall {
-
-
-    -fx-font-size:  200%;
-
-
+.root {
+    -fx-font-size: 175%;
 }
+
 
 .button {
     -fx-background-color: #1a936f;

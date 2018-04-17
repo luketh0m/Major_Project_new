@@ -4,6 +4,9 @@ package sample;
 
 
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
+import gnu.io.NoSuchPortException;
+import javafx.scene.paint.Color;
 import org.sintef.jarduino.*;
 import org.sintef.jarduino.comm.Serial4JArduino;
 import org.sintef.jarduino.sim.InteractiveJArduinoDataGUIClient;
@@ -16,6 +19,7 @@ import static org.sintef.jarduino.DigitalState.HIGH;
 import static org.sintef.jarduino.DigitalState.LOW;
 import static org.sintef.jarduino.PinMode.INPUT;
 import static org.sintef.jarduino.PinMode.OUTPUT;
+
 
 public class Hardware extends JArduino {
 
@@ -33,6 +37,7 @@ public class Hardware extends JArduino {
 
 
 
+
     public static JArduino arduino = new Hardware("COM3");
     @Override
     protected void setup() {}
@@ -46,7 +51,15 @@ public class Hardware extends JArduino {
             System.out.print(arduino.digitalRead(DigitalPin.PIN_3));
         counter++;
         arduino.delay(50);
+
     }
+
+    public static void pingTest() {
+
+        arduino.ping();
+    }
+
+
 
     public static void proximitySensorOn() {
 
@@ -100,19 +113,22 @@ public class Hardware extends JArduino {
 
     }
 
-    public static void microphoneOn(){
+    public static void microphoneOn() {
 
-        arduino.pinMode(DigitalPin.PIN_3, INPUT);
 
-        int count = 0;
-        while (count <100)
-        {
 
-            System.out.print(arduino.analogRead(AnalogPin.A_0)+ "   ");
-            if (arduino.analogRead(AnalogPin.A_0) > 200) {
-                Toolkit.getDefaultToolkit().beep();
-            }
-            count++;
+        arduino.pinMode(DigitalPin.PIN_8, INPUT);
+        short number;
+
+
+        do {
+            number = arduino.analogRead(AnalogPin.A_0);
+
+        } while (number <= 202);
+
+        if (number >= 203) {
+            System.out.print(number);
+            alertBox.display("Hi!", "I heard that!", "Okay");
         }
 
     }
@@ -157,16 +173,6 @@ public class Hardware extends JArduino {
 
         }
 
-    }
-
-    public static void buttonOff() {
-        try {
-            arduino.pinMode(DigitalPin.PIN_4, OUTPUT);
-        } catch (Exception e) {}
-
-        try {
-            arduino.digitalWrite(DigitalPin.PIN_4, LOW);
-        } catch (Exception e) {}
     }
 
 

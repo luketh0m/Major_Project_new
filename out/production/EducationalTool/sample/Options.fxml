@@ -86,7 +86,7 @@
             <Font name="Curlz MT" size="18.0" />
          </font>
       </Text>
-      <Text layoutX="60.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada ligula quis mauris aliquam, vitae fermentum sem porta. Pellentesque lorem tortor, suscipit ut est sed, laoreet eleifend metus. Maecenas eget orci id neque malesuada vulputate. Quisque dignissim justo sit amet scelerisque tempus. Nulla a massa ultrices, vestibulum nisl nec, dignissim ante. Nunc dolor diam, finibus non finibus id, scelerisque et turpis. Morbi consequat quam id ante efficitur placerat at nec turpis. Aenean rhoncus posuere turpis, quis venenatis quam. Nam gravida lacinia felis, et volutpat quam condimentum id. Nunc pretium eu arcu a tincidunt. Nulla maximus nulla in est interdum interdum. Maecenas vestibulum convallis metus, a elementum diam vehicula vel. " wrappingWidth="735.0927732028067" />
+      <Text layoutX="60.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada ligula quis mauris aliquam, vitae fermentum sem porta. Pellentesque lorem tortor, suscipit ut est sed, laoreet eleifend metus. Maecenas eget orci id neque malesuada vulputate. morbi consequat quam id ante efficitur placerat at nec turpis.  " wrappingWidth="735.0927732028067" />
    </children>
 
 </AnchorPane>

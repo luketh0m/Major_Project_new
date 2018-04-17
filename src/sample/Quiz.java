@@ -16,6 +16,7 @@ import javafx.scene.shape.StrokeType;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 
 
 import java.awt.*;
@@ -31,8 +32,8 @@ public class Quiz extends Application {
 
     public static String[] randomAnswers = new String[3];
     public static int score;
-    public static int questionNo;
-
+    public static int questionNo = 1;
+    public static   Main m = new Main();
 
 
 
@@ -104,15 +105,9 @@ public class Quiz extends Application {
 
     public static String[] displayQuestions (String questions[], String questionsAnswers[]) {
 
-
-        Random r = new Random();
-        int numberOfQuestions = questions.length;
-        int random = r.nextInt(numberOfQuestions);
-
         String qAndA[] = new String [2];
-        qAndA [0]  = questions[random];
-        qAndA [1] = questionsAnswers[random];
-
+        qAndA [0]  = questions[questionNo];
+        qAndA [1] = questionsAnswers[questionNo];
 
 
         return qAndA;
@@ -181,10 +176,10 @@ public class Quiz extends Application {
         } while (Question[1] == Quiz.randomAnswers[0] || Question[1] == Quiz.randomAnswers[1] || Question[1] == Quiz.randomAnswers[2]);
 
 
-        Rectangle backround = new Rectangle();
-        backround.setWidth(800);
-        backround.setHeight(600);
-        backround.setFill(Color.web("#ddfff7"));
+        Rectangle background = new Rectangle();
+        background.setWidth(800);
+        background.setHeight(600);
+        background.setFill(Color.web("#ddfff7"));
 
         Label questionNumberLabel = new Label("Question " + Quiz.questionNo + " Out of 10");
         Label questionLabel = new Label(Question[0]); //Display Question on screen
@@ -284,7 +279,7 @@ public class Quiz extends Application {
         toolkitButton.setPrefWidth(118);
 
 
-        layout.getChildren().addAll( backround, questionNumberLabel, questionLabel,grid, bottomMenu, menuButton, infoButton,aboutButton,toolkitButton);
+        layout.getChildren().addAll( background, questionNumberLabel, questionLabel,grid, bottomMenu, menuButton, infoButton,aboutButton,toolkitButton);
 
 
 
@@ -381,10 +376,10 @@ public class Quiz extends Application {
         primaryStage.close();
 
        AnchorPane pane = new AnchorPane();
-       Rectangle backround = new Rectangle();
-       backround.setHeight(600);
-       backround.setWidth(800);
-       backround.setFill(Color.web("#ddfff7"));
+       Rectangle background = new Rectangle();
+       background.setHeight(600);
+       background.setWidth(800);
+       background.setFill(Color.web("#ddfff7"));
        pane.setPrefHeight(600);
        pane.setPrefWidth(800);
        Stage newPrimaryStage = new Stage();
@@ -409,6 +404,19 @@ public class Quiz extends Application {
         tryAgin.setFont(f);
 
         Button retry = new Button ("Retry");
+        retry.setOnAction(e ->  {
+            primaryStage.close();
+            Main.currentPage = "welcomeQuiz.fxml";
+
+            try {
+                questionNo =1;
+                score =0;
+                m.start(primaryStage);
+            } catch (Exception e1) {
+                e1.printStackTrace();
+            }
+
+        });
         retry.setLayoutX(343);
         retry.setLayoutY(238);
         retry.setPrefWidth(131);
@@ -429,7 +437,7 @@ public class Quiz extends Application {
         submit.setLayoutX(532);
         submit.setLayoutY(370);
         submit.setFont(f);
-        retry.setOnAction(e -> quizMenu() );
+
 
         submit.setOnAction(e->
         {
@@ -440,7 +448,7 @@ public class Quiz extends Application {
                 alertBox.display("Nickname Added!", "Your Nickname has been added! Your score won't show right now, but if you've made it onto the leaderboard, It'll be there next time! Thanks for playing!", "Okay!");
             }
             catch (Exception exc) {
-                System.out.print(exc);
+                alertBox.display("Error!", "Sorry, your score couldn't be added at this time. Please try again later", "Okay");
 
             }
         });
@@ -517,7 +525,7 @@ public class Quiz extends Application {
 
 
 
-        pane.getChildren().addAll( backround, gameOver, userScore, tryAgin, retry, enterName, nameSubmission, submit, lBoard, firstPlace, secondPlace, thirdPlace, factBoarder, fact, menu, about, info, toolKit);
+        pane.getChildren().addAll( background, gameOver, userScore, tryAgin, retry, enterName, nameSubmission, submit, lBoard, firstPlace, secondPlace, thirdPlace, factBoarder, fact, menu, about, info, toolKit);
         Scene scene = new Scene(pane, 800, 600 );
         scene.getStylesheets().add(optionsController.fontSize);
         newPrimaryStage.setScene(scene);
@@ -527,6 +535,9 @@ public class Quiz extends Application {
 
 
     }
+
+
+
 
 
 
