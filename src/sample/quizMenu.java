@@ -12,11 +12,17 @@ import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 
 import java.io.FileNotFoundException;
 
+import static sample.optionsController.primaryStage;
+
 public class quizMenu extends Application {
 
+
+    Controller c = new Controller();
+    Main m = new Main();
 
     AnchorPane pane;
     @FXML
@@ -71,6 +77,44 @@ public class quizMenu extends Application {
 
         quizStart(Hard,hardAnswer);
     }
+
+    public void menuButtonClicked() throws Exception {
+        primaryStage.close();
+        m.start(primaryStage);
+
+
+    }
+
+
+    public void settingsButtonClicked() throws Exception {
+        primaryStage.close();
+        Main.currentPage = "Options.fxml";
+        m.start(primaryStage);
+
+    }
+
+    public void infoButtonClicked() throws Exception {
+
+        c.infoButton();
+    }
+
+    public void quizButtonClicked() throws Exception {
+        primaryStage.close();
+        Main.currentPage = "welcomeQuiz.fxml";
+        m.start(primaryStage);
+
+
+    }
+        public void closePage() throws Exception {
+
+            Window window = rootPane.getScene().getWindow();
+            if (window instanceof Stage) {
+
+
+                ((Stage) window).close();
+            }
+        }
+
 
 
 

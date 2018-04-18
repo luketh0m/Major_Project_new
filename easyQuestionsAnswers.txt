@@ -6,6 +6,6 @@ Acoustic Energy
 photodiode
 Capacative Proximity sensor
 Enhanced Zoom
-Light-emitting diode (LED)
+LED
 Signal image processor
 Transducer

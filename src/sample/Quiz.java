@@ -11,6 +11,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.effect.Reflection;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Ellipse;
+import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.StrokeType;
 import javafx.scene.text.Font;
@@ -164,8 +166,7 @@ public class Quiz extends Application {
 
     public static void quizGame (String questions[], String questionsAnswers[]) {
 
-
-
+        Reflection R = new Reflection();
         Stage primaryStage = new Stage();
         String Question[] = Quiz.displayQuestions(questions, questionsAnswers);
 
@@ -204,48 +205,86 @@ public class Quiz extends Application {
 
         AnchorPane  layout = new AnchorPane();
         GridPane grid = new GridPane();
-        grid.add(Answers.get(0), 1, 0);
-        grid.add(Answers.get(1), 1, 1);
-        grid.add(Answers.get(2), 2, 0);
-        grid.add(Answers.get(3), 2, 1);
-
+        grid.add(Answers.get(0), 0, 0);
+        grid.add(Answers.get(1), 0, 1);
+        grid.add(Answers.get(2), 1, 0);
+        grid.add(Answers.get(3), 1, 1);
+        grid.setGridLinesVisible(false);
 
 
 
         correctAnswer.setPrefHeight(75);
         correctAnswer.setPrefWidth(168);
+        correctAnswer.setEffect(R);
 
 
         incorrectOne.setPrefHeight(75);
         incorrectOne.setPrefWidth(168);
+        incorrectOne.setEffect(R);
 
 
         incorrectTwo.setPrefHeight(75);
         incorrectTwo.setPrefWidth(168);
+        incorrectTwo.setEffect(R);
 
         incorrectThree.setPrefHeight(75);
         incorrectThree.setPrefWidth(168);
+        incorrectThree.setEffect(R);
+
+
+        Line questionLink1 = new Line();
+        Line questionLink2 = new Line();
+        Line questionLink3 = new Line();
+        Line questionLink4 = new Line();
+
+        questionLink1.setEndX(200);
+        questionLink1.setStartX(0);
+        questionLink1.setStartY(330);
+        questionLink1.setEndY(330);
+
+        questionLink2.setEndX(600);
+        questionLink2.setStartX(800);
+        questionLink2.setStartY(330);
+        questionLink2.setEndY(330);
+
+
+        questionLink3.setEndX(200);
+        questionLink3.setStartX(0);
+        questionLink3.setStartY(475);
+        questionLink3.setEndY(475);
+
+        questionLink4.setEndX(600);
+        questionLink4.setStartX(800);
+        questionLink4.setStartY(475);
+        questionLink4.setEndY(475);
 
 
 
-        questionNumberLabel.setFont(new Font("curlz MT", 30));
+        questionNumberLabel.setFont(new Font("curlz MT", 25));
         questionNumberLabel.setTextFill(Color.web("#114b5f"));
         questionNumberLabel.setLayoutX(10);
-        questionNumberLabel.setLayoutY(10);
+        questionNumberLabel.setLayoutY(1);
 
+        VBox questionBox = new VBox();
         questionLabel.setFont(new Font("curlz MT", 30));
         questionLabel.setTextFill(Color.web("#114b5f"));
         questionLabel.setLayoutX(10);
         questionLabel.setLayoutY(100);
+        questionLabel.setMaxWidth(800);
 
-        grid.setLayoutX(47);
+        questionBox.getChildren().add(questionLabel);
+        questionBox.setLayoutX(10);
+        questionBox.setLayoutY(100);
+        questionBox.setMaxWidth(800);
+        questionBox.setFillWidth(true);
+        grid.setLayoutX(40);
         grid.setLayoutY(239);
         grid.setPrefHeight(309);
         grid.setPrefWidth(721);
         grid.setVgap(50);
         grid.setHgap(150);
 
-       grid.setAlignment(Pos.CENTER_LEFT);
+       grid.setAlignment(Pos.CENTER);
 
         Rectangle bottomMenu = new Rectangle();
         bottomMenu.setWidth(800);
@@ -279,19 +318,7 @@ public class Quiz extends Application {
         toolkitButton.setPrefWidth(118);
 
 
-        layout.getChildren().addAll( background, questionNumberLabel, questionLabel,grid, bottomMenu, menuButton, infoButton,aboutButton,toolkitButton);
-
-
-
-
-
-
-
-
-
-
-
-
+        layout.getChildren().addAll( background, questionNumberLabel, questionBox, questionLink1, questionLink2,questionLink3, questionLink4, grid, bottomMenu, menuButton, infoButton,aboutButton,toolkitButton);
 
 
 
@@ -301,6 +328,8 @@ public class Quiz extends Application {
         primaryStage.setMaxWidth(800);
         primaryStage.show();
 
+        scene.getStylesheets().add
+                (Quiz.class.getResource(optionsController.fontSize).toExternalForm());
         correctAnswer.setOnAction(e -> {
 
             correctAnswerChosen(primaryStage, questions, questionsAnswers);
@@ -393,14 +422,14 @@ public class Quiz extends Application {
         gameOver.setEffect(r);
 
         Text userScore = new Text ("You Scored " + Quiz.score + " Out of 10!");
-        userScore.setLayoutX(267);
-        userScore.setLayoutY(151);
+        userScore.setLayoutX(258);
+        userScore.setLayoutY(103);
         userScore.setFont(f);
 
 
         Text tryAgin = new Text ("Try again?");
-        tryAgin.setLayoutX(343);
-        tryAgin.setLayoutY(218);
+        tryAgin.setLayoutX(350);
+        tryAgin.setLayoutY(213);
         tryAgin.setFont(f);
 
         Button retry = new Button ("Retry");
@@ -417,7 +446,7 @@ public class Quiz extends Application {
             }
 
         });
-        retry.setLayoutX(343);
+        retry.setLayoutX(350);
         retry.setLayoutY(238);
         retry.setPrefWidth(131);
         retry.setPrefHeight(30);
@@ -458,7 +487,7 @@ public class Quiz extends Application {
 
         Text lBoard = new Text ("LeaderBoard");
         lBoard.setLayoutX(65);
-        lBoard.setLayoutY(179);
+        lBoard.setLayoutY(213);
         lBoard.setFont(l);
 
         // Image trophy
@@ -471,12 +500,12 @@ public class Quiz extends Application {
 
         Text secondPlace = new Text((String.format("2. %s", connect.nickNames.pop() + " Score: " +connect.userScores.pop())));
         secondPlace.setLayoutX(65);
-        secondPlace.setLayoutY(307);
+        secondPlace.setLayoutY(290);
         secondPlace.setFont(l);
 
         Text thirdPlace = new Text ((String.format("3. %s", connect.nickNames.pop() + " Score: " + connect.userScores.pop())));
         thirdPlace.setLayoutX(65);
-        thirdPlace.setLayoutY(274);
+        thirdPlace.setLayoutY(340);
         thirdPlace.setFont(l);
 
 

@@ -3,6 +3,7 @@
 
 
 .root {
+
     -fx-font-size: 150%;
 }
 
@@ -13,7 +14,8 @@
 }
 
 .button {
-    -fx-font-size:  150%;
+    -fx-font-family: 'Curlz MT';
+    -fx-text-fill: black;
     -fx-background-color: #1a936f;
 }
 .radio-button {
@@ -22,6 +24,8 @@
 
 
 .button:hover {
-    -fx-scale-x: 5.1;
+    -fx-cursor: hand;
+    -fx-color: #1a936f;
+    -fx-scale-x: 2.1;
     -fx-scale-y: 1.1;
 }

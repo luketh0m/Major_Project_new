@@ -16,11 +16,13 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane fx:id="rootPane" onMouseEntered="#appAcessed" stylesheets="@Quiz.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.phoneController">
+<AnchorPane fx:id="rootPane" onMouseEntered="#appAcessed" prefHeight="600.0" prefWidth="842.0" stylesheets="@Quiz.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.phoneController">
    <children>
       <TextFlow layoutX="36.0" layoutY="92.0" />
       <Group layoutX="42.0" layoutY="100.0">
          <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ddfff7" height="608.0" layoutX="-43.0" layoutY="-102.0" stroke="BLACK" strokeType="INSIDE" width="842.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a7a7eb" height="53.0" layoutX="-43.0" layoutY="452.0" stroke="BLACK" strokeType="INSIDE" width="843.0" />
             <Rectangle fx:id="phoneBody" arcHeight="35.0" arcWidth="35.0" height="449.0" layoutX="20.0" layoutY="-40.0" stroke="BLACK" strokeType="INSIDE" width="256.0">
                <fill>
                   <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
@@ -98,23 +100,22 @@
             <Rectangle fx:id="frontSpeaker" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="5.0" layoutX="133.0" layoutY="-36.0" onMouseClicked="#frontSpeakerClicked" onMouseEntered="#frontSpeakerMouseOver" stroke="BLACK" strokeType="INSIDE" width="25.0" />
             <Rectangle fx:id="multiTask1" arcHeight="5.0" arcWidth="5.0" fill="#d0d0d0" height="10.0" layoutX="216.0" layoutY="377.0" onMouseClicked="#multiTaskingButtonClicked" onMouseEntered="#multiTaskingButtonMouseOver" stroke="BLACK" strokeType="INSIDE" width="11.0" />
             <Ellipse fx:id="microphone" fill="WHITE" layoutX="222.0" layoutY="406.0" onMouseClicked="#microphoneClicked" onMouseEntered="#microphoneMouseOver" radiusX="6.0" radiusY="3.0" stroke="BLACK" strokeType="INSIDE" />
+            <Button fx:id="menuButton" layoutX="20.0" layoutY="461.0" mnemonicParsing="false" onAction="#menuButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Menu" />
+            <Button fx:id="settingsButton" layoutX="212.0" layoutY="461.0" mnemonicParsing="false" onAction="#settingsButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Settings" />
+            <Button fx:id="quizButton" layoutX="575.0" layoutY="461.0" mnemonicParsing="false" onAction="#quizButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Quiz" />
+            <Button fx:id="infoButton" layoutX="395.0" layoutY="461.0" mnemonicParsing="false" onAction="#infoButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Info" />
+            <Text fx:id="frontText" layoutX="102.0" layoutY="-53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Front" wrappingWidth="87.91993713378906">
+               <font>
+                  <Font name="Curlz MT" size="33.0" />
+               </font>
+            </Text>
+            <Text fx:id="backText" layoutX="545.0" layoutY="-54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Back" wrappingWidth="59.25325012207031">
+               <font>
+                  <Font name="Curlz MT" size="33.0" />
+               </font>
+            </Text>
          </children>
       </Group>
-      <Text fx:id="frontText" layoutX="149.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Front" wrappingWidth="87.91993713378906">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Text>
-      <Text fx:id="backText" layoutX="594.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Back" wrappingWidth="59.25325012207031">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Text>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="41.0" layoutX="10.0" layoutY="565.0" stroke="BLACK" strokeType="INSIDE" width="790.0" />
-      <Button fx:id="infoButton" layoutX="432.0" layoutY="570.0" mnemonicParsing="false" onAction="#infoButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Info" />
-      <Button fx:id="menuButton" layoutX="114.0" layoutY="570.0" mnemonicParsing="false" onAction="#menuButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Menu" />
-      <Button fx:id="settingsButton" layoutX="265.0" layoutY="570.0" mnemonicParsing="false" onAction="#settingsButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Settings" />
-      <Button fx:id="quizButton" layoutX="596.0" layoutY="570.0" mnemonicParsing="false" onAction="#quizButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Quiz" />
       <Rectangle fx:id="phoneBodyBack" arcHeight="35.0" arcWidth="35.0" height="449.0" layoutX="478.0" layoutY="60.0" onMouseClicked="#phoneBodyBackClicked" onMouseEntered="#phoneBodyBackMouseOver" stroke="BLACK" strokeType="INSIDE" width="256.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
