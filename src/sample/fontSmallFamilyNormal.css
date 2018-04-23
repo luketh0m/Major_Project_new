@@ -1,0 +1,22 @@
+
+
+
+
+.Size {
+    -fx-font-size: 150%;
+}
+
+
+.button {
+    -fx-font-size: 150%;
+    -fx-font-family: 'Arial Black';
+    -fx-text-fill: black;
+    -fx-background-color: #1a936f;
+}
+.button:hover {
+    -fx-cursor: hand;
+    -fx-color: #1a936f;
+    -fx-scale-x: 2.1;
+    -fx-scale-y: 1.1;
+}
+
