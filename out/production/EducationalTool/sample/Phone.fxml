@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane fx:id="rootPane" onMouseEntered="#appAcessed" prefHeight="600.0" prefWidth="842.0" stylesheets="@Quiz.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.phoneController">
+<AnchorPane fx:id="rootPane" onMouseEntered="#appAcessed" prefHeight="600.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.phoneController">
    <children>
       <TextFlow layoutX="36.0" layoutY="92.0" />
       <Group layoutX="42.0" layoutY="100.0">
@@ -100,16 +100,16 @@
             <Rectangle fx:id="frontSpeaker" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="5.0" layoutX="133.0" layoutY="-36.0" onMouseClicked="#frontSpeakerClicked" onMouseEntered="#frontSpeakerMouseOver" stroke="BLACK" strokeType="INSIDE" width="25.0" />
             <Rectangle fx:id="multiTask1" arcHeight="5.0" arcWidth="5.0" fill="#d0d0d0" height="10.0" layoutX="216.0" layoutY="377.0" onMouseClicked="#multiTaskingButtonClicked" onMouseEntered="#multiTaskingButtonMouseOver" stroke="BLACK" strokeType="INSIDE" width="11.0" />
             <Ellipse fx:id="microphone" fill="WHITE" layoutX="222.0" layoutY="406.0" onMouseClicked="#microphoneClicked" onMouseEntered="#microphoneMouseOver" radiusX="6.0" radiusY="3.0" stroke="BLACK" strokeType="INSIDE" />
-            <Button fx:id="menuButton" layoutX="20.0" layoutY="461.0" mnemonicParsing="false" onAction="#menuButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Menu" />
-            <Button fx:id="settingsButton" layoutX="212.0" layoutY="461.0" mnemonicParsing="false" onAction="#settingsButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Settings" />
-            <Button fx:id="quizButton" layoutX="575.0" layoutY="461.0" mnemonicParsing="false" onAction="#quizButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Quiz" />
-            <Button fx:id="infoButton" layoutX="395.0" layoutY="461.0" mnemonicParsing="false" onAction="#infoButtonClicked" prefHeight="31.0" prefWidth="123.0" text="Info" />
-            <Text fx:id="frontText" layoutX="102.0" layoutY="-53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Front" wrappingWidth="87.91993713378906">
+            <Button fx:id="menuButton" layoutX="20.0" layoutY="461.0" mnemonicParsing="false" onAction="#menuButtonClicked" prefHeight="31.0" prefWidth="123.0" styleClass="Size" text="Menu" />
+            <Button fx:id="settingsButton" layoutX="212.0" layoutY="461.0" mnemonicParsing="false" onAction="#settingsButtonClicked" prefHeight="31.0" prefWidth="123.0" styleClass="Size" text="Settings" />
+            <Button fx:id="quizButton" layoutX="575.0" layoutY="461.0" mnemonicParsing="false" onAction="#quizButtonClicked" prefHeight="31.0" prefWidth="123.0" styleClass="Size" text="Quiz" />
+            <Button fx:id="infoButton" layoutX="395.0" layoutY="461.0" mnemonicParsing="false" onAction="#infoButtonClicked" prefHeight="31.0" prefWidth="123.0" styleClass="Size" text="Info" />
+            <Text fx:id="frontText" layoutX="102.0" layoutY="-53.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Size" text="Front" wrappingWidth="87.91993713378906">
                <font>
                   <Font name="Curlz MT" size="33.0" />
                </font>
             </Text>
-            <Text fx:id="backText" layoutX="545.0" layoutY="-54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Back" wrappingWidth="59.25325012207031">
+            <Text fx:id="backText" layoutX="545.0" layoutY="-54.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Size" text="Back" wrappingWidth="116.25325012207031">
                <font>
                   <Font name="Curlz MT" size="33.0" />
                </font>
@@ -174,20 +174,20 @@
       <StackPane fx:id="infomationPane" layoutX="293.0" layoutY="526.0" />
       <Rectangle fx:id="greyOutRectangle" arcHeight="5.0" arcWidth="5.0" disable="true" fill="#8a8a8a" height="638.0" onMouseEntered="#appAcessed" opacity="0.6" stroke="#ddfff7" strokeType="INSIDE" visible="false" width="830.0" />
       <Rectangle fx:id="descriptionArea" arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="405.0" layoutX="36.0" layoutY="92.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="714.0" />
-      <Text fx:id="descriptionLabel" layoutX="326.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sensor Label" visible="false">
+      <Text fx:id="descriptionLabel" layoutX="326.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Size" text="Sensor Label" visible="false">
          <font>
             <Font size="22.0" />
          </font></Text>
-      <Text fx:id="descriptionText" layoutX="40.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vulputate et quam a fringilla. Vivamus tincidunt mollis diam, quis molestie nulla aliquam at. Curabitur mollis quam fermentum libero porta, vel malesuada nisi facilisis. Vestibulum odio augue, volutpat non sem sed, tincidunt sagittis elit. Curabitur turpis dolor, semper vel ligula semper, hendrerit vestibulum lorem. Integer ac nisl commodo, ullamcorper arcu nec, bibendum augue. Pellentesque nisi diam, tempor a odio id, pharetra consectetur justo" visible="false" wrappingWidth="693.69140625">
+      <Text fx:id="descriptionText" layoutX="40.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Size" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vulputate et quam a fringilla. Vivamus tincidunt mollis diam, quis molestie nulla aliquam at. Curabitur mollis quam fermentum libero porta, vel malesuada nisi facilisis. Vestibulum odio augue, volutpat non sem sed, tincidunt sagittis elit. Curabitur turpis dolor, semper vel ligula semper, hendrerit vestibulum lorem. Integer ac nisl commodo, ullamcorper arcu nec, bibendum augue. Pellentesque nisi diam, tempor a odio id, pharetra consectetur justo" visible="false" wrappingWidth="693.69140625">
          <font>
             <Font size="20.0" />
          </font></Text>
-      <Button fx:id="hardwareButton" layoutX="306.0" layoutY="454.0" mnemonicParsing="false" text="Launch Hardware" visible="false">
+      <Button fx:id="hardwareButton" layoutX="306.0" layoutY="454.0" mnemonicParsing="false" styleClass="Size" text="Launch Hardware" visible="false">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="backToPhoneButton" layoutX="325.0" layoutY="526.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="123.0" text="Take me Back!" visible="false">
+      <Button fx:id="backToPhoneButton" layoutX="325.0" layoutY="526.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="123.0" styleClass="Size" text="Take me Back!" visible="false">
          <font>
             <Font size="16.0" />
          </font>

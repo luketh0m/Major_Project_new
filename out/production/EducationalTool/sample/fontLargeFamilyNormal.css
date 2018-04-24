@@ -1,14 +1,16 @@
 
 
+
+
 .Size {
--fx-font-size: 150%;
-    -fx-font-family: 'Curlz MT';
+    -fx-font-size: 200%;
+    -fx-font-family: 'Arial';
 }
 
 
 .button {
     -fx-font-size: 150%;
-    -fx-font-family: 'Curlz MT';
+    -fx-font-family: 'Arial';
     -fx-text-fill: black;
     -fx-background-color: #1a936f;
 }
@@ -20,5 +22,5 @@
 }
 
 .TextFont {
-    -fx-font-family: 'Culrz MT';
+    -fx-font-family: 'Arial';
 }

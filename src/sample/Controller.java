@@ -57,14 +57,14 @@ Button quizButton;
     public void aboutButtonMouseOver() {
         mouseOver(aboutButton);
     }
-    public void quizButtonMouseOver() {
-        mouseOver(quizButton);
+    public void quizButtonMouseOver() { mouseOver(quizButton);}
 
-    }
+
+
 
     public void appAcessed() {
         optionsController.tintOptions(Tint);
-        System.out.print("Accessed");
+
 
     }
 
@@ -73,11 +73,13 @@ Button quizButton;
         pane = FXMLLoader.load(getClass().getResource("Phone.fxml"));
         rootPane.getChildren().setAll(pane);
         Hardware.pingTest();
-        rootPane.getStylesheets().add(optionsController.fontSize);
+
+            alertBox.display("No hardware Detected", "Sorry no hardware detected. Please plug in the arduino and restart this application", "    Okay");
+            rootPane.getStylesheets().add(optionsController.fontSize);
+
+        }
 
 
-
-    }
 
     public void settingsButton() throws Exception { //When user clicks the start button, load the Phone.fxml file
          pane = FXMLLoader.load(getClass().getResource("Options.fxml"));
@@ -91,7 +93,7 @@ Button quizButton;
 
     public void infoButton() {
 
-        alertBox.display("Info", "Version 1.0, Alpha", "Got it!");
+        alertBox.display("Info", "Version 2.0, Beta. Release date March 2018. Author lut14@aber.ac.uk", "Got it!");
 
     }
 

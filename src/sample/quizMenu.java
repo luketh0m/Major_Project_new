@@ -9,10 +9,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.*;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+
 
 import java.io.FileNotFoundException;
 
@@ -23,7 +25,7 @@ public class quizMenu extends Application {
 
     Controller c = new Controller();
     Main m = new Main();
-
+    optionsController o = new optionsController();
     AnchorPane pane;
     @FXML
     static Pane rootPane;
@@ -33,6 +35,8 @@ public class quizMenu extends Application {
     static Button mediumButton;
     @FXML
     static Button hardButton;
+    @FXML
+     private Rectangle Tint;
 
 
     public static  String Easy = "easyQuestions.txt";
@@ -42,6 +46,17 @@ public class quizMenu extends Application {
     String easyAnswer = "easyQuestionsAnswers.txt";
     String mediumAnswer = "mediumQuestionsAnswers.txt";
     String hardAnswer = "hardQuestionsAnswers.txt";
+
+
+
+
+
+    public void appAcessed() {
+        optionsController.tintOptions(Tint);
+
+
+    }
+
 
     public static void quizDifficulty() {
 
@@ -53,9 +68,6 @@ public class quizMenu extends Application {
 
 
         // Text files of question and answers
-
-
-
 
     }
     public void quizStart(String Difficulty, String DifficultyAnswers) throws Exception {

@@ -1,8 +1,7 @@
 
 
 .Size {
--fx-font-size: 150%;
-    -fx-font-family: 'Curlz MT';
+    -fx-font-size: 200%;
 }
 
 
@@ -17,8 +16,4 @@
     -fx-color: #1a936f;
     -fx-scale-x: 2.1;
     -fx-scale-y: 1.1;
-}
-
-.TextFont {
-    -fx-font-family: 'Culrz MT';
 }

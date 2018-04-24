@@ -28,7 +28,7 @@ public class DBconnect {
             st = con.createStatement();
 
         } catch (Exception ex) {
-            System.out.print("Error: " + ex);
+            alertBox.display("Error!", "We have a database error! Please tell the administrator. Exception: " +ex, "Okay"  );
         }
     }
 

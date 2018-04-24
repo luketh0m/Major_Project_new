@@ -21,15 +21,20 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{ // Load FXML document and display on screen
 
+        if (optionsController.fontSize == null) {
+
+            optionsController.fontSize = "/Sample/fontSmall.css";
+        }
 
         Parent root = FXMLLoader.load(getClass().getResource(currentPage));
+        root.getStylesheets().add(optionsController.fontSize);
         primaryStage.setTitle("Welcome!");
         primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();
         primaryStage.setMinWidth(800);
         primaryStage.setMinHeight(600);
 
-
+    System.out.print(optionsController.fontSize);
 
 
 

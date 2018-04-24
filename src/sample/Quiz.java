@@ -1,4 +1,5 @@
 package sample;
+import com.sun.org.apache.xpath.internal.functions.FuncFalse;
 import javafx.application.Application;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
@@ -30,13 +31,13 @@ import java.util.List;
 public class Quiz extends Application {
 
 
-
+    public Rectangle tint = new Rectangle();
 
     public static String[] randomAnswers = new String[3];
     public static int score;
     public static int questionNo = 1;
     public static   Main m = new Main();
-
+    static  Quiz q = new Quiz();
 
 
 
@@ -103,7 +104,9 @@ public class Quiz extends Application {
     }
 
 
-
+   /* public void appAccessed {
+        optionsController.tintOptions(Tint);
+    }  */
 
     public static String[] displayQuestions (String questions[], String questionsAnswers[]) {
 
@@ -264,6 +267,7 @@ public class Quiz extends Application {
         questionNumberLabel.setTextFill(Color.web("#114b5f"));
         questionNumberLabel.setLayoutX(10);
         questionNumberLabel.setLayoutY(1);
+        questionNumberLabel.getStyleClass().add("Size");
 
         VBox questionBox = new VBox();
         questionLabel.setFont(new Font("curlz MT", 30));
@@ -271,6 +275,7 @@ public class Quiz extends Application {
         questionLabel.setLayoutX(10);
         questionLabel.setLayoutY(100);
         questionLabel.setMaxWidth(800);
+        questionLabel.getStyleClass().add("Size");
 
         questionBox.getChildren().add(questionLabel);
         questionBox.setLayoutX(10);
@@ -317,8 +322,15 @@ public class Quiz extends Application {
        toolkitButton.setPrefHeight(38);
         toolkitButton.setPrefWidth(118);
 
+            q.tint.setVisible(false);
+            q.tint.setHeight(600);
+            q.tint.setWidth(800);
+            q.tint.setOpacity(0.2);
+            q.tint.setDisable(true);
 
-        layout.getChildren().addAll( background, questionNumberLabel, questionBox, questionLink1, questionLink2,questionLink3, questionLink4, grid, bottomMenu, menuButton, infoButton,aboutButton,toolkitButton);
+            optionsController.tintOptions(q.tint);
+
+        layout.getChildren().addAll( background, questionNumberLabel, questionBox, questionLink1, questionLink2,questionLink3, questionLink4, grid, bottomMenu, menuButton, infoButton,aboutButton,toolkitButton, q.tint);
 
 
 
@@ -326,6 +338,7 @@ public class Quiz extends Application {
         primaryStage.setScene(scene);
         primaryStage.setMaxHeight(600);
         primaryStage.setMaxWidth(800);
+        scene.getStylesheets().add(optionsController.fontSize);
         primaryStage.show();
 
         scene.getStylesheets().add
@@ -418,6 +431,7 @@ public class Quiz extends Application {
         gameOver.setLayoutX(258.0);
         gameOver.setLayoutY(53);
         gameOver.setFont(new Font("Curlz MT", 52));
+        gameOver.getStyleClass().add("Size");
 
         gameOver.setEffect(r);
 
@@ -425,12 +439,14 @@ public class Quiz extends Application {
         userScore.setLayoutX(258);
         userScore.setLayoutY(103);
         userScore.setFont(f);
+        userScore.getStyleClass().add("Size");
 
 
         Text tryAgin = new Text ("Try again?");
         tryAgin.setLayoutX(350);
         tryAgin.setLayoutY(213);
         tryAgin.setFont(f);
+        tryAgin.getStyleClass().add("Size");
 
         Button retry = new Button ("Retry");
         retry.setOnAction(e ->  {
@@ -451,12 +467,14 @@ public class Quiz extends Application {
         retry.setPrefWidth(131);
         retry.setPrefHeight(30);
         retry.setFont(new Font("Curlz MT", 14));
+        retry.getStyleClass().add("Size");
 
         Text enterName = new Text ("Please enter your nickname to be added to the LeaderBoard");
         enterName.setLayoutX(260);
         enterName.setLayoutY(340);
         enterName.setFont(new Font("Curlz MT", 20));
         enterName.setEffect(r);
+        enterName.getStyleClass().add("Size");
 
         TextField nameSubmission = new TextField();
         nameSubmission.setLayoutX(260);
@@ -466,6 +484,7 @@ public class Quiz extends Application {
         submit.setLayoutX(532);
         submit.setLayoutY(370);
         submit.setFont(f);
+
 
 
         submit.setOnAction(e->
@@ -489,6 +508,7 @@ public class Quiz extends Application {
         lBoard.setLayoutX(65);
         lBoard.setLayoutY(213);
         lBoard.setFont(l);
+        lBoard.getStyleClass().add("Size");
 
         // Image trophy
 
@@ -497,16 +517,20 @@ public class Quiz extends Application {
         firstPlace.setLayoutX(65);
         firstPlace.setLayoutY(240);
         firstPlace.setFont(l);
+        firstPlace.getStyleClass().add("Size");
+
 
         Text secondPlace = new Text((String.format("2. %s", connect.nickNames.pop() + " Score: " +connect.userScores.pop())));
         secondPlace.setLayoutX(65);
         secondPlace.setLayoutY(290);
         secondPlace.setFont(l);
+        secondPlace.getStyleClass().add("Size");
 
         Text thirdPlace = new Text ((String.format("3. %s", connect.nickNames.pop() + " Score: " + connect.userScores.pop())));
         thirdPlace.setLayoutX(65);
         thirdPlace.setLayoutY(340);
         thirdPlace.setFont(l);
+        thirdPlace.getStyleClass().add("Size");
 
 
 
@@ -529,6 +553,7 @@ public class Quiz extends Application {
         fact.setLayoutX(248);
        fact.setLayoutY(481);
        fact.setFont(l);
+       fact.getStyleClass().add("Size");
 
 
 
@@ -551,14 +576,22 @@ public class Quiz extends Application {
         toolKit.setLayoutY(566);
 
 
+        q.tint.setVisible(false);
+        q.tint.setHeight(600);
+        q.tint.setWidth(800);
+        q.tint.setOpacity(0.2);
+        q.tint.setDisable(true);
+
+        optionsController.tintOptions(q.tint);
 
 
 
-        pane.getChildren().addAll( background, gameOver, userScore, tryAgin, retry, enterName, nameSubmission, submit, lBoard, firstPlace, secondPlace, thirdPlace, factBoarder, fact, menu, about, info, toolKit);
+        pane.getChildren().addAll( background, gameOver, userScore, tryAgin, retry, enterName, nameSubmission, submit, lBoard, firstPlace, secondPlace, thirdPlace, factBoarder, fact, menu, about, info, toolKit, q.tint);
         Scene scene = new Scene(pane, 800, 600 );
+        pane.getStyleClass().clear();
+
         scene.getStylesheets().add(optionsController.fontSize);
         newPrimaryStage.setScene(scene);
-
         newPrimaryStage.show();
 
 

@@ -1,11 +1,14 @@
 package sample;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
@@ -43,6 +46,12 @@ public class optionsController {
 
     @FXML Rectangle Tint;
 
+    @FXML
+    Text fontStyle;
+    @FXML
+      RadioButton normalFontButton;
+    @FXML
+      RadioButton funFontButton;
 
 public  Boolean soundEnabled = true;
 
@@ -54,7 +63,13 @@ public static Boolean blueTint = FALSE;
     public static Boolean mediumText = FALSE;
     public static Boolean largeText = FALSE;
 
-    public static String fontSize = "Quiz.css";
+    public static String fontSize;
+
+   public static Boolean fontNormal = FALSE;
+   public static Boolean fontFun = TRUE;
+
+
+
 
 
 
@@ -77,9 +92,6 @@ public static Boolean blueTint = FALSE;
     }
 
 
-
-
-
     public void smallFontButton() throws Exception {
 
         smallTextSizeButton.setSelected(true);
@@ -88,21 +100,14 @@ public static Boolean blueTint = FALSE;
         smallTextSize();
 
 
-
-
-
     }
 
     public void mediumFontButton() throws Exception {
-
-
 
         smallTextSizeButton.setSelected(false);
         mediumTextSizeButton.setSelected(true);
         largeTextSizeButton.setSelected(false);
         mediumTextSize();
-
-
 
 
 
@@ -116,7 +121,6 @@ public static Boolean blueTint = FALSE;
         largeTextSize();
 
 
-
     }
 
 
@@ -126,18 +130,16 @@ public  void smallTextSize ()throws Exception {
         smallText = TRUE;
         mediumText = FALSE;
         largeText = FALSE;
-    fontSize = "/Sample/Quiz.css";
+    fontSize = fontSize.replaceAll("Medium", "Small");
+    fontSize = fontSize.replaceAll("Large", "Small");
     rootPane.getStylesheets().clear();
     rootPane.getStylesheets().add(optionsController.fontSize);
 
 
 
-
-
-
 }
 
- public  void mediumTextSize ()throws Exception {
+ public  void mediumTextSize () {
 
 
 
@@ -145,19 +147,20 @@ public  void smallTextSize ()throws Exception {
         smallText = FALSE;
         mediumText = TRUE;
         largeText = FALSE;
-     fontSize = "/Sample/fontMedium.css";
+     fontSize = fontSize.replaceAll("Small", "Medium");
+     fontSize = fontSize.replaceAll("Large", "Medium");
      rootPane.getStylesheets().clear();
      rootPane.getStylesheets().add(optionsController.fontSize);
 
 
 
-
-
-
     }
 
- public static  void largeTextSize() {
-     fontSize = "/Sample/fontLarge.css";
+ public void largeTextSize() {
+     fontSize = fontSize.replaceAll("Small", "Large");
+     fontSize = fontSize.replaceAll("Medium", "Large" );
+     rootPane.getStylesheets().clear();
+     rootPane.getStylesheets().add(optionsController.fontSize);
          smallText = FALSE;
          mediumText = FALSE;
          largeText = TRUE;
@@ -221,14 +224,50 @@ public void blueTint(){
 }
 
 
+    public void setFontNormal () {
+
+        if (fontNormal != TRUE) {
+            fontNormal = TRUE;
+            fontFun = FALSE;
+            funFontButton.setSelected(FALSE);
+            normalFontButton.setSelected(TRUE);
+            fontSize = fontSize.replaceAll(".css", "FamilyNormal.css");
+            rootPane.getStylesheets().clear();
+            rootPane.getStylesheets().add(optionsController.fontSize);
+        } else  {
+            alertBox.display("Already Selected!", "You've already chosen this font", "Okay");
+        }
 
 
+
+
+    }
+
+    public void setFontFun () {
+
+        if (fontFun != TRUE) {
+            fontFun = TRUE;
+            fontNormal = FALSE;
+            funFontButton.setSelected(TRUE);
+            normalFontButton.setSelected(FALSE);
+            fontSize = fontSize.replaceAll("FamilyNormal.css", ".css");
+            rootPane.getStylesheets().clear();
+            rootPane.getStylesheets().add(optionsController.fontSize);
+
+
+        } else {
+            alertBox.display("Already Selected!", "You've already chosen this font", "Okay");
+        }
+    }
     public void menuButtonClicked() throws Exception {
 
 
         closePage();
+
         Main.currentPage = "sample.fxml";
+        rootPane.getStylesheets().add(optionsController.fontSize);
         m.start(primaryStage);
+
 
 
 
