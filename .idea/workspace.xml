@@ -7,24 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/hardQuestions.txt" afterPath="$PROJECT_DIR$/hardQuestions.txt" />
-      <change beforePath="$PROJECT_DIR$/hardQuestionsAnswers.txt" afterPath="$PROJECT_DIR$/hardQuestionsAnswers.txt" />
-      <change beforePath="$PROJECT_DIR$/mediumQuestions.txt" afterPath="$PROJECT_DIR$/mediumQuestions.txt" />
-      <change beforePath="$PROJECT_DIR$/mediumQuestionsAnswers.txt" afterPath="$PROJECT_DIR$/mediumQuestionsAnswers.txt" />
-      <change beforePath="$PROJECT_DIR$/out/production/EducationalTool/sample/Options.fxml" afterPath="$PROJECT_DIR$/out/production/EducationalTool/sample/Options.fxml" />
-      <change beforePath="$PROJECT_DIR$/out/production/EducationalTool/sample/Phone.fxml" afterPath="$PROJECT_DIR$/out/production/EducationalTool/sample/Phone.fxml" />
-      <change beforePath="$PROJECT_DIR$/out/production/EducationalTool/sample/optionsController.class" afterPath="$PROJECT_DIR$/out/production/EducationalTool/sample/optionsController.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/EducationalTool/sample/phoneController.class" afterPath="$PROJECT_DIR$/out/production/EducationalTool/sample/phoneController.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/EducationalTool/sample/quizMenu.class" afterPath="$PROJECT_DIR$/out/production/EducationalTool/sample/quizMenu.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/EducationalTool/sample/welcomeQuiz.fxml" afterPath="$PROJECT_DIR$/out/production/EducationalTool/sample/welcomeQuiz.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Options.fxml" afterPath="$PROJECT_DIR$/src/sample/Options.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Phone.fxml" afterPath="$PROJECT_DIR$/src/sample/Phone.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Quiz.java" afterPath="$PROJECT_DIR$/src/sample/Quiz.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/optionsController.java" afterPath="$PROJECT_DIR$/src/sample/optionsController.java" />
       <change beforePath="$PROJECT_DIR$/src/sample/phoneController.java" afterPath="$PROJECT_DIR$/src/sample/phoneController.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/quizMenu.java" afterPath="$PROJECT_DIR$/src/sample/quizMenu.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/sample/welcomeQuiz.fxml" afterPath="$PROJECT_DIR$/src/sample/welcomeQuiz.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -106,7 +89,7 @@
           </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
-              <caret line="19" column="88" lean-forward="true" selection-start-line="19" selection-start-column="88" selection-end-line="19" selection-end-column="97" />
+              <caret line="19" column="88" lean-forward="false" selection-start-line="19" selection-start-column="88" selection-end-line="19" selection-end-column="97" />
               <folding />
             </state>
           </provider>
@@ -147,17 +130,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="phoneController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="phoneController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/phoneController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="581" column="54" lean-forward="false" selection-start-line="581" selection-start-column="54" selection-end-line="581" selection-end-column="54" />
+            <state relative-caret-position="217">
+              <caret line="192" column="22" lean-forward="true" selection-start-line="192" selection-start-column="22" selection-end-line="192" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#20102#20103#0" expanded="true" />
-                <element signature="e#20176#20177#0" expanded="true" />
-                <element signature="e#23848#23849#0" expanded="true" />
-                <element signature="e#23929#23930#0" expanded="true" />
+                <element signature="e#20257#20258#0" expanded="true" />
+                <element signature="e#20331#20332#0" expanded="true" />
+                <element signature="e#24152#24153#0" expanded="true" />
+                <element signature="e#24233#24234#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -173,11 +156,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Quiz.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Quiz.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Quiz.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="591" column="0" lean-forward="true" selection-start-line="591" selection-start-column="0" selection-end-line="591" selection-end-column="0" />
+            <state relative-caret-position="596">
+              <caret line="591" column="0" lean-forward="false" selection-start-line="591" selection-start-column="0" selection-end-line="591" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -229,7 +212,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>close</find>
       <find>QUESTION</find>
       <find>QuestionLabel</find>
       <find>LEADER</find>
@@ -257,8 +239,9 @@
       <find>question</find>
       <find>setFill</find>
       <find>menuba</find>
-      <find>fact</find>
       <find>touc</find>
+      <find>fact</find>
+      <find>backtoPhoneBUtton</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -312,8 +295,8 @@
         <option value="$PROJECT_DIR$/hardQuestionsAnswers.txt" />
         <option value="$PROJECT_DIR$/src/sample/welcomeQuiz.fxml" />
         <option value="$PROJECT_DIR$/src/sample/quizMenu.java" />
-        <option value="$PROJECT_DIR$/src/sample/phoneController.java" />
         <option value="$PROJECT_DIR$/src/sample/Quiz.java" />
+        <option value="$PROJECT_DIR$/src/sample/phoneController.java" />
       </list>
     </option>
   </component>
@@ -331,8 +314,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
+    <option name="x" value="705" />
+    <option name="width" value="1221" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -687,15 +670,15 @@
       <workItem from="1524567832073" duration="11302000" />
       <workItem from="1524851229767" duration="1240000" />
       <workItem from="1525014670418" duration="6297000" />
-      <workItem from="1525080932256" duration="6588000" />
+      <workItem from="1525080932256" duration="10015000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="377315000" />
+    <option name="totallyTimeSpent" value="380742000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="705" y="0" width="1221" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -711,7 +694,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19146608" sideWeight="0.6703755" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15073213" sideWeight="0.6703755" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24945295" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1106,27 +1089,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/phoneController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="581" column="54" lean-forward="false" selection-start-line="581" selection-start-column="54" selection-end-line="581" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#20102#20103#0" expanded="true" />
-            <element signature="e#20176#20177#0" expanded="true" />
-            <element signature="e#23848#23849#0" expanded="true" />
-            <element signature="e#23929#23930#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Options.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
-          <caret line="19" column="88" lean-forward="true" selection-start-line="19" selection-start-column="88" selection-end-line="19" selection-end-column="97" />
+          <caret line="19" column="88" lean-forward="false" selection-start-line="19" selection-start-column="88" selection-end-line="19" selection-end-column="97" />
           <folding />
         </state>
       </provider>
@@ -1159,10 +1128,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Quiz.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="591" column="0" lean-forward="true" selection-start-line="591" selection-start-column="0" selection-end-line="591" selection-end-column="0" />
+        <state relative-caret-position="596">
+          <caret line="591" column="0" lean-forward="false" selection-start-line="591" selection-start-column="0" selection-end-line="591" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/phoneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="192" column="22" lean-forward="true" selection-start-line="192" selection-start-column="22" selection-end-line="192" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#20257#20258#0" expanded="true" />
+            <element signature="e#20331#20332#0" expanded="true" />
+            <element signature="e#24152#24153#0" expanded="true" />
+            <element signature="e#24233#24234#0" expanded="true" />
           </folding>
         </state>
       </provider>

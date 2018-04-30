@@ -9,12 +9,15 @@ import javafx.scene.Cursor;
 import java.awt.event.ActionEvent;
 import java.beans.EventHandler;
 import java.lang.reflect.InvocationTargetException;
+import java.nio.file.Paths;
 import java.util.Timer;
 import java.util.function.ToLongBiFunction;
 
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.layout.StackPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
 import javafx.stage.Window;
 import javafx.util.Duration;
@@ -138,6 +141,7 @@ public class phoneController extends Application {
     @FXML
     private Rectangle Tint;
 
+    private MediaPlayer player;
 
     Controller c = new Controller();
     Main m = new Main();
@@ -186,6 +190,7 @@ public class phoneController extends Application {
         hardwareButton.setVisible(false);
         backToPhoneButton.setVisible(false);
         greyOutRectangle.setVisible(false);
+        player.stop();
 
     }
 
@@ -559,6 +564,7 @@ public class phoneController extends Application {
     public void RearCameraColourClicked() {
 
 
+
         sensorDescription("Camera",
                 "\u2022 That's the camera!\n" +
                         " \u2022 The camera uses a lens to help light enter through the aperture (The aperture is basically a hole)\n" +
@@ -568,6 +574,14 @@ public class phoneController extends Application {
                         "\u2022 The sensor is set to shut off after a certain amount of time to make sure the right amount of light has entered.\n" +
                         "\u2022 Once all of the light information has been captured, it is sent too a signal image processor which will take all the information and turn it into an image.\n");
         hardwareButton.setOnAction(e-> alertBox.display("No hardware", "we're sorry, there's no hardware available for this option", "Okay"));
+
+        Media m = new Media(Paths.get("CameraVocal.mp3").toUri().toString());
+        this.player = new MediaPlayer(m);
+        player.play();
+
+
+
+
 
     }
 
