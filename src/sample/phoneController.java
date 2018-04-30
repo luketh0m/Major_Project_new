@@ -143,6 +143,8 @@ public class phoneController extends Application {
 
     private MediaPlayer player;
 
+
+
     Controller c = new Controller();
     Main m = new Main();
 
@@ -156,6 +158,7 @@ public class phoneController extends Application {
     public void menuButtonClicked() throws Exception {
         closePage();
         m.start(primaryStage);
+
 
 
     }
@@ -205,6 +208,7 @@ public class phoneController extends Application {
         descriptionText.setVisible(true);
         hardwareButton.setVisible(true);
         backToPhoneButton.setVisible(true);
+
 
         backToPhoneButton.setOnAction(e -> backToTool());
 
@@ -575,8 +579,9 @@ public class phoneController extends Application {
                         "\u2022 Once all of the light information has been captured, it is sent too a signal image processor which will take all the information and turn it into an image.\n");
         hardwareButton.setOnAction(e-> alertBox.display("No hardware", "we're sorry, there's no hardware available for this option", "Okay"));
 
-        Media m = new Media(Paths.get("CameraVocal.mp3").toUri().toString());
-        this.player = new MediaPlayer(m);
+      Media  media = new Media(Paths.get("CameraVocal.mp3").toUri().toString());
+        player = new MediaPlayer(media);
+        playNarration();
         player.play();
 
 
@@ -628,7 +633,17 @@ public class phoneController extends Application {
         TooltipFeatures("Flash", flash);
 
     }
+    public void playNarration() {
+        System.out.print(optionsController.soundEnabled);
+        if (!optionsController.soundEnabled) {
+            player.setVolume(0);
+            if (optionsController.soundEnabled) {
 
+                player.setVolume(100);
+            }
+
+        }
+    }
 
     public static void main(String[] args) {
         launch(args);

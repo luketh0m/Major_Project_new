@@ -4,8 +4,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
@@ -52,8 +54,15 @@ public class optionsController {
       RadioButton normalFontButton;
     @FXML
       RadioButton funFontButton;
+    @FXML
+    ToggleButton volumeSetter;
 
-public  Boolean soundEnabled = true;
+    @FXML
+    RadioButton soundOffButton;
+    @FXML
+    RadioButton soundOnButton;
+
+public static Boolean soundEnabled = TRUE;
 
 public static Boolean noTint = FALSE;
 public static Boolean yellowTint = FALSE;
@@ -71,7 +80,20 @@ public static Boolean blueTint = FALSE;
 
 
 
+public void soundOn() {
+soundEnabled = true;
 
+soundOffButton.setSelected(false);
+soundOnButton.setSelected(true);
+
+}
+public  void soundOff() {
+soundEnabled = false;
+    soundOffButton.setSelected(true);
+    soundOnButton.setSelected(false);
+
+
+}
 
 
 
@@ -90,6 +112,9 @@ public static Boolean blueTint = FALSE;
             optionsController.noBackgroundColorButton(Tint);
         }
     }
+
+
+
 
 
     public void smallFontButton() throws Exception {
@@ -237,8 +262,6 @@ public void blueTint(){
         } else  {
             alertBox.display("Already Selected!", "You've already chosen this font", "Okay");
         }
-
-
 
 
     }
