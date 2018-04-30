@@ -18,37 +18,37 @@
                <effect>
                   <Bloom threshold="1.0" />
                </effect></Rectangle>
-                <Button alignment="CENTER" layoutX="329.0" layoutY="138.0" mnemonicParsing="false" onAction="#startButton" prefHeight="67.0" prefWidth="156.0" styleClass="Size" text="Start" textFill="WHITE">
+                <Button alignment="CENTER" layoutX="322.0" layoutY="150.0" mnemonicParsing="false" onAction="#startButton" prefHeight="67.0" prefWidth="156.0" styleClass="Size" text="Start" textFill="WHITE">
                     <font>
                         <Font name="Curlz MT" size="20.0" />
                     </font>
                <effect>
                   <Reflection />
                </effect></Button>
-                <Button alignment="CENTER" layoutX="329.0" layoutY="243.0" mnemonicParsing="false" onAction="#settingsButton" prefHeight="61.0" prefWidth="156.0" styleClass="Size" text="Options" textFill="WHITE">
+                <Button alignment="CENTER" layoutX="322.0" layoutY="251.0" mnemonicParsing="false" onAction="#settingsButton" prefHeight="61.0" prefWidth="156.0" styleClass="Size" text="Options" textFill="WHITE">
                     <font>
                         <Font name="Curlz MT" size="20.0" />
                     </font>
                <effect>
                   <Reflection />
                </effect></Button>
-                <Button alignment="CENTER" layoutX="329.0" layoutY="342.0" mnemonicParsing="false" onMouseClicked="#infoButton" prefHeight="67.0" prefWidth="156.0" styleClass="Size" text="Info" textFill="WHITE">
+                <Button alignment="CENTER" layoutX="322.0" layoutY="349.0" mnemonicParsing="false" onMouseClicked="#infoButton" prefHeight="67.0" prefWidth="156.0" styleClass="Size" text="Info" textFill="WHITE">
                     <font>
                         <Font name="Curlz MT" size="20.0" />
                     </font>
                <effect>
                   <Reflection />
                </effect></Button>
-                <Button alignment="CENTER" layoutX="329.0" layoutY="450.0" mnemonicParsing="false" onAction="#quizButton" prefHeight="67.0" prefWidth="156.0" styleClass="Size" text="Quiz" textFill="WHITE">
+                <Button alignment="CENTER" layoutX="322.0" layoutY="470.0" mnemonicParsing="false" onAction="#quizButton" prefHeight="67.0" prefWidth="156.0" styleClass="Size" text="Quiz" textFill="WHITE">
                     <font>
                         <Font name="Curlz MT" size="20.0" />
                     </font>
                <effect>
                   <Reflection />
                </effect></Button>
-                <Text fill="#114b5f" layoutX="149.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont" text="Educational Tool For Robotics">
+                <Text fill="#114b5f" layoutX="122.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont" text="Educational Tool For Robotics">
                     <font>
-                        <Font name="Curlz MT" size="45.0" />
+                        <Font name="Bell MT" size="45.0" />
                     </font>
                <effect>
                   <DropShadow />

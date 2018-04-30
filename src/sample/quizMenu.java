@@ -92,6 +92,7 @@ public class quizMenu extends Application {
 
     public void menuButtonClicked() throws Exception {
         primaryStage.close();
+        Main.currentPage = "sample.fxml";
         m.start(primaryStage);
 
 
@@ -112,7 +113,7 @@ public class quizMenu extends Application {
 
     public void quizButtonClicked() throws Exception {
         primaryStage.close();
-        Main.currentPage = "welcomeQuiz.fxml";
+        Main.currentPage = "Phone.fxml";
         m.start(primaryStage);
 
 

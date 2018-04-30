@@ -17,6 +17,7 @@
         <items>
           <AnchorPane minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ddfff7;">
                <children>
+                  <Rectangle fx:id="menuBackground" arcHeight="5.0" arcWidth="5.0" fill="#a7a7eb" height="53.0" layoutX="-6.0" layoutY="542.0" stroke="BLACK" strokeType="INSIDE" width="843.0" />
                   <Text fill="#114b5f" layoutX="325.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings" wrappingWidth="149.00000876188278">
                      <font>
                         <Font name="Curlz MT" size="45.0" />
@@ -76,9 +77,10 @@
                   <Line endX="800.0" layoutX="101.0" layoutY="409.0" startX="-100.0" />
                   <Line endX="800.0" layoutX="101.0" layoutY="204.0" startX="-100.0" />
                   <Text layoutX="32.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Size" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada ligula quis mauris aliquam, vitae fermentum sem porta. Pellentesque lorem tortor, suscipit ut est sed, laoreet eleifend metus. Maecenas eget orci id neque malesuada vulputate. morbi consequat quam id ante efficitur placerat at nec turpis.  " wrappingWidth="735.0927732028067" />
-                  <Button fx:id="infoButton" layoutX="325.0" layoutY="563.0" mnemonicParsing="false" onAction="#infoButtonClicked" prefHeight="31.0" prefWidth="123.0" styleClass="Size" text="Info" />
-                  <Button fx:id="menuButton" layoutX="157.0" layoutY="563.0" mnemonicParsing="false" onAction="#menuButtonClicked" prefHeight="31.0" prefWidth="123.0" styleClass="Size" text="Menu" />
-                  <Button fx:id="quizButton" layoutX="515.0" layoutY="563.0" mnemonicParsing="false" onAction="#quizButtonClicked" prefHeight="31.0" prefWidth="123.0" styleClass="Size" text="Quiz" />
+                  <Button fx:id="menuButton" layoutX="54.0" layoutY="549.0" mnemonicParsing="false" onAction="#menuButtonClicked" prefHeight="31.0" prefWidth="123.0" styleClass="Size" text="Menu" />
+                  <Button fx:id="toolkitButton" layoutX="250.0" layoutY="549.0" mnemonicParsing="false" onAction="#toolkitButtonClicked" prefHeight="31.0" prefWidth="123.0" styleClass="Size" text="Toolkit" />
+                  <Button fx:id="quizButton" layoutX="638.0" layoutY="549.0" mnemonicParsing="false" onAction="#quizButtonClicked" prefHeight="31.0" prefWidth="123.0" styleClass="Size" text="Quiz" />
+                  <Button fx:id="infoButton" layoutX="451.0" layoutY="553.0" mnemonicParsing="false" onAction="#infoButtonClicked" prefHeight="31.0" prefWidth="123.0" styleClass="Size" text="Info" />
                   <Text layoutX="347.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Controls">
                      <font>
                         <Font name="Curlz MT" size="18.0" />

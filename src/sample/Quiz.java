@@ -28,6 +28,8 @@ import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.List;
 
+import static sample.optionsController.primaryStage;
+
 public class Quiz extends Application {
 
 
@@ -37,7 +39,9 @@ public class Quiz extends Application {
     public static int score;
     public static int questionNo = 1;
     public static   Main m = new Main();
+    Controller c = new Controller();
     static  Quiz q = new Quiz();
+    public static Pane rootPane;
 
 
 
@@ -263,25 +267,25 @@ public class Quiz extends Application {
 
 
 
-        questionNumberLabel.setFont(new Font("curlz MT", 25));
+        questionNumberLabel.setFont(new Font("Ariel", 25));
         questionNumberLabel.setTextFill(Color.web("#114b5f"));
         questionNumberLabel.setLayoutX(10);
         questionNumberLabel.setLayoutY(1);
-        questionNumberLabel.getStyleClass().add("Size");
+
 
         VBox questionBox = new VBox();
-        questionLabel.setFont(new Font("curlz MT", 30));
+        questionLabel.setFont(new Font("Ariel", 25));
         questionLabel.setTextFill(Color.web("#114b5f"));
-        questionLabel.setLayoutX(10);
-        questionLabel.setLayoutY(100);
-        questionLabel.setMaxWidth(800);
-        questionLabel.getStyleClass().add("Size");
 
-        questionBox.getChildren().add(questionLabel);
+
+        questionBox.setMaxWidth(800);
         questionBox.setLayoutX(10);
         questionBox.setLayoutY(100);
         questionBox.setMaxWidth(800);
-        questionBox.setFillWidth(true);
+        questionBox.getChildren().add(questionLabel);
+
+
+
         grid.setLayoutX(40);
         grid.setLayoutY(239);
         grid.setPrefHeight(309);
@@ -409,8 +413,8 @@ public class Quiz extends Application {
 
 
         Reflection r = new Reflection();
-        Font f = new Font("Curlz MT", 32);
-        Font l = new Font("Curlz MT", 20);
+        Font f = new Font("Ariel", 30);
+        Font l = new Font("Ariel", 20);
 
         DBconnect connect = new DBconnect();
         connect.getData();
@@ -430,8 +434,8 @@ public class Quiz extends Application {
         Text gameOver = new Text ("Quiz complete");
         gameOver.setLayoutX(258.0);
         gameOver.setLayoutY(53);
-        gameOver.setFont(new Font("Curlz MT", 52));
-        gameOver.getStyleClass().add("Size");
+        gameOver.setFont(new Font("Ariel", 52));
+
 
         gameOver.setEffect(r);
 
@@ -439,14 +443,15 @@ public class Quiz extends Application {
         userScore.setLayoutX(258);
         userScore.setLayoutY(103);
         userScore.setFont(f);
-        userScore.getStyleClass().add("Size");
+
+
 
 
         Text tryAgin = new Text ("Try again?");
         tryAgin.setLayoutX(350);
         tryAgin.setLayoutY(213);
         tryAgin.setFont(f);
-        tryAgin.getStyleClass().add("Size");
+      ;
 
         Button retry = new Button ("Retry");
         retry.setOnAction(e ->  {
@@ -466,22 +471,25 @@ public class Quiz extends Application {
         retry.setLayoutY(238);
         retry.setPrefWidth(131);
         retry.setPrefHeight(30);
-        retry.setFont(new Font("Curlz MT", 14));
-        retry.getStyleClass().add("Size");
+        retry.setFont(new Font("Ariel", 14));
+
 
         Text enterName = new Text ("Please enter your nickname to be added to the LeaderBoard");
-        enterName.setLayoutX(260);
+        enterName.setLayoutX(200);
         enterName.setLayoutY(340);
-        enterName.setFont(new Font("Curlz MT", 20));
+        enterName.setFont(new Font("Ariel", 20));
         enterName.setEffect(r);
-        enterName.getStyleClass().add("Size");
 
-        TextField nameSubmission = new TextField();
-        nameSubmission.setLayoutX(260);
+
+        TextField nameSubmission = new TextField("Please enter your name here");
+        nameSubmission.setLayoutX(200);
         nameSubmission.setLayoutY(370);
+        nameSubmission.setMinWidth(480);
+
+
 
         Button submit = new Button("Enter");
-        submit.setLayoutX(532);
+        submit.setLayoutX(680);
         submit.setLayoutY(370);
         submit.setFont(f);
 
@@ -503,46 +511,40 @@ public class Quiz extends Application {
 
 
 
+        VBox leaderboardBox = new VBox();
 
         Text lBoard = new Text ("LeaderBoard");
         lBoard.setLayoutX(65);
-        lBoard.setLayoutY(213);
+        lBoard.setLayoutY(200);
         lBoard.setFont(l);
-        lBoard.getStyleClass().add("Size");
+
 
         // Image trophy
 
 
         Text firstPlace = new Text ((String.format("1. %s", connect.nickNames.pop() + " Score: " +connect.userScores.pop())));
-        firstPlace.setLayoutX(65);
-        firstPlace.setLayoutY(240);
+
         firstPlace.setFont(l);
-        firstPlace.getStyleClass().add("Size");
+
 
 
         Text secondPlace = new Text((String.format("2. %s", connect.nickNames.pop() + " Score: " +connect.userScores.pop())));
-        secondPlace.setLayoutX(65);
-        secondPlace.setLayoutY(290);
+
         secondPlace.setFont(l);
-        secondPlace.getStyleClass().add("Size");
+
 
         Text thirdPlace = new Text ((String.format("3. %s", connect.nickNames.pop() + " Score: " + connect.userScores.pop())));
-        thirdPlace.setLayoutX(65);
-        thirdPlace.setLayoutY(340);
+
         thirdPlace.setFont(l);
-        thirdPlace.getStyleClass().add("Size");
+
+        leaderboardBox.setAlignment(Pos.TOP_LEFT);
+        leaderboardBox.setLayoutY(180);
+        leaderboardBox.setLayoutX(54);
+        leaderboardBox.getChildren().addAll(lBoard, firstPlace, secondPlace, thirdPlace);
 
 
 
-        Rectangle factBoarder = new Rectangle();
-        factBoarder.setArcHeight(5);
-        factBoarder.setArcWidth(5);
-        factBoarder.setWidth(400);
-        factBoarder.setHeight(43);
-        factBoarder.setLayoutX(248);
-        factBoarder.setLayoutY(450);
-        factBoarder.setStrokeType(StrokeType.INSIDE);
-       factBoarder.setFill(Color.web("#7aafe1"));
+
 
         Text fact = null;
         try {
@@ -550,57 +552,70 @@ public class Quiz extends Application {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        fact.setLayoutX(248);
-       fact.setLayoutY(481);
+        fact.setLayoutX(315);
+       fact.setLayoutY(545);
        fact.setFont(l);
-       fact.getStyleClass().add("Size");
 
 
 
+
+        Rectangle menuBackground = new Rectangle();
+        menuBackground.setHeight(50);
+        menuBackground.setWidth(800);
+        menuBackground.setLayoutX(0);
+        menuBackground.setLayoutY(550);
+        menuBackground.setFill(Color.web("#a7a7eb"));
 
 
         Button menu = new Button ("Menu");
-        menu.setLayoutX(171);
-        menu.setLayoutY(566);
-
-        Button about = new Button ("About");
-        about.setLayoutX(271);
-        about.setLayoutY(566);
-
-        Button info = new Button ("Info");
-        info.setLayoutX(371);
-        info.setLayoutY(566);
-
-        Button toolKit = new Button ("Toolkit");
-        toolKit.setLayoutX(471);
-        toolKit.setLayoutY(566);
+        menu.setLayoutX(54);
+        menu.setLayoutY(560);
+        menu.setPrefWidth(123);
+        menu.setPrefHeight(31);
+        menu.setOnAction(e-> {});
 
 
-        q.tint.setVisible(false);
-        q.tint.setHeight(600);
-        q.tint.setWidth(800);
-        q.tint.setOpacity(0.2);
-        q.tint.setDisable(true);
+                Button about = new Button("Settings");
+                about.setLayoutX(250);
+                about.setLayoutY(560);
+                about.setPrefWidth(123);
+                about.setPrefHeight(31);
 
-        optionsController.tintOptions(q.tint);
+                Button info = new Button("Info");
+                info.setLayoutX(451);
+                info.setLayoutY(560);
+                info.setPrefWidth(123);
+                info.setPrefHeight(31);
+                info.setOnAction( e-> {
+                            alertBox.display("Info", "Version 2.0, Beta. Release date March 2018. Author lut14@aber.ac.uk", "Got it!");
+                        });
 
-
-
-        pane.getChildren().addAll( background, gameOver, userScore, tryAgin, retry, enterName, nameSubmission, submit, lBoard, firstPlace, secondPlace, thirdPlace, factBoarder, fact, menu, about, info, toolKit, q.tint);
-        Scene scene = new Scene(pane, 800, 600 );
-        pane.getStyleClass().clear();
-
-        scene.getStylesheets().add(optionsController.fontSize);
-        newPrimaryStage.setScene(scene);
-        newPrimaryStage.show();
-
-
-
-    }
-
+                Button toolKit = new Button("Toolkit");
+                toolKit.setLayoutX(638);
+                toolKit.setLayoutY(560);
+                toolKit.setPrefWidth(123);
+                toolKit.setPrefHeight(31);
 
 
+                q.tint.setVisible(false);
+                q.tint.setHeight(600);
+                q.tint.setWidth(800);
+                q.tint.setOpacity(0.2);
+                q.tint.setDisable(true);
 
+                optionsController.tintOptions(q.tint);
+
+
+                pane.getChildren().addAll(background, gameOver, userScore, tryAgin, retry, enterName, nameSubmission, submit, leaderboardBox, fact, menuBackground, menu, about, info, toolKit, q.tint);
+                Scene scene = new Scene(pane, 800, 600);
+                pane.getStyleClass().clear();
+
+                scene.getStylesheets().add(optionsController.fontSize);
+                newPrimaryStage.setScene(scene);
+                newPrimaryStage.show();
+
+
+            }
 
 
     @Override

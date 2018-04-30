@@ -227,7 +227,15 @@ public class phoneController extends Application {
 
     public void touchScreenClicked() throws Exception {
 
-        sensorDescription("Touch Screen", "That was the Touchscreen! Every time you tap on your phone, your phone has to transmit that touch into an electrical signal. It does this using Capacitive Sensing. Underneath the glass surface of your phone, there is a conductive material called indium tin oxide. Within this material there are electrodes arranged in a diamond grid. Your phone keeps these electrodes at a set voltage. When your finger touches the screen, it attracts the positive electrodes on one side of your finger, forcing your phone to deposit more electrons. Each pair of electrodes then has a meter that keeps track of how many charges are in the two electrodes at that particular spot on the phone. Your phone looks at which point of the phone the electrodes are disturbed, and it then knows where you have placed your finger on the screen! It also means that you are able to text with the back of a metal spoon, or even a hot dog!  ");
+        sensorDescription("Touch Screen", "That was the Touchscreen!\n" +
+                "\u2022Every time you tap on your phone, your phone has to transmit that touch into an electrical signal.\n" +
+                "\u2022Does this using Capacitive Sensing.\n" +
+                "\u2022Underneath the glass surface of your phone, there is a conductive material called indium tin oxide.\n" +
+                "\u2022Within this material there are electrodes arranged in a diamond grid.\n" +
+                "\u2022When your finger touches the screen, it attracts the positive electrodes on one side of your finger\n" +
+                "\u2022forcing your phone to deposit more electrons.\n" +
+                "\u2022Each pair of electrodes then has a meter that keeps track of how many charges are in the two electrodes at that particular spot on the phone.\n" +
+                "\u2022Your phone looks at which point of the phone the electrodes are disturbed, and it then knows where you have placed your finger on the screen!\n");
         hardwareButton.setOnAction(e-> alertBox.display("No hardware", "we're sorry, there's no hardware available for this option", "Okay"));
 
     }
@@ -568,8 +576,17 @@ public class phoneController extends Application {
     }
 
     public void RearCameraBlackAndWhiteClicked() {
-        sensorDescription("Rear Camera 1", "That's the first rear Camera. Smart phones these days often have two cameras. The camera uses a lens to help light enter through the aperture (The aperture is basically a hole) and it lets light through to the sensor. If too much light is taken in, the image will be all white. If too little light is taken in, the image will be black. The sensor is set to shut off after a certain amount of time to make sure the right amount of light has entered. Once all of the light information has been captured, it is sent too a signal image processor which will take all the information and turn it into an image. This camera is considered the 'standard camera' of the two! Check out the other camera to see why");
-        hardwareButton.setOnAction(e-> alertBox.display("No hardware", "we're sorry, there's no hardware available for this option", "Okay"));
+        sensorDescription("Rear Camera 1", "That's the secondary camera. " +
+                "\u2022Smart phones these days often have two cameras.\n" +
+                "\u2022The camera uses a lens to help light enter through the aperture (The aperture is basically a hole) and it lets light through to the sensor.\n" +
+                "\u2022Secondary cameras are used for three primary purposes\n" +
+                "1) Better white balance and low light performance\n" +
+                "\u2022Done using a larger imsage sensor\n" +
+                "\u2022often taken in monochrome (black and white)\n" +
+                "2) 3D image capabilities\n" +
+                "\u2022Done by taking the photo from two different angles\n" +
+                "3) Optical zoom with no moving parts\n" +
+                "\u2022done by providing two vocal lengths\n");
     }
 
     public void RearCameraBlackAndWhiteMouseOver() {

@@ -273,6 +273,19 @@ public void blueTint(){
 
     }
 
+    public void toolkitButtonClicked() throws Exception {
+
+
+        closePage();
+
+        Main.currentPage = "Phone.fxml";
+        rootPane.getStylesheets().add(optionsController.fontSize);
+        m.start(primaryStage);
+
+
+
+
+    }
 
     public void infoButtonClicked() throws Exception {
 
