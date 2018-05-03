@@ -1,11 +1,11 @@
-camera
-tin oxide
-tim oxide
-flash
-helium
-tall oxage
-7
-8
-9
-1
-0
+Illuminate
+The touch screen
+Tin oxide
+The volume rocker
+Home
+Lock
+Camera
+Flash
+Protect
+Proximity sensor
+Ambient Light sensor

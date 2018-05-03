@@ -1,10 +1,11 @@
-22mm
-30mm
-35mm
-44mm
-52mm
-62mm
-72mm
-82mm
-92mm
-102mm
+Light emited diode
+A virtual button
+A set of buttons
+A button
+Acoustic Energy
+Transducer
+Capacitive sensing
+LED
+Electrical Energy
+Light emitting Diode
+Mega Pixel

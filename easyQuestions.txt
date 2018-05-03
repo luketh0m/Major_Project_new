@@ -1,7 +1,8 @@
-Which sensor detecs if an object is close (30mm or closer)
+
+Which sensor detects if an object is close (30mm or closer)
 Which sensor measures the level of brightness around the phone?
 What is the name of the 'hole' that lets light through to the camera?
-A touchscreen sensor touch using a...?
+A touchscreen sensor senses touch using a...?
 A speaker converts Electrical energy into what?
 The sensor inside the ambient light sensor is called?
 The sensor inside the proximity sensor is called?

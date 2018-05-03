@@ -31,11 +31,11 @@ public class optionsController {
     Button soundButton;
 
 
-@FXML
+    @FXML
     RadioButton noBackgroundColorButton;
-@FXML
+    @FXML
     RadioButton yellowBackgroundColorButton;
-@FXML
+    @FXML
     RadioButton blueBackgroundColorButton;
 
 
@@ -46,14 +46,15 @@ public class optionsController {
     @FXML
     RadioButton largeTextSizeButton;
 
-    @FXML Rectangle Tint;
+    @FXML
+    Rectangle Tint;
 
     @FXML
     Text fontStyle;
     @FXML
-      RadioButton normalFontButton;
+    RadioButton normalFontButton;
     @FXML
-      RadioButton funFontButton;
+    RadioButton funFontButton;
     @FXML
     ToggleButton volumeSetter;
 
@@ -62,11 +63,11 @@ public class optionsController {
     @FXML
     RadioButton soundOnButton;
 
-public static Boolean soundEnabled = TRUE;
+    public static Boolean soundEnabled = TRUE;
 
-public static Boolean noTint = FALSE;
-public static Boolean yellowTint = FALSE;
-public static Boolean blueTint = FALSE;
+    public static Boolean noTint = FALSE;
+    public static Boolean yellowTint = FALSE;
+    public static Boolean blueTint = FALSE;
 
     public static Boolean smallText = FALSE;
     public static Boolean mediumText = FALSE;
@@ -74,47 +75,37 @@ public static Boolean blueTint = FALSE;
 
     public static String fontSize;
 
-   public static Boolean fontNormal = FALSE;
-   public static Boolean fontFun = TRUE;
+    public static Boolean fontNormal = FALSE;
+    public static Boolean fontFun = TRUE;
 
 
+    public void soundOn() {
+        soundEnabled = true;
+
+        soundOffButton.setSelected(false);
+        soundOnButton.setSelected(true);
+
+    }
+
+    public void soundOff() {
+        soundEnabled = false;
+        soundOffButton.setSelected(true);
+        soundOnButton.setSelected(false);
 
 
-public void soundOn() {
-soundEnabled = true;
-
-soundOffButton.setSelected(false);
-soundOnButton.setSelected(true);
-
-}
-public  void soundOff() {
-soundEnabled = false;
-    soundOffButton.setSelected(true);
-    soundOnButton.setSelected(false);
-
-
-}
-
-
-
-
-
-    public static void tintOptions (Rectangle Tint) {
-        if (optionsController.blueTint == TRUE) {
-            optionsController.blueTintButton(Tint);
-        }
-
-       else if (optionsController.yellowTint == TRUE) {
-            optionsController.yellowTintButton(Tint);
-
-        }
-       else if (optionsController.noTint == TRUE) {
-            optionsController.noBackgroundColorButton(Tint);
-        }
     }
 
 
+    public static void tintOptions(Rectangle Tint) {
+        if (optionsController.blueTint == TRUE) {
+            optionsController.blueTintButton(Tint);
+        } else if (optionsController.yellowTint == TRUE) {
+            optionsController.yellowTintButton(Tint);
 
+        } else if (optionsController.noTint == TRUE) {
+            optionsController.noBackgroundColorButton(Tint);
+        }
+    }
 
 
     public void smallFontButton() throws Exception {
@@ -135,7 +126,6 @@ soundEnabled = false;
         mediumTextSize();
 
 
-
     }
 
     public void largeFontButton() throws Exception {
@@ -149,78 +139,72 @@ soundEnabled = false;
     }
 
 
-public  void smallTextSize ()throws Exception {
+    public void smallTextSize() throws Exception {
 
 
         smallText = TRUE;
         mediumText = FALSE;
         largeText = FALSE;
-    fontSize = fontSize.replaceAll("Medium", "Small");
-    fontSize = fontSize.replaceAll("Large", "Small");
-    rootPane.getStylesheets().clear();
-    rootPane.getStylesheets().add(optionsController.fontSize);
+        fontSize = fontSize.replaceAll("Medium", "Small");
+        fontSize = fontSize.replaceAll("Large", "Small");
+        rootPane.getStylesheets().clear();
+        rootPane.getStylesheets().add(optionsController.fontSize);
 
 
+    }
 
-}
-
- public  void mediumTextSize () {
-
-
+    public void mediumTextSize() {
 
 
         smallText = FALSE;
         mediumText = TRUE;
         largeText = FALSE;
-     fontSize = fontSize.replaceAll("Small", "Medium");
-     fontSize = fontSize.replaceAll("Large", "Medium");
-     rootPane.getStylesheets().clear();
-     rootPane.getStylesheets().add(optionsController.fontSize);
-
+        fontSize = fontSize.replaceAll("Small", "Medium");
+        fontSize = fontSize.replaceAll("Large", "Medium");
+        rootPane.getStylesheets().clear();
+        rootPane.getStylesheets().add(optionsController.fontSize);
 
 
     }
 
- public void largeTextSize() {
-     fontSize = fontSize.replaceAll("Small", "Large");
-     fontSize = fontSize.replaceAll("Medium", "Large" );
-     rootPane.getStylesheets().clear();
-     rootPane.getStylesheets().add(optionsController.fontSize);
-         smallText = FALSE;
-         mediumText = FALSE;
-         largeText = TRUE;
+    public void largeTextSize() {
+        fontSize = fontSize.replaceAll("Small", "Large");
+        fontSize = fontSize.replaceAll("Medium", "Large");
+        rootPane.getStylesheets().clear();
+        rootPane.getStylesheets().add(optionsController.fontSize);
+        smallText = FALSE;
+        mediumText = FALSE;
+        largeText = TRUE;
 
-     }
-
-
+    }
 
 
     public static void noBackgroundColorButton(Rectangle R) {
 
-    R.setVisible(false);
-    noTint = TRUE;
-    yellowTint = FALSE;
-    blueTint = FALSE;
+        R.setVisible(false);
+        noTint = TRUE;
+        yellowTint = FALSE;
+        blueTint = FALSE;
 
-}
+    }
 
-public static void yellowTintButton(Rectangle R) {
-    R.setFill((Color.rgb(255,255,0, 0.3)));
-    R.setVisible(true);
-    yellowTint = TRUE;
-    blueTint = FALSE;
-    noTint = FALSE;
+    public static void yellowTintButton(Rectangle R) {
+        R.setFill((Color.rgb(255, 255, 0, 0.3)));
+        R.setVisible(true);
+        yellowTint = TRUE;
+        blueTint = FALSE;
+        noTint = FALSE;
 
-}
+    }
 
 
-public static void blueTintButton (Rectangle R) {
+    public static void blueTintButton(Rectangle R) {
 
-            R.setFill((Color.rgb(0,0,255, 0.3)));
-            R.setVisible(true);
-            blueTint = TRUE;
-            yellowTint = FALSE;
-            noTint = FALSE;
+        R.setFill((Color.rgb(0, 0, 255, 0.3)));
+        R.setVisible(true);
+        blueTint = TRUE;
+        yellowTint = FALSE;
+        noTint = FALSE;
 
     }
 
@@ -228,28 +212,28 @@ public static void blueTintButton (Rectangle R) {
     Main m = new Main();
 
 
+    public void noTint() {
+        noBackgroundColorButton(Tint);
+        yellowBackgroundColorButton.setSelected(false);
+        blueBackgroundColorButton.setSelected(false);
 
 
-public void noTint() {
-    noBackgroundColorButton(Tint);
-    yellowBackgroundColorButton.setSelected(false);
-    blueBackgroundColorButton.setSelected(false);
+    }
+
+    public void yellowTint() {
+        yellowTintButton(Tint);
+        noBackgroundColorButton.setSelected(false);
+        blueBackgroundColorButton.setSelected(false);
+    }
+
+    public void blueTint() {
+        blueTintButton(Tint);
+        yellowBackgroundColorButton.setSelected(false);
+        noBackgroundColorButton.setSelected(false);
+    }
 
 
-}
-public void yellowTint() {
-    yellowTintButton(Tint);
-    noBackgroundColorButton.setSelected(false);
-    blueBackgroundColorButton.setSelected(false);
-}
-public void blueTint(){
-    blueTintButton(Tint);
-    yellowBackgroundColorButton.setSelected(false);
-    noBackgroundColorButton.setSelected(false);
-}
-
-
-    public void setFontNormal () {
+    public void setFontNormal() {
 
         if (fontNormal != TRUE) {
             fontNormal = TRUE;
@@ -259,14 +243,14 @@ public void blueTint(){
             fontSize = fontSize.replaceAll(".css", "FamilyNormal.css");
             rootPane.getStylesheets().clear();
             rootPane.getStylesheets().add(optionsController.fontSize);
-        } else  {
+        } else {
             alertBox.display("Already Selected!", "You've already chosen this font", "Okay");
         }
 
 
     }
 
-    public void setFontFun () {
+    public void setFontFun() {
 
         if (fontFun != TRUE) {
             fontFun = TRUE;
@@ -282,6 +266,7 @@ public void blueTint(){
             alertBox.display("Already Selected!", "You've already chosen this font", "Okay");
         }
     }
+
     public void menuButtonClicked() throws Exception {
 
 
@@ -290,8 +275,6 @@ public void blueTint(){
         Main.currentPage = "sample.fxml";
         rootPane.getStylesheets().add(optionsController.fontSize);
         m.start(primaryStage);
-
-
 
 
     }
@@ -304,8 +287,6 @@ public void blueTint(){
         Main.currentPage = "Phone.fxml";
         rootPane.getStylesheets().add(optionsController.fontSize);
         m.start(primaryStage);
-
-
 
 
     }

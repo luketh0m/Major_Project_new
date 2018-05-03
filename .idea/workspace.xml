@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/sample/optionsController.java" line="207" />
-    <bookmark url="file://$PROJECT_DIR$/easyQuestions.txt" line="7" />
+    <bookmark url="file://$PROJECT_DIR$/src/sample/optionsController.java" line="191" />
+    <bookmark url="file://$PROJECT_DIR$/easyQuestions.txt" line="8" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Options.fxml" afterPath="$PROJECT_DIR$/src/sample/Options.fxml" />
+      <change beforePath="$PROJECT_DIR$/Facts.txt" afterPath="$PROJECT_DIR$/Facts.txt" />
+      <change beforePath="$PROJECT_DIR$/Major Project/Abstract.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Major Project/Declaration of originality.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Major Project/Introduction.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Major Project/Methodology.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/easyQuestions.txt" afterPath="$PROJECT_DIR$/easyQuestions.txt" />
+      <change beforePath="$PROJECT_DIR$/easyQuestionsAnswers.txt" afterPath="$PROJECT_DIR$/easyQuestionsAnswers.txt" />
+      <change beforePath="$PROJECT_DIR$/hardQuestions.txt" afterPath="$PROJECT_DIR$/hardQuestions.txt" />
+      <change beforePath="$PROJECT_DIR$/hardQuestionsAnswers.txt" afterPath="$PROJECT_DIR$/hardQuestionsAnswers.txt" />
+      <change beforePath="$PROJECT_DIR$/mediumQuestions.txt" afterPath="$PROJECT_DIR$/mediumQuestions.txt" />
+      <change beforePath="$PROJECT_DIR$/mediumQuestionsAnswers.txt" afterPath="$PROJECT_DIR$/mediumQuestionsAnswers.txt" />
+      <change beforePath="$PROJECT_DIR$/out/production/EducationalTool/sample/Quiz.class" afterPath="$PROJECT_DIR$/out/production/EducationalTool/sample/Quiz.class" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="$PROJECT_DIR$/src/sample/Controller.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/DBconnect.java" afterPath="$PROJECT_DIR$/src/sample/DBconnect.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Hardware.java" afterPath="$PROJECT_DIR$/src/sample/Hardware.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/sample/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Quiz.java" afterPath="$PROJECT_DIR$/src/sample/Quiz.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/alertBox.java" afterPath="$PROJECT_DIR$/src/sample/alertBox.java" />
       <change beforePath="$PROJECT_DIR$/src/sample/optionsController.java" afterPath="$PROJECT_DIR$/src/sample/optionsController.java" />
       <change beforePath="$PROJECT_DIR$/src/sample/phoneController.java" afterPath="$PROJECT_DIR$/src/sample/phoneController.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/quizMenu.java" afterPath="$PROJECT_DIR$/src/sample/quizMenu.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,87 +102,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Options.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Options.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="18" column="88" lean-forward="false" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="welcomeQuiz.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/welcomeQuiz.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="56" column="168" lean-forward="false" selection-start-line="56" selection-start-column="168" selection-end-line="56" selection-end-column="168" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="quizMenu.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/quizMenu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="110" column="14" lean-forward="false" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="phoneController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/phoneController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="585" column="0" lean-forward="true" selection-start-line="585" selection-start-column="0" selection-end-line="585" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#20261#20262#0" expanded="true" />
-                <element signature="e#20335#20336#0" expanded="true" />
-                <element signature="e#24183#24184#0" expanded="true" />
-                <element signature="e#24264#24265#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Quiz.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Quiz.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="591" column="0" lean-forward="false" selection-start-line="591" selection-start-column="0" selection-end-line="591" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="287">
+              <caret line="102" column="39" lean-forward="false" selection-start-line="102" selection-start-column="39" selection-end-line="102" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="optionsController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/optionsController.java">
+      <file leaf-file-name="Facts.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Facts.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="61" column="9" lean-forward="false" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="easyQuestions.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/easyQuestions.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="easyQuestionsAnswers.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/easyQuestionsAnswers.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mediumQuestions.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mediumQuestions.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -173,8 +155,8 @@
       <file leaf-file-name="hardQuestions.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hardQuestions.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="37" lean-forward="false" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
+            <state relative-caret-position="153">
+              <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -183,9 +165,43 @@
       <file leaf-file-name="hardQuestionsAnswers.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hardQuestionsAnswers.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            <state relative-caret-position="0">
+              <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mediumQuestionsAnswers.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mediumQuestionsAnswers.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="phoneController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/phoneController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="272" column="34" lean-forward="false" selection-start-line="272" selection-start-column="34" selection-end-line="272" selection-end-column="34" />
+              <folding>
+                <element signature="e#21216#21217#0" expanded="true" />
+                <element signature="e#21290#21291#0" expanded="true" />
+                <element signature="e#25207#25208#0" expanded="true" />
+                <element signature="e#25288#25289#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hs_err_pid28760.log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hs_err_pid28760.log">
+          <provider selected="true" editor-type-id="LogFileEditorProvider">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             </state>
           </provider>
         </entry>
@@ -204,13 +220,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>QUESTION</find>
-      <find>QuestionLabel</find>
-      <find>LEADER</find>
-      <find>checkA</find>
-      <find>grid</find>
-      <find>user</find>
-      <find>populate</find>
       <find>styleshee</find>
       <find>root</find>
       <find>font</find>
@@ -224,16 +233,23 @@
       <find>speaker</find>
       <find>front camera</find>
       <find>p</find>
-      <find>menu</find>
       <find>touchscreen</find>
       <find>rear camera</find>
       <find>question</find>
       <find>setFill</find>
       <find>touc</find>
-      <find>fact</find>
       <find>backtoPhoneBUtton</find>
       <find>menuba</find>
+      <find>proxi</find>
+      <find>pro</find>
+      <find>menu</find>
+      <find>menubutton</find>
+      <find>retry</find>
+      <find>fact</find>
+      <find>gener</find>
+      <find>questions</find>
       <find>camera</find>
+      <find>touch</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -253,7 +269,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/sample/mouseOver.java" />
-        <option value="$PROJECT_DIR$/src/sample/alertBox.java" />
         <option value="$PROJECT_DIR$/src/sample/onClick.java" />
         <option value="$PROJECT_DIR$/src/sample/quizController.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Quiz.fxml" />
@@ -264,11 +279,6 @@
         <option value="$PROJECT_DIR$/src/sample/quizGame.fxml" />
         <option value="$PROJECT_DIR$/src/sample/quizover.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Facts.txt" />
-        <option value="$PROJECT_DIR$/src/sample/Hardware.java" />
-        <option value="$PROJECT_DIR$/easyQuestionsAnswers.txt" />
-        <option value="$PROJECT_DIR$/easyQuestions.txt" />
-        <option value="$PROJECT_DIR$/src/sample/DBconnect.java" />
-        <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/Quiz.css" />
         <option value="$PROJECT_DIR$/src/sample/QuizNormal.css" />
         <option value="$PROJECT_DIR$/src/sample/fontMedium.css" />
@@ -277,18 +287,25 @@
         <option value="$PROJECT_DIR$/src/sample/fontSmall.css" />
         <option value="$PROJECT_DIR$/src/sample/fontMediumFamilyNormal.css" />
         <option value="$PROJECT_DIR$/src/sample/fontLargeFamilyNormal.css" />
-        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/sample/Phone.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Options.fxml" />
-        <option value="$PROJECT_DIR$/mediumQuestionsAnswers.txt" />
-        <option value="$PROJECT_DIR$/mediumQuestions.txt" />
-        <option value="$PROJECT_DIR$/hardQuestions.txt" />
-        <option value="$PROJECT_DIR$/hardQuestionsAnswers.txt" />
         <option value="$PROJECT_DIR$/src/sample/welcomeQuiz.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/quizMenu.java" />
-        <option value="$PROJECT_DIR$/src/sample/Quiz.java" />
-        <option value="$PROJECT_DIR$/src/sample/phoneController.java" />
+        <option value="$PROJECT_DIR$/src/sample/alertBox.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
+        <option value="$PROJECT_DIR$/src/sample/DBconnect.java" />
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/optionsController.java" />
+        <option value="$PROJECT_DIR$/src/sample/quizMenu.java" />
+        <option value="$PROJECT_DIR$/src/sample/Hardware.java" />
+        <option value="$PROJECT_DIR$/Facts.txt" />
+        <option value="$PROJECT_DIR$/src/sample/Quiz.java" />
+        <option value="$PROJECT_DIR$/easyQuestions.txt" />
+        <option value="$PROJECT_DIR$/easyQuestionsAnswers.txt" />
+        <option value="$PROJECT_DIR$/mediumQuestions.txt" />
+        <option value="$PROJECT_DIR$/mediumQuestionsAnswers.txt" />
+        <option value="$PROJECT_DIR$/hardQuestionsAnswers.txt" />
+        <option value="$PROJECT_DIR$/hardQuestions.txt" />
+        <option value="$PROJECT_DIR$/src/sample/phoneController.java" />
       </list>
     </option>
   </component>
@@ -305,10 +322,9 @@
     </treeState>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="372" />
-    <option name="y" value="92" />
-    <option name="width" value="1221" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -330,7 +346,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -357,8 +373,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -374,7 +390,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mysql-connector-java-5.1.46/mysql-connector-java-5.1.46.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -663,16 +679,19 @@
       <workItem from="1524567832073" duration="11302000" />
       <workItem from="1524851229767" duration="1240000" />
       <workItem from="1525014670418" duration="6297000" />
-      <workItem from="1525080932256" duration="13937000" />
+      <workItem from="1525080932256" duration="14582000" />
+      <workItem from="1525167305406" duration="1396000" />
+      <workItem from="1525208002364" duration="2315000" />
+      <workItem from="1525260033207" duration="2799000" />
+      <workItem from="1525372579013" duration="9007000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="384664000" />
+    <option name="totallyTimeSpent" value="400826000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="372" y="92" width="1221" height="1047" extended-state="1" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -683,13 +702,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32790446" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15073213" sideWeight="0.6703755" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1391258" sideWeight="0.6703755" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24945295" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2489339" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -706,7 +725,7 @@
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -772,111 +791,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/javafx-src.zip!/javafx/scene/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8412" column="0" lean-forward="false" selection-start-line="8412" selection-start-column="0" selection-end-line="8412" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/javafx-src.zip!/javafx/scene/control/Button.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="184" column="0" lean-forward="false" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/javafx-src.zip!/com/sun/javafx/scene/control/behavior/ButtonBehavior.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/javafx-src.zip!/com/sun/javafx/scene/control/skin/BehaviorSkinBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/javafx-src.zip!/com/sun/javafx/event/CompositeEventDispatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/javafx-src.zip!/javafx/event/EventHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="44" column="9" lean-forward="false" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Facts.txt" />
-    <entry file="file://$PROJECT_DIR$/src/sample/quizGame.fxml" />
-    <entry file="jar://$PROJECT_DIR$/../JArduino-0.1.7/jarduino.samples/lib/org.sintef.jarduino.gui-0.1.7-SNAPSHOT.jar!/org/sintef/jarduino/AbstractJArduino.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="84" column="19" lean-forward="false" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/SerialTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/alertBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="29" column="7" lean-forward="false" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/easyQuestionsAnswers.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/phonebrokendown.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/sample/quizover.fxml" />
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/javafx-src.zip!/javafx/scene/control/TextArea.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="84" column="74" lean-forward="true" selection-start-line="84" selection-start-column="74" selection-end-line="84" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/DBconnect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Hardware.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="747" column="0" lean-forward="false" selection-start-line="747" selection-start-column="0" selection-end-line="747" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/javafx-src.zip!/com/sun/glass/ui/win/WinApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
@@ -955,14 +869,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="15" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/fontSmall.css">
@@ -977,14 +891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/fontLarge.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1006,22 +912,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Phone.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
           <caret line="103" column="193" lean-forward="true" selection-start-line="103" selection-start-column="193" selection-end-line="103" selection-end-column="201" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/easyQuestions.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="57" />
-          <folding />
-        </state>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/fontMedium.css">
@@ -1032,115 +930,639 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mediumQuestionsAnswers.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mediumQuestions.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hardQuestions.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="37" lean-forward="false" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hardQuestionsAnswers.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/welcomeQuiz.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
           <caret line="56" column="168" lean-forward="false" selection-start-line="56" selection-start-column="168" selection-end-line="56" selection-end-column="168" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Options.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Options.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
+        <state relative-caret-position="306">
           <caret line="18" column="88" lean-forward="false" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/quizMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="110" column="14" lean-forward="false" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Quiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="591" column="0" lean-forward="false" selection-start-line="591" selection-start-column="0" selection-end-line="591" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="1773" column="0" lean-forward="false" selection-start-line="1773" selection-start-column="0" selection-end-line="1773" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/fontLarge.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-          <folding />
+    <entry file="uml://JAVA/sample.Quiz">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>sample.Quiz</OriginalElement>
+          <nodes>
+            <node x="" y="">javafx.application.Application</node>
+            <node x="" y="">sample.Quiz</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="55.0" y="54.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/phoneController.java">
+    <entry file="uml://JAVA/sample.phoneController">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>sample.phoneController</OriginalElement>
+          <nodes>
+            <node x="13.0" y="0.0">javafx.application.Application</node>
+            <node x="0.0" y="79.0">sample.phoneController</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="sample.phoneController" target="javafx.application.Application">
+              <point x="0.0" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="68.0" y="54.0" />
+          <SelectedNodes>
+            <node>sample.phoneController</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/sample.Controller">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>sample.Controller</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">sample.Controller</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-199.0" y="-175.0" />
+          <SelectedNodes>
+            <node>sample.Controller</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/sample.optionsController">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>sample.optionsController</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">sample.optionsController</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-179.0" y="-175.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Flash/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Flash</ID>
+          <OriginalElement />
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="848.0" y="435.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>PRIVATE</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/sample.Hardware">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>sample.Hardware</OriginalElement>
+          <nodes>
+            <node x="" y="">org.sintef.jarduino.AbstractJArduino</node>
+            <node x="" y="">sample.Hardware</node>
+            <node x="" y="">org.sintef.jarduino.JArduino</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="677.0" y="145.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/sample.DBconnect">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>sample.DBconnect</OriginalElement>
+          <nodes>
+            <node x="" y="">sample.DBconnect</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="411.0" y="-124.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Properties</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/src.zip!/java/sql/Connection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="585" column="0" lean-forward="true" selection-start-line="585" selection-start-column="0" selection-end-line="585" selection-end-column="0" />
+        <state relative-caret-position="295">
+          <caret line="83" column="17" lean-forward="false" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MODULES/mdl-EducationalTool">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MODULES</ID>
+          <OriginalElement>mdl-EducationalTool</OriginalElement>
+          <nodes>
+            <node x="" y="">mdl-EducationalTool</node>
+            <node x="" y="">lib-RXTXcomm.jar</node>
+            <node x="" y="">lib-mysql-connector-java-5.1.46.jar</node>
+            <node x="" y="">lib-jArduinoLib</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-59.0" y="15.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Libraries</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="" y="">com</node>
+            <node x="" y="">de</node>
+            <node x="" y="">ImageGen</node>
+            <node x="" y="">hm20master</node>
+            <node x="" y="">groovyjarjarasm</node>
+            <node x="" y="">java</node>
+            <node x="" y="">javax</node>
+            <node x="" y="">hm20slide</node>
+            <node x="" y="">javafx</node>
+            <node x="" y="">DirectSoundAuto</node>
+            <node x="" y="">hm20masterorig</node>
+            <node x="" y="">oracle</node>
+            <node x="" y="">SimplePlayerApplet</node>
+            <node x="" y="">META-INF</node>
+            <node x="" y="">hm20ipix</node>
+            <node x="" y="">groovy</node>
+            <node x="" y="">hm20action</node>
+            <node x="" y="">hm20gui</node>
+            <node x="" y="">hm20animator</node>
+            <node x="" y="">jmapps</node>
+            <node x="" y="">groovyjarjarcommonscli</node>
+            <node x="" y="">groovyjarjarantlr</node>
+            <node x="" y="">netscape</node>
+            <node x="" y="">VFWAuto</node>
+            <node x="" y="">codecLib</node>
+            <node x="" y="">hm20decimg</node>
+            <node x="" y="">twitter4j</node>
+            <node x="" y="">sun</node>
+            <node x="" y="">Export</node>
+            <node x="" y="">hm20pan</node>
+            <node x="" y="">JMFRegistry</node>
+            <node x="" y="">hm20ipixb</node>
+            <node x="" y="">hm20ipixa</node>
+            <node x="" y="">JavaSoundDetector</node>
+            <node x="" y="">a</node>
+            <node x="" y="">hm20ipixd</node>
+            <node x="" y="">hm20ipixc</node>
+            <node x="" y="">org</node>
+            <node x="" y="">nativelib</node>
+            <node x="" y="">JMStudio</node>
+            <node x="" y="">sample</node>
+            <node x="" y="">gnu</node>
+            <node x="" y="">jdk</node>
+            <node x="" y="">VFWManual</node>
+            <node x="" y="">JavaSoundAuto</node>
+            <node x="" y="">hm20player</node>
+            <node x="" y="">hm20gsmtask</node>
+            <node x="" y="">JMFInit</node>
+            <node x="" y="">hm20gsm</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="425.0" y="275.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/sample.Main">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>sample.Main</OriginalElement>
+          <nodes>
+            <node x="" y="">javafx.application.Application</node>
+            <node x="" y="">sample.Main</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="55.0" y="54.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/sample">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>sample</OriginalElement>
+          <nodes>
+            <node x="10.948611111111035" y="277.0">sample.DBconnect</node>
+            <node x="300.66818910256404" y="89.0">sample.Hardware</node>
+            <node x="156.50568910256396" y="366.0">sample.Main</node>
+            <node x="167.63068910256396" y="0.0">sample.alertBox</node>
+            <node x="86.13400106837597" y="495.0">sample.Quiz</node>
+            <node x="169.78333333333327" y="604.0">sample.quizMenu</node>
+            <node x="157.196688034188" y="277.0">sample.optionsController</node>
+            <node x="205.25568910256396" y="168.0">sample.Controller</node>
+            <node x="272.70568910256395" y="495.0">sample.phoneController</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="sample.Hardware" target="sample.alertBox">
+              <point x="0.0" y="-14.5" />
+              <point x="350.16818910256404" y="59.0" />
+              <point x="235.1306891025639" y="59.0" />
+              <point x="22.49999999999997" y="14.5" />
+            </edge>
+            <edge source="sample.phoneController" target="sample.Controller">
+              <point x="8.4375" y="-14.5" />
+              <point x="348.64318910256395" y="475.0" />
+              <point x="342.39318910256395" y="475.0" />
+              <point x="342.39318910256395" y="247.0" />
+              <point x="266.9779113247862" y="247.0" />
+              <point x="11.222222222222229" y="14.5" />
+            </edge>
+            <edge source="sample.phoneController" target="sample.Hardware">
+              <point x="42.1875" y="-14.5" />
+              <point x="382.39318910256395" y="475.0" />
+              <point x="374.91818910256404" y="475.0" />
+              <point x="24.75" y="14.5" />
+            </edge>
+            <edge source="sample.quizMenu" target="sample.Controller">
+              <point x="35.35000000000002" y="-14.5" />
+              <point x="255.6333333333333" y="574.0" />
+              <point x="424.76193910256404" y="574.0" />
+              <point x="424.76193910256404" y="227.0" />
+              <point x="289.42235576923065" y="227.0" />
+              <point x="33.66666666666666" y="14.5" />
+            </edge>
+            <edge source="sample.Main" target="sample.DBconnect">
+              <point x="-31.25" y="-14.5" />
+              <point x="162.75568910256396" y="336.0" />
+              <point x="77.19861111111103" y="336.0" />
+              <point x="13.25" y="14.5" />
+            </edge>
+            <edge source="sample.Quiz" target="sample.alertBox">
+              <point x="-32.0" y="-14.5" />
+              <point x="90.13400106837597" y="475.0" />
+              <point x="0.4486111111110347" y="475.0" />
+              <point x="0.4486111111110347" y="49.0" />
+              <point x="175.13068910256396" y="49.0" />
+              <point x="-37.5" y="14.5" />
+            </edge>
+            <edge source="sample.optionsController" target="sample.Main">
+              <point x="-15.666666666666686" y="14.5" />
+              <point x="18.75" y="-14.5" />
+            </edge>
+            <edge source="sample.Quiz" target="sample.DBconnect">
+              <point x="-16.0" y="-14.5" />
+              <point x="106.13400106837597" y="455.0" />
+              <point x="41.448611111111035" y="455.0" />
+              <point x="41.448611111111035" y="346.0" />
+              <point x="50.698611111111035" y="346.0" />
+              <point x="-13.25" y="14.5" />
+            </edge>
+            <edge source="sample.Quiz" target="sample.Main">
+              <point x="24.0" y="-14.5" />
+              <point x="146.13400106837597" y="455.0" />
+              <point x="169.00568910256396" y="455.0" />
+              <point x="-25.0" y="14.5" />
+            </edge>
+            <edge source="sample.quizMenu" target="sample.optionsController">
+              <point x="15.150000000000034" y="-14.5" />
+              <point x="235.4333333333333" y="554.0" />
+              <point x="252.10568910256399" y="554.0" />
+              <point x="252.10568910256399" y="336.0" />
+              <point x="259.03002136752133" y="336.0" />
+              <point x="31.333333333333314" y="14.5" />
+            </edge>
+            <edge source="sample.optionsController" target="sample.alertBox">
+              <point x="-52.875" y="-14.5" />
+              <point x="174.821688034188" y="227.0" />
+              <point x="194.75568910256396" y="227.0" />
+              <point x="194.75568910256396" y="69.0" />
+              <point x="205.13068910256396" y="69.0" />
+              <point x="-7.5" y="14.5" />
+            </edge>
+            <edge source="sample.DBconnect" target="sample.alertBox">
+              <point x="0.0" y="-14.5" />
+              <point x="63.948611111111035" y="59.0" />
+              <point x="190.13068910256396" y="59.0" />
+              <point x="-22.5" y="14.5" />
+            </edge>
+            <edge source="sample.Quiz" target="sample.Controller">
+              <point x="0.0" y="-14.5" />
+              <point x="122.13400106837597" y="425.0" />
+              <point x="135.44861111111103" y="425.0" />
+              <point x="135.44861111111103" y="247.0" />
+              <point x="222.0890224358973" y="247.0" />
+              <point x="-33.66666666666666" y="14.5" />
+            </edge>
+            <edge source="sample.optionsController" target="sample.Controller">
+              <point x="-17.625" y="-14.5" />
+              <point x="210.071688034188" y="257.0" />
+              <point x="233.31124465811953" y="257.0" />
+              <point x="-22.44444444444443" y="14.5" />
+            </edge>
+            <edge source="sample.quizMenu" target="sample.Quiz">
+              <point x="-45.44999999999999" y="-14.5" />
+              <point x="174.8333333333333" y="584.0" />
+              <point x="104.13400106837597" y="584.0" />
+              <point x="-18.0" y="14.5" />
+            </edge>
+            <edge source="sample.quizMenu" target="sample.Main">
+              <point x="-15.149999999999977" y="-14.5" />
+              <point x="205.1333333333333" y="554.0" />
+              <point x="194.00568910256396" y="554.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="sample.Controller" target="sample.optionsController">
+              <point x="0.0" y="14.5" />
+              <point x="255.75568910256396" y="257.0" />
+              <point x="280.571688034188" y="257.0" />
+              <point x="52.875" y="-14.5" />
+            </edge>
+            <edge source="sample.Controller" target="sample.alertBox">
+              <point x="-25.25000000000003" y="-14.5" />
+              <point x="230.50568910256393" y="69.0" />
+              <point x="220.13068910256396" y="69.0" />
+              <point x="7.5" y="14.5" />
+            </edge>
+            <edge source="sample.phoneController" target="sample.Main">
+              <point x="-59.0625" y="-14.5" />
+              <point x="281.14318910256395" y="465.0" />
+              <point x="210.67235576923065" y="465.0" />
+              <point x="16.666666666666686" y="14.5" />
+            </edge>
+            <edge source="sample.Controller" target="sample.Hardware">
+              <point x="25.24999999999997" y="-14.5" />
+              <point x="281.0056891025639" y="143.0" />
+              <point x="325.41818910256404" y="143.0" />
+              <point x="-24.75" y="14.5" />
+            </edge>
+            <edge source="sample.Quiz" target="sample.optionsController">
+              <point x="8.0" y="-14.5" />
+              <point x="130.13400106837597" y="435.0" />
+              <point x="145.70568910256398" y="435.0" />
+              <point x="145.70568910256398" y="346.0" />
+              <point x="165.03002136752136" y="346.0" />
+              <point x="-62.66666666666666" y="14.5" />
+            </edge>
+            <edge source="sample.phoneController" target="sample.alertBox">
+              <point x="59.0625" y="-14.5" />
+              <point x="399.26818910256395" y="475.0" />
+              <point x="410.16818910256404" y="475.0" />
+              <point x="410.16818910256404" y="49.0" />
+              <point x="250.1306891025639" y="49.0" />
+              <point x="37.49999999999997" y="14.5" />
+            </edge>
+            <edge source="sample.phoneController" target="sample.optionsController">
+              <point x="-8.4375" y="-14.5" />
+              <point x="331.39318910256395" y="346.0" />
+              <point x="290.36335470085464" y="346.0" />
+              <point x="62.66666666666663" y="14.5" />
+            </edge>
+            <edge source="sample.Main" target="sample.optionsController">
+              <point x="-6.25" y="-14.5" />
+              <point x="187.75568910256396" y="346.0" />
+              <point x="180.696688034188" y="346.0" />
+              <point x="-47.0" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-140.0" y="153.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/alertBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#20261#20262#0" expanded="true" />
-            <element signature="e#20335#20336#0" expanded="true" />
-            <element signature="e#24183#24184#0" expanded="true" />
-            <element signature="e#24264#24265#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/DBconnect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="46" column="48" lean-forward="false" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+          <folding>
+            <marker date="1525380266886" expanded="true" signature="838:896" ph="SELECT * FRO... userscore" />
+            <marker date="1525380266886" expanded="true" signature="1808:1908" ph="INSERT INTO userscore... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/optionsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="61" column="9" lean-forward="false" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
+        <state relative-caret-position="204">
+          <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="69" column="13" lean-forward="false" selection-start-line="68" selection-start-column="6" selection-end-line="69" selection-end-column="44" />
+          <folding>
+            <element signature="e#1038#1039#0" expanded="false" />
+            <element signature="e#1075#1076#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/quizMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="107" column="36" lean-forward="false" selection-start-line="107" selection-start-column="36" selection-end-line="107" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="32" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Hardware.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="148" column="5" lean-forward="true" selection-start-line="148" selection-start-column="5" selection-end-line="148" selection-end-column="5" />
+          <folding>
+            <element signature="e#822#823#0" expanded="false" />
+            <element signature="e#852#853#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Facts.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Quiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="102" column="39" lean-forward="false" selection-start-line="102" selection-start-column="39" selection-end-line="102" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hs_err_pid28760.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/easyQuestions.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/easyQuestionsAnswers.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mediumQuestionsAnswers.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mediumQuestions.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardQuestionsAnswers.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardQuestions.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/phoneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="272" column="34" lean-forward="false" selection-start-line="272" selection-start-column="34" selection-end-line="272" selection-end-column="34" />
+          <folding>
+            <element signature="e#21216#21217#0" expanded="true" />
+            <element signature="e#21290#21291#0" expanded="true" />
+            <element signature="e#25207#25208#0" expanded="true" />
+            <element signature="e#25288#25289#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

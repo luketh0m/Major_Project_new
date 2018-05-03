@@ -19,7 +19,7 @@ public class Main extends Application {
     public static String currentPage = "sample.fxml";
 
     @Override
-    public void start(Stage primaryStage) throws Exception{ // Load FXML document and display on screen
+    public void start(Stage primaryStage) throws Exception { // Load FXML document and display on screen
 
         if (optionsController.fontSize == null) {
 
@@ -34,14 +34,10 @@ public class Main extends Application {
         primaryStage.setMinWidth(800);
         primaryStage.setMinHeight(600);
 
-    System.out.print(optionsController.fontSize);
-
-
+        System.out.print(optionsController.fontSize);
 
 
     }
-
-
 
 
     public void closeWindow(Stage primaryStage) {
@@ -51,7 +47,6 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
-
 
 
     }

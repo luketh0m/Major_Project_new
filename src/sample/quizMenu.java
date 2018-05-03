@@ -36,19 +36,16 @@ public class quizMenu extends Application {
     @FXML
     static Button hardButton;
     @FXML
-     private Rectangle Tint;
+    private Rectangle Tint;
 
 
-    public static  String Easy = "easyQuestions.txt";
+    public static String Easy = "easyQuestions.txt";
     String Medium = "mediumQuestions.txt";
     String Hard = "hardQuestions.txt";
 
     String easyAnswer = "easyQuestionsAnswers.txt";
     String mediumAnswer = "mediumQuestionsAnswers.txt";
     String hardAnswer = "hardQuestionsAnswers.txt";
-
-
-
 
 
     public void appAcessed() {
@@ -70,6 +67,7 @@ public class quizMenu extends Application {
         // Text files of question and answers
 
     }
+
     public void quizStart(String Difficulty, String DifficultyAnswers) throws Exception {
 
         Quiz.generateQuestionsAndAnswers(Difficulty, DifficultyAnswers);
@@ -78,16 +76,17 @@ public class quizMenu extends Application {
 
     public void easyQuiz() throws Exception {
 
-        quizStart(Easy,easyAnswer);
+        quizStart(Easy, easyAnswer);
     }
 
     public void mediumQuiz() throws Exception {
 
-        quizStart(Medium,mediumAnswer);
+        quizStart(Medium, mediumAnswer);
     }
+
     public void hardQuiz() throws Exception {
 
-        quizStart(Hard,hardAnswer);
+        quizStart(Hard, hardAnswer);
     }
 
     public void menuButtonClicked() throws Exception {
@@ -106,7 +105,7 @@ public class quizMenu extends Application {
 
     }
 
-    public void infoButtonClicked() throws Exception {
+    public void infoButtonClicked()  {
 
         c.infoButton();
     }
@@ -118,18 +117,16 @@ public class quizMenu extends Application {
 
 
     }
-        public void closePage() throws Exception {
 
-            Window window = rootPane.getScene().getWindow();
-            if (window instanceof Stage) {
+    public void closePage() throws Exception {
+
+        Window window = rootPane.getScene().getWindow();
+        if (window instanceof Stage) {
 
 
-                ((Stage) window).close();
-            }
+            ((Stage) window).close();
         }
-
-
-
+    }
 
 
     @Override

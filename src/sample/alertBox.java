@@ -11,6 +11,7 @@ import javafx.scene.control.*;
 
 public class alertBox {
 
+    // An alert box that displays a title, description and button on top of the current window
     public static void display(String title, String message, String buttonText) {
         Stage window = new Stage();
 

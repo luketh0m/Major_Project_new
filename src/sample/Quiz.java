@@ -1,10 +1,9 @@
 package sample;
-import com.sun.org.apache.xpath.internal.functions.FuncFalse;
+
 import javafx.application.Application;
-import javafx.geometry.HPos;
-import javafx.geometry.Insets;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
-import javafx.geometry.VPos;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -12,23 +11,17 @@ import javafx.scene.control.TextField;
 import javafx.scene.effect.Reflection;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.shape.StrokeType;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 
 
-import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.List;
-
-import static sample.optionsController.primaryStage;
 
 public class Quiz extends Application {
 
@@ -38,11 +31,10 @@ public class Quiz extends Application {
     public static String[] randomAnswers = new String[3];
     public static int score;
     public static int questionNo = 1;
-    public static   Main m = new Main();
+    public static Main m = new Main();
     Controller c = new Controller();
-    static  Quiz q = new Quiz();
+    static Quiz q = new Quiz();
     public static Pane rootPane;
-
 
 
     public static void generateQuestionsAndAnswers(String Difficulty, String difficultyAnswers) throws FileNotFoundException {
@@ -73,14 +65,13 @@ public class Quiz extends Application {
         String questionsAnswers[] = listA.toArray(new String[listA.size()]); //puts all answers in array, same order as questions
 
 
-
-        displayQuestions(questions, questionsAnswers);
+        displayQuestionsAndAnswers(questions, questionsAnswers);
         quizGame(questions, questionsAnswers);
 
 
     }
 
-    public static void checkAnswer(String questionAnswers[]) {
+    private static void checkAnswer(String questionAnswers[]) {
 
 
         int i = questionAnswers.length;
@@ -97,26 +88,21 @@ public class Quiz extends Application {
         answerStack.addAll(answerRandom);
 
 
-
         Quiz.randomAnswers[0] = answerStack.pop();
         Quiz.randomAnswers[1] = answerStack.pop();
         Quiz.randomAnswers[2] = answerStack.pop();
 
 
-
-
     }
 
 
-   /* public void appAccessed {
-        optionsController.tintOptions(Tint);
-    }  */
 
-    public static String[] displayQuestions (String questions[], String questionsAnswers[]) {
 
-        String qAndA[] = new String [2];
-        qAndA [0]  = questions[questionNo];
-        qAndA [1] = questionsAnswers[questionNo];
+    private static String[] displayQuestionsAndAnswers(String questions[], String questionsAnswers[]) {
+
+        String qAndA[] = new String[2];
+        qAndA[0] = questions[questionNo];
+        qAndA[1] = questionsAnswers[questionNo];
 
 
         return qAndA;
@@ -124,8 +110,7 @@ public class Quiz extends Application {
     }
 
 
-
-    public static void correctAnswerChosen (Stage primaryStage, String questions[], String questionsAnswers[]) {
+    private static void correctAnswerChosen(Stage primaryStage, String questions[], String questionsAnswers[]) {
         if (Quiz.questionNo < 10) {
             Quiz.score++;
             Quiz.questionNo++;
@@ -133,8 +118,7 @@ public class Quiz extends Application {
             quizGame(questions, questionsAnswers);
 
 
-        }
-        else if (Quiz.questionNo  == 10 ) {
+        } else if (Quiz.questionNo == 10) {
             Quiz.score++;
             Quiz.questionNo++;
             primaryStage.close();
@@ -143,7 +127,7 @@ public class Quiz extends Application {
         }
     }
 
-    public static  void incorrectAnswerChosen(Stage primaryStage, String questions[], String questionsAnswers[]) {
+    private static void incorrectAnswerChosen(Stage primaryStage, String questions[], String questionsAnswers[]) {
 
         if (Quiz.questionNo < 10) {
             Quiz.questionNo++;
@@ -159,6 +143,7 @@ public class Quiz extends Application {
 
 
     }
+
     public static void quizMenu() {
 
         Stage primaryStage = new Stage();
@@ -171,17 +156,18 @@ public class Quiz extends Application {
 
 
 
-    public static void quizGame (String questions[], String questionsAnswers[]) {
+    private static void quizGame(String questions[], String questionsAnswers[]) {
 
         Reflection R = new Reflection();
         Stage primaryStage = new Stage();
-        String Question[] = Quiz.displayQuestions(questions, questionsAnswers);
+        String Question[] = Quiz.displayQuestionsAndAnswers(questions, questionsAnswers);
 
         checkAnswer(questionsAnswers);
 
         do {
             Quiz.checkAnswer(questionsAnswers);
-        } while (Question[1] == Quiz.randomAnswers[0] || Question[1] == Quiz.randomAnswers[1] || Question[1] == Quiz.randomAnswers[2]);
+        }
+        while (Question[1] == Quiz.randomAnswers[0] || Question[1] == Quiz.randomAnswers[1] || Question[1] == Quiz.randomAnswers[2]);
 
 
         Rectangle background = new Rectangle();
@@ -193,9 +179,8 @@ public class Quiz extends Application {
         Label questionLabel = new Label(Question[0]); //Display Question on screen
         Button correctAnswer = new Button(Question[1]); //correct answer always on the same button, but button will move
         Button incorrectOne = new Button(Quiz.randomAnswers[0]);
-        Button incorrectTwo = new Button (Quiz.randomAnswers[1]);
+        Button incorrectTwo = new Button(Quiz.randomAnswers[1]);
         Button incorrectThree = new Button(Quiz.randomAnswers[2]);
-
 
 
         ArrayList<Button> Answers = new ArrayList<>(); //Take all answers, put them into Array List, so they can be placed at random locations.
@@ -208,16 +193,13 @@ public class Quiz extends Application {
         Collections.shuffle(Answers);
 
 
-
-
-        AnchorPane  layout = new AnchorPane();
+        AnchorPane layout = new AnchorPane();
         GridPane grid = new GridPane();
         grid.add(Answers.get(0), 0, 0);
         grid.add(Answers.get(1), 0, 1);
         grid.add(Answers.get(2), 1, 0);
         grid.add(Answers.get(3), 1, 1);
         grid.setGridLinesVisible(false);
-
 
 
         correctAnswer.setPrefHeight(75);
@@ -266,7 +248,6 @@ public class Quiz extends Application {
         questionLink4.setEndY(475);
 
 
-
         questionNumberLabel.setFont(new Font("Ariel", 25));
         questionNumberLabel.setTextFill(Color.web("#114b5f"));
         questionNumberLabel.setLayoutX(10);
@@ -285,7 +266,6 @@ public class Quiz extends Application {
         questionBox.getChildren().add(questionLabel);
 
 
-
         grid.setLayoutX(40);
         grid.setLayoutY(239);
         grid.setPrefHeight(309);
@@ -293,7 +273,7 @@ public class Quiz extends Application {
         grid.setVgap(50);
         grid.setHgap(150);
 
-       grid.setAlignment(Pos.CENTER);
+        grid.setAlignment(Pos.CENTER);
 
         Rectangle bottomMenu = new Rectangle();
         bottomMenu.setWidth(800);
@@ -311,7 +291,8 @@ public class Quiz extends Application {
         menuButton.setPrefHeight(38);
         menuButton.setPrefWidth(118);
 
-       aboutButton.setLayoutX(260);
+
+        aboutButton.setLayoutX(260);
         aboutButton.setLayoutY(562);
         aboutButton.setPrefHeight(38);
         aboutButton.setPrefWidth(118);
@@ -321,21 +302,20 @@ public class Quiz extends Application {
         infoButton.setPrefHeight(38);
         infoButton.setPrefWidth(118);
 
-       toolkitButton.setLayoutX(520);
-       toolkitButton.setLayoutY(562);
-       toolkitButton.setPrefHeight(38);
+        toolkitButton.setLayoutX(520);
+        toolkitButton.setLayoutY(562);
+        toolkitButton.setPrefHeight(38);
         toolkitButton.setPrefWidth(118);
 
-            q.tint.setVisible(false);
-            q.tint.setHeight(600);
-            q.tint.setWidth(800);
-            q.tint.setOpacity(0.2);
-            q.tint.setDisable(true);
+        q.tint.setVisible(false);
+        q.tint.setHeight(600);
+        q.tint.setWidth(800);
+        q.tint.setOpacity(0.2);
+        q.tint.setDisable(true);
 
-            optionsController.tintOptions(q.tint);
+        optionsController.tintOptions(q.tint);
 
-        layout.getChildren().addAll( background, questionNumberLabel, questionBox, questionLink1, questionLink2,questionLink3, questionLink4, grid, bottomMenu, menuButton, infoButton,aboutButton,toolkitButton, q.tint);
-
+        layout.getChildren().addAll(background, questionNumberLabel, questionBox, questionLink1, questionLink2, questionLink3, questionLink4, grid, bottomMenu, menuButton, infoButton, aboutButton, toolkitButton, q.tint);
 
 
         Scene scene = new Scene(layout, 800, 600);
@@ -352,24 +332,23 @@ public class Quiz extends Application {
             correctAnswerChosen(primaryStage, questions, questionsAnswers);
 
 
-
         }); //if answer is incorrect, add 1 to questionNo and generate new question and Answers  //if answer is incorrect, add 1 to questionNo and generate new question and Answersi
 
-        incorrectOne.setOnAction( e -> {
+        incorrectOne.setOnAction(e -> {
 
             incorrectAnswerChosen(primaryStage, questions, questionsAnswers);
             //if answer is incorrect, add 1 to questionNo and generate new question and Answers
 
         });
 
-        incorrectTwo.setOnAction( e -> {
+        incorrectTwo.setOnAction(e -> {
 
             incorrectAnswerChosen(primaryStage, questions, questionsAnswers);
             //if answer is incorrect, add 1 to questionNo and generate new question and Answers
 
         });
 
-        incorrectThree.setOnAction( e -> {
+        incorrectThree.setOnAction(e -> {
             incorrectAnswerChosen(primaryStage, questions, questionsAnswers);
             //if answer is incorrect, add 1 to questionNo and generate new question and Answers
 
@@ -379,8 +358,7 @@ public class Quiz extends Application {
     }
 
 
-
-    public static String factGenerator () throws FileNotFoundException {
+    private static String factGenerator() throws FileNotFoundException {
 
 
         List<String> list = new LinkedList<>();
@@ -407,31 +385,42 @@ public class Quiz extends Application {
 
     }
 
+    public void navBar (String page, Stage primaryStage) {
+        primaryStage.close();
+        Main.currentPage = page;
 
-    public static void quizOver(Stage primaryStage) {
+        try {
 
+            m.start(primaryStage);
+        } catch (Exception e1) {
+            e1.printStackTrace();
+        }
+}
+
+    private static void quizOver(Stage primaryStage) {
 
 
         Reflection r = new Reflection();
         Font f = new Font("Ariel", 30);
         Font l = new Font("Ariel", 20);
 
-        DBconnect connect = new DBconnect();
+        DBconnect connect;
+        connect = new DBconnect();
         connect.getData();
 
         primaryStage.close();
 
-       AnchorPane pane = new AnchorPane();
-       Rectangle background = new Rectangle();
-       background.setHeight(600);
-       background.setWidth(800);
-       background.setFill(Color.web("#ddfff7"));
-       pane.setPrefHeight(600);
-       pane.setPrefWidth(800);
-       Stage newPrimaryStage = new Stage();
+        AnchorPane pane = new AnchorPane();
+        Rectangle background = new Rectangle();
+        background.setHeight(600);
+        background.setWidth(800);
+        background.setFill(Color.web("#ddfff7"));
+        pane.setPrefHeight(600);
+        pane.setPrefWidth(800);
+        Stage newPrimaryStage = new Stage();
 
 
-        Text gameOver = new Text ("Quiz complete");
+        Text gameOver = new Text("Quiz complete");
         gameOver.setLayoutX(258.0);
         gameOver.setLayoutY(53);
         gameOver.setFont(new Font("Ariel", 52));
@@ -439,34 +428,23 @@ public class Quiz extends Application {
 
         gameOver.setEffect(r);
 
-        Text userScore = new Text ("You Scored " + Quiz.score + " Out of 10!");
+        Text userScore = new Text("You Scored " + Quiz.score + " Out of 10!");
         userScore.setLayoutX(258);
         userScore.setLayoutY(103);
         userScore.setFont(f);
 
 
-
-
-        Text tryAgin = new Text ("Try again?");
+        Text tryAgin = new Text("Try again?");
         tryAgin.setLayoutX(350);
         tryAgin.setLayoutY(213);
         tryAgin.setFont(f);
-      ;
+        ;
 
-        Button retry = new Button ("Retry");
-        retry.setOnAction(e ->  {
-            primaryStage.close();
-            Main.currentPage = "welcomeQuiz.fxml";
+        Button retry = new Button("Retry");
+        retry.setOnAction(e -> q.navBar("welcomeQuiz.fxml", primaryStage));
 
-            try {
-                questionNo =1;
-                score =0;
-                m.start(primaryStage);
-            } catch (Exception e1) {
-                e1.printStackTrace();
-            }
 
-        });
+
         retry.setLayoutX(350);
         retry.setLayoutY(238);
         retry.setPrefWidth(131);
@@ -474,7 +452,7 @@ public class Quiz extends Application {
         retry.setFont(new Font("Ariel", 14));
 
 
-        Text enterName = new Text ("Please enter your nickname to be added to the LeaderBoard");
+        Text enterName = new Text("Please enter your nickname to be added to the LeaderBoard");
         enterName.setLayoutX(200);
         enterName.setLayoutY(340);
         enterName.setFont(new Font("Ariel", 20));
@@ -487,33 +465,29 @@ public class Quiz extends Application {
         nameSubmission.setMinWidth(480);
 
 
-
         Button submit = new Button("Enter");
         submit.setLayoutX(680);
         submit.setLayoutY(370);
         submit.setFont(f);
 
 
-
-        submit.setOnAction(e->
+        submit.setOnAction(e ->
         {
 
 
             try {
                 connect.addData(nameSubmission.getText(), Quiz.score);
                 alertBox.display("Nickname Added!", "Your Nickname has been added! Your score won't show right now, but if you've made it onto the leaderboard, It'll be there next time! Thanks for playing!", "Okay!");
-            }
-            catch (Exception exc) {
+            } catch (Exception exc) {
                 alertBox.display("Error!", "Sorry, your score couldn't be added at this time. Please try again later", "Okay");
 
             }
         });
 
 
-
         VBox leaderboardBox = new VBox();
 
-        Text lBoard = new Text ("LeaderBoard");
+        Text lBoard = new Text("LeaderBoard");
         lBoard.setLayoutX(65);
         lBoard.setLayoutY(200);
         lBoard.setFont(l);
@@ -522,18 +496,17 @@ public class Quiz extends Application {
         // Image trophy
 
 
-        Text firstPlace = new Text ((String.format("1. %s", connect.nickNames.pop() + " Score: " +connect.userScores.pop())));
+        Text firstPlace = new Text((String.format("1. %s", connect.nickNames.pop() + " Score: " + connect.userScores.pop())));
 
         firstPlace.setFont(l);
 
 
-
-        Text secondPlace = new Text((String.format("2. %s", connect.nickNames.pop() + " Score: " +connect.userScores.pop())));
+        Text secondPlace = new Text((String.format("2. %s", connect.nickNames.pop() + " Score: " + connect.userScores.pop())));
 
         secondPlace.setFont(l);
 
 
-        Text thirdPlace = new Text ((String.format("3. %s", connect.nickNames.pop() + " Score: " + connect.userScores.pop())));
+        Text thirdPlace = new Text((String.format("3. %s", connect.nickNames.pop() + " Score: " + connect.userScores.pop())));
 
         thirdPlace.setFont(l);
 
@@ -543,20 +516,15 @@ public class Quiz extends Application {
         leaderboardBox.getChildren().addAll(lBoard, firstPlace, secondPlace, thirdPlace);
 
 
-
-
-
         Text fact = null;
         try {
             fact = new Text("Fact: " + Quiz.factGenerator());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        fact.setLayoutX(315);
-       fact.setLayoutY(545);
-       fact.setFont(l);
-
-
+        fact.setLayoutX(0);
+        fact.setLayoutY(545);
+        fact.setFont(l);
 
 
         Rectangle menuBackground = new Rectangle();
@@ -567,59 +535,63 @@ public class Quiz extends Application {
         menuBackground.setFill(Color.web("#a7a7eb"));
 
 
-        Button menu = new Button ("Menu");
+        Button menu = new Button("Menu");
         menu.setLayoutX(54);
         menu.setLayoutY(560);
         menu.setPrefWidth(123);
         menu.setPrefHeight(31);
-        menu.setOnAction(e-> {});
+        menu.setOnAction(e -> q.navBar("sample.fxml", primaryStage));
 
 
-                Button about = new Button("Settings");
-                about.setLayoutX(250);
-                about.setLayoutY(560);
-                about.setPrefWidth(123);
-                about.setPrefHeight(31);
 
-                Button info = new Button("Info");
-                info.setLayoutX(451);
-                info.setLayoutY(560);
-                info.setPrefWidth(123);
-                info.setPrefHeight(31);
-                info.setOnAction( e-> {
-                            alertBox.display("Info", "Version 2.0, Beta. Release date March 2018. Author lut14@aber.ac.uk", "Got it!");
-                        });
-
-                Button toolKit = new Button("Toolkit");
-                toolKit.setLayoutX(638);
-                toolKit.setLayoutY(560);
-                toolKit.setPrefWidth(123);
-                toolKit.setPrefHeight(31);
+        Button about = new Button("Settings");
+        about.setLayoutX(250);
+        about.setLayoutY(560);
+        about.setPrefWidth(123);
+        about.setPrefHeight(31);
+        about.setOnAction(e-> q.navBar("Options.fxml", primaryStage));
 
 
-                q.tint.setVisible(false);
-                q.tint.setHeight(600);
-                q.tint.setWidth(800);
-                q.tint.setOpacity(0.2);
-                q.tint.setDisable(true);
+        Button info = new Button("Info");
+        info.setLayoutX(451);
+        info.setLayoutY(560);
+        info.setPrefWidth(123);
+        info.setPrefHeight(31);
+        info.setOnAction(e -> {
+            alertBox.display("Info", "Version 2.0, Beta. Release date March 2018. Author lut14@aber.ac.uk", "Got it!");
+        });
 
-                optionsController.tintOptions(q.tint);
+        Button toolKit = new Button("Toolkit");
+        toolKit.setLayoutX(638);
+        toolKit.setLayoutY(560);
+        toolKit.setPrefWidth(123);
+        toolKit.setPrefHeight(31);
+        toolKit.setOnAction(e-> q.navBar("Phone.fxml", primaryStage));
 
 
-                pane.getChildren().addAll(background, gameOver, userScore, tryAgin, retry, enterName, nameSubmission, submit, leaderboardBox, fact, menuBackground, menu, about, info, toolKit, q.tint);
-                Scene scene = new Scene(pane, 800, 600);
-                pane.getStyleClass().clear();
+        q.tint.setVisible(false);
+        q.tint.setHeight(600);
+        q.tint.setWidth(800);
+        q.tint.setOpacity(0.2);
+        q.tint.setDisable(true);
 
-                scene.getStylesheets().add(optionsController.fontSize);
-                newPrimaryStage.setScene(scene);
-                newPrimaryStage.show();
+        optionsController.tintOptions(q.tint);
 
 
-            }
+        pane.getChildren().addAll(background, gameOver, userScore, tryAgin, retry, enterName, nameSubmission, submit, leaderboardBox, fact, menuBackground, menu, about, info, toolKit, q.tint);
+        Scene scene = new Scene(pane, 800, 600);
+        pane.getStyleClass().clear();
+
+        scene.getStylesheets().add(optionsController.fontSize);
+        newPrimaryStage.setScene(scene);
+        newPrimaryStage.show();
+
+
+    }
 
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage)  {
 
     }
 }
