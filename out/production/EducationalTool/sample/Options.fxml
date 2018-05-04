@@ -22,7 +22,7 @@
                         <Font name="Curlz MT" size="45.0" />
                      </font>
                   </Text>
-                  <Text fill="#114b5f" layoutX="14.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Size" text="Welcome yo the settings page! Here you can adjust the backround color (some poeple find it easier to read wtih different colors). It's up to you if you want sound, just toggle the switch below! Text too small? We've got you covered. Once you've changed soemthing, it will remain that way until you close the app. unless you change it again - ofcourse!" textAlignment="JUSTIFY" wrappingWidth="781.037109375">
+                  <Text fill="#114b5f" layoutX="14.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Size" text="Welcome to the settings page! Here you can adjust the backround colour (some poeple find it easier to read wtih different colours). It's up to you if you want sound, just toggle the switch below! Text too small? We've got you covered. Once you've changed soemthing, it will remain that way until you close the app. unless you change it again - ofcourse!" textAlignment="JUSTIFY" wrappingWidth="781.037109375">
                      <font>
                         <Font name="Curlz MT" size="17.0" />
                      </font>
@@ -74,7 +74,7 @@
                   </RadioButton>
                   <Line endX="800.0" layoutX="101.0" layoutY="409.0" startX="-100.0" />
                   <Line endX="800.0" layoutX="101.0" layoutY="204.0" startX="-100.0" />
-                  <Text layoutX="32.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Size" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada ligula quis mauris aliquam, vitae fermentum sem porta. Pellentesque lorem tortor, suscipit ut est sed, laoreet eleifend metus. Maecenas eget orci id neque malesuada vulputate. morbi consequat quam id ante efficitur placerat at nec turpis.  " wrappingWidth="735.0927732028067" />
+                  <Text layoutX="32.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Size" text="The controls are simple. Use the buttons to navigate, hover over a sensor or button to discover what it is. Click on a sensor or button to learn about it, and press the launch hardware button to test out any hardware. Use thes settings page to change background colour, text size and font family, and toggle sound on or off. Once you feel confident, try the quiz to see how much you've learnt" wrappingWidth="735.0927732028067" />
                   <Button fx:id="menuButton" layoutX="54.0" layoutY="549.0" mnemonicParsing="false" onAction="#menuButtonClicked" prefHeight="31.0" prefWidth="123.0" styleClass="Size" text="Menu" />
                   <Button fx:id="toolkitButton" layoutX="250.0" layoutY="549.0" mnemonicParsing="false" onAction="#toolkitButtonClicked" prefHeight="31.0" prefWidth="123.0" styleClass="Size" text="Toolkit" />
                   <Button fx:id="quizButton" layoutX="638.0" layoutY="549.0" mnemonicParsing="false" onAction="#quizButtonClicked" prefHeight="31.0" prefWidth="123.0" styleClass="Size" text="Quiz" />

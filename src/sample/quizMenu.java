@@ -22,11 +22,9 @@ import static sample.optionsController.primaryStage;
 
 public class quizMenu extends Application {
 
-
     Controller c = new Controller();
     Main m = new Main();
-    optionsController o = new optionsController();
-    AnchorPane pane;
+
     @FXML
     static Pane rootPane;
     @FXML
@@ -38,7 +36,6 @@ public class quizMenu extends Application {
     @FXML
     private Rectangle Tint;
 
-
     public static String Easy = "easyQuestions.txt";
     String Medium = "mediumQuestions.txt";
     String Hard = "hardQuestions.txt";
@@ -47,90 +44,59 @@ public class quizMenu extends Application {
     String mediumAnswer = "mediumQuestionsAnswers.txt";
     String hardAnswer = "hardQuestionsAnswers.txt";
 
-
     public void appAcessed() {
+        //displays background options
         optionsController.tintOptions(Tint);
-
-
-    }
-
-
-    public static void quizDifficulty() {
-
-        Stage primaryStage = new Stage();
-        Quiz quiz = new Quiz();
-
-        quiz.score = 0;
-        quiz.questionNo = 1;
-
-
-        // Text files of question and answers
-
     }
 
     public void quizStart(String Difficulty, String DifficultyAnswers) throws Exception {
-
+        // generates questions and answers, and runs quiz
         Quiz.generateQuestionsAndAnswers(Difficulty, DifficultyAnswers);
     }
 
-
     public void easyQuiz() throws Exception {
-
+        //runs Quiz with easy questions
         quizStart(Easy, easyAnswer);
     }
 
     public void mediumQuiz() throws Exception {
-
+        //runs Quiz with medium questions
         quizStart(Medium, mediumAnswer);
     }
 
     public void hardQuiz() throws Exception {
-
+        //runs Quiz with hard questions
         quizStart(Hard, hardAnswer);
     }
 
     public void menuButtonClicked() throws Exception {
+        //opens main menu
         primaryStage.close();
         Main.currentPage = "sample.fxml";
         m.start(primaryStage);
-
-
     }
 
 
     public void settingsButtonClicked() throws Exception {
+        //opens settings menu
         primaryStage.close();
         Main.currentPage = "Options.fxml";
         m.start(primaryStage);
-
     }
 
     public void infoButtonClicked()  {
-
+        //display info about application
         c.infoButton();
     }
 
     public void quizButtonClicked() throws Exception {
+        //opens quiz menu
         primaryStage.close();
         Main.currentPage = "Phone.fxml";
         m.start(primaryStage);
-
-
     }
-
-    public void closePage() throws Exception {
-
-        Window window = rootPane.getScene().getWindow();
-        if (window instanceof Stage) {
-
-
-            ((Stage) window).close();
-        }
-    }
-
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
-
+    public void start(Stage primaryStage){
     }
 }

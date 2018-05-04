@@ -16,6 +16,7 @@ import javafx.stage.Window;
 
 
 import java.awt.*;
+import java.lang.reflect.Method;
 
 import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
@@ -24,12 +25,11 @@ import static java.lang.Boolean.TRUE;
 public class optionsController {
     static Stage primaryStage = new Stage();
 
+    Controller c = new Controller();
+    Main m = new Main();
+
     @FXML
     AnchorPane rootPane;
-
-    @FXML
-    Button soundButton;
-
 
     @FXML
     RadioButton noBackgroundColorButton;
@@ -37,7 +37,6 @@ public class optionsController {
     RadioButton yellowBackgroundColorButton;
     @FXML
     RadioButton blueBackgroundColorButton;
-
 
     @FXML
     RadioButton smallTextSizeButton;
@@ -55,8 +54,6 @@ public class optionsController {
     RadioButton normalFontButton;
     @FXML
     RadioButton funFontButton;
-    @FXML
-    ToggleButton volumeSetter;
 
     @FXML
     RadioButton soundOffButton;
@@ -80,25 +77,24 @@ public class optionsController {
 
 
     public void soundOn() {
+        //set sound boolean to true, and select radio button
         soundEnabled = true;
-
         soundOffButton.setSelected(false);
         soundOnButton.setSelected(true);
-
     }
 
     public void soundOff() {
+        //set sound boolean to false, and select radio button
         soundEnabled = false;
         soundOffButton.setSelected(true);
         soundOnButton.setSelected(false);
-
-
     }
 
-
     public static void tintOptions(Rectangle Tint) {
+        //check what button is selected, and adjust background colour accordingly
         if (optionsController.blueTint == TRUE) {
             optionsController.blueTintButton(Tint);
+
         } else if (optionsController.yellowTint == TRUE) {
             optionsController.yellowTintButton(Tint);
 
@@ -107,41 +103,32 @@ public class optionsController {
         }
     }
 
-
-    public void smallFontButton() throws Exception {
-
+    public void smallFontButton() {
+        //set small font button to true and run smallTextSize method
         smallTextSizeButton.setSelected(true);
         mediumTextSizeButton.setSelected(false);
         largeTextSizeButton.setSelected(false);
         smallTextSize();
-
-
     }
 
-    public void mediumFontButton() throws Exception {
-
+    public void mediumFontButton() {
+        //set medium font button to true and run smallTextSize method
         smallTextSizeButton.setSelected(false);
         mediumTextSizeButton.setSelected(true);
         largeTextSizeButton.setSelected(false);
         mediumTextSize();
-
-
     }
 
-    public void largeFontButton() throws Exception {
-
+    public void largeFontButton() {
+        //set medium font button to true and run smallTextSize method
         smallTextSizeButton.setSelected(false);
         mediumTextSizeButton.setSelected(false);
         largeTextSizeButton.setSelected(true);
         largeTextSize();
-
-
     }
 
-
-    public void smallTextSize() throws Exception {
-
-
+    public void smallTextSize() {
+// sets boolean of smallText to true, and alters css accordingly, clears and re-adds stylesheet for correct CSS
         smallText = TRUE;
         mediumText = FALSE;
         largeText = FALSE;
@@ -149,13 +136,10 @@ public class optionsController {
         fontSize = fontSize.replaceAll("Large", "Small");
         rootPane.getStylesheets().clear();
         rootPane.getStylesheets().add(optionsController.fontSize);
-
-
     }
 
     public void mediumTextSize() {
-
-
+        // sets boolean of mediumText to true, and alters css accordingly, clears and re-adds stylesheet for correct CSS
         smallText = FALSE;
         mediumText = TRUE;
         largeText = FALSE;
@@ -163,11 +147,10 @@ public class optionsController {
         fontSize = fontSize.replaceAll("Large", "Medium");
         rootPane.getStylesheets().clear();
         rootPane.getStylesheets().add(optionsController.fontSize);
-
-
     }
 
     public void largeTextSize() {
+        // sets boolean of largeText to true, and alters css accordingly, clears and re-adds stylesheet for correct CSS
         fontSize = fontSize.replaceAll("Small", "Large");
         fontSize = fontSize.replaceAll("Medium", "Large");
         rootPane.getStylesheets().clear();
@@ -175,58 +158,51 @@ public class optionsController {
         smallText = FALSE;
         mediumText = FALSE;
         largeText = TRUE;
-
     }
 
-
     public static void noBackgroundColorButton(Rectangle R) {
-
+        // removes background tint
         R.setVisible(false);
         noTint = TRUE;
         yellowTint = FALSE;
         blueTint = FALSE;
-
     }
 
     public static void yellowTintButton(Rectangle R) {
+        // adds yellow background tint
         R.setFill((Color.rgb(255, 255, 0, 0.3)));
         R.setVisible(true);
         yellowTint = TRUE;
         blueTint = FALSE;
         noTint = FALSE;
-
     }
 
-
     public static void blueTintButton(Rectangle R) {
-
+        // adds blue background tint
         R.setFill((Color.rgb(0, 0, 255, 0.3)));
         R.setVisible(true);
         blueTint = TRUE;
         yellowTint = FALSE;
         noTint = FALSE;
-
     }
-
-    Controller c = new Controller();
-    Main m = new Main();
 
 
     public void noTint() {
+        //removes selected radio buttons, runs no background colour function
         noBackgroundColorButton(Tint);
         yellowBackgroundColorButton.setSelected(false);
         blueBackgroundColorButton.setSelected(false);
-
-
     }
 
     public void yellowTint() {
+        //removes selected radio buttons, runs yellow background colour function
         yellowTintButton(Tint);
         noBackgroundColorButton.setSelected(false);
         blueBackgroundColorButton.setSelected(false);
     }
 
     public void blueTint() {
+        //removes selected radio buttons, runs blue background colour function
         blueTintButton(Tint);
         yellowBackgroundColorButton.setSelected(false);
         noBackgroundColorButton.setSelected(false);
@@ -234,7 +210,7 @@ public class optionsController {
 
 
     public void setFontNormal() {
-
+        //sets font to normal (Ariel)
         if (fontNormal != TRUE) {
             fontNormal = TRUE;
             fontFun = FALSE;
@@ -243,15 +219,14 @@ public class optionsController {
             fontSize = fontSize.replaceAll(".css", "FamilyNormal.css");
             rootPane.getStylesheets().clear();
             rootPane.getStylesheets().add(optionsController.fontSize);
+
         } else {
             alertBox.display("Already Selected!", "You've already chosen this font", "Okay");
         }
-
-
     }
 
     public void setFontFun() {
-
+        //sets font to normal (Crulz MT)
         if (fontFun != TRUE) {
             fontFun = TRUE;
             fontNormal = FALSE;
@@ -261,58 +236,46 @@ public class optionsController {
             rootPane.getStylesheets().clear();
             rootPane.getStylesheets().add(optionsController.fontSize);
 
-
         } else {
             alertBox.display("Already Selected!", "You've already chosen this font", "Okay");
         }
     }
 
     public void menuButtonClicked() throws Exception {
-
-
+        //takes user back to main menu
         closePage();
-
         Main.currentPage = "sample.fxml";
         rootPane.getStylesheets().add(optionsController.fontSize);
         m.start(primaryStage);
-
-
     }
 
     public void toolkitButtonClicked() throws Exception {
-
-
+        //takes user back to toolkit
         closePage();
-
         Main.currentPage = "Phone.fxml";
         rootPane.getStylesheets().add(optionsController.fontSize);
         m.start(primaryStage);
-
-
     }
 
-    public void infoButtonClicked() throws Exception {
-
+    public void infoButtonClicked() {
+        //displays app info
         c.infoButton();
     }
 
     public void quizButtonClicked() throws Exception {
+        //takes user back to quiz
         closePage();
         Main.currentPage = "welcomeQuiz.fxml";
         m.start(primaryStage);
-
     }
 
-
-    public void closePage() throws Exception {
-
+    public void closePage() {
+        //closes current window
         Window window = rootPane.getScene().getWindow();
         if (window instanceof Stage) {
-
 
             ((Stage) window).close();
         }
     }
-
 
 }
