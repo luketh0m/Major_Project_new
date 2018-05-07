@@ -1,4 +1,4 @@
-
+Tin oxide
 Proximity Sensor
 Ambient Light Sensor
 Aperture

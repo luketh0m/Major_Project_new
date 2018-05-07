@@ -47,9 +47,9 @@ public class Hardware extends JArduino {
 
             if (pin == 0) {
                 arduino.digitalRead(DigitalPin.PIN_10);
+                alertBox.display("No object detected", "Sorry, we couldn't find an object to detect. We are working on it", "Okay");
             }
         }
-
 
     public static void rearSpeakerOn() {
         //send signal to speaker sensor to play sound

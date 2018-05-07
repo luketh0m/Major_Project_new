@@ -1,0 +1,12 @@
+
+__ sensor detects if an object is close (30mm or closer)
+__ detetcs the amount of light around the phone
+__ is the 'hole' that lets light through to the camera
+A touchscreen sensor senses touch using a...?
+A speaker converts Electrical energy into what?
+The sensor inside the ambient light sensor is called?
+The sensor inside the proximity sensor is called?
+one of the second camera on a dual camera smart phone?
+Whats the name of the light that smart phone flash's use?
+__ is the processor that is used for digital image processing
+A Device that converts one form of energy to another is called?

@@ -36,13 +36,13 @@ public class quizMenu extends Application {
     @FXML
     private Rectangle Tint;
 
-    public static String Easy = "easyQuestions.txt";
-    String Medium = "mediumQuestions.txt";
-    String Hard = "hardQuestions.txt";
+    public static String Easy = "quizFiles/easyQuestions.txt";
+    String Medium = "quizFiles/mediumQuestions.txt";
+    String Hard = "quizFiles/hardQuestions.txt";
 
-    String easyAnswer = "easyQuestionsAnswers.txt";
-    String mediumAnswer = "mediumQuestionsAnswers.txt";
-    String hardAnswer = "hardQuestionsAnswers.txt";
+    String easyAnswer = "quizFiles/easyQuestionsAnswers.txt";
+    String mediumAnswer = "quizFiles/mediumQuestionsAnswers.txt";
+    String hardAnswer = "quizFiles/hardQuestionsAnswers.txt";
 
     public void appAcessed() {
         //displays background options

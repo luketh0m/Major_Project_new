@@ -229,7 +229,7 @@ public class phoneController extends Application {
                 "\u2022Each pair of electrodes then has a meter that keeps track of how many charges are in the two electrodes at that particular spot on the phone.\n" +
                 "\u2022Your phone looks at which point of the phone the electrodes are disturbed, and it then knows where you have placed your finger on the screen!\n");
 
-        narration("Touch screen.m4a");
+        narration("narration/Touch screen.m4a");
 
         hardwareButton.setOnAction(e -> alertBox.display("No hardware", "we're sorry, there's no hardware available for this option", "Okay"));
     }
@@ -250,7 +250,7 @@ public class phoneController extends Application {
                 "\u2022 This passes the energy to the rest of the microphones components.\n" +
                 "\u2022 These vibrations are converted to an electrical current which becomes the audio signal your interface uses to capture and playback sound.\n");
 
-        narration("microphone.m4a");
+        narration("narration/Microphone.m4a");
 
         hardwareButton.setOnAction(e -> {
             alertBox.display("Go on!", "Say something!, but make sure you click okay first!", "Okay");
@@ -274,7 +274,7 @@ public class phoneController extends Application {
                         "\u2022 The sensor is set to shut off after a certain amount of time to make sure the right amount of light has entered.\n" +
                         "\u2022 Once all of the light information has been captured, it is sent too a signal image processor which will take all the information and turn it into an image.\n");
 
-        narration("CameraVocal.mp3");
+        narration("narration/Camera.mp3");
 
         hardwareButton.setOnAction(e ->
                 alertBox.display("No hardware!", "We're really sorry, there's no hardware available for this sensor", "Okay"));
@@ -297,7 +297,7 @@ public class phoneController extends Application {
                         "\u2022 This moves the coil backward and forward, pulling and pushing the speakers cone. +" +
                         "\u2022 The moving cone pumps sounds out into the air\n ");
 
-        narration("speaker.m4a");
+        narration("narration/Speaker.m4a");
 
         hardwareButton.setOnAction(e -> Hardware.frontSpeakerOn());
     }
@@ -318,7 +318,7 @@ public class phoneController extends Application {
                         "\u2022 Readings are sent to your phones CPU (Central processing unit).\n" +
                         "\u2022 If the surrounding area is bright, the signal sent will be high, as a result the phone will increase in screen brightness, if the light is low, the screen brightness will decrease.\n");
 
-        narration("Ambient light sensor.m4a");
+        narration("narration/Ambient light sensor.m4a");
 
         hardwareButton.setOnAction(e -> alertBox.display("No hardware", "We're really sorry, there's no hardware available for this sensor.", "Okay"));
     }
@@ -330,7 +330,7 @@ public class phoneController extends Application {
 
     public void proximitySensorClicked() {
         // displays proximity description, plays narration, activates proximity sensor hardware
-        sensorDescription("Proximity Sensor", "\u2022 That was the proximity sensor!" +
+        sensorDescription("Proximity Sensor", "\u2022 That was the proximity sensor!\n" +
                 "\u2022 The proximity sensor measures how close something is to your device.\n" +
                 "\u2022 Its range is very limited (up to 30mm)\n" +
                 "\u2022 Used to turn the screen off while a human ear is in range (normally due to a user on the phone).\n" +
@@ -340,7 +340,7 @@ public class phoneController extends Application {
                 "\u2022 Dialectic constant is an electrostatic field and can detect interference within it.\n" +
                 "\u2022 Once the detector senses enough interference, the output circuit remains active until the target is removed, which is why your screen turns off while you are on the phone! ");
 
-        narration("Proximity sensor.m4a");
+        narration("narration/Proximity sensor.m4a");
 
         hardwareButton.setOnAction(e -> Hardware.proximitySensorOn());
     }
@@ -362,7 +362,7 @@ public class phoneController extends Application {
                         "\u2022 The volume rocker actually contains two small buttons, and the casing around them covers both.\n" +
                         "\u2022 Pressing the casing up presses the volume up button, while pressing the casing at the bottom presses the downward button.\n");
 
-        narration("volume rocker.m4a");
+        narration("narration/volume rocker.m4a");
 
         hardwareButton.setOnAction(e -> {
             alertBox.display("Volume Rocker", "Go ahead! Click the button", "Okay");
@@ -385,7 +385,7 @@ public class phoneController extends Application {
                         "\u2022 If the state is high (User pressed the button), lock the phone!\n" +
                         "\u2022 The volume rocker actually contains two small buttons, and the casing around them covers both.\n");
 
-        narration("sleepwake button.m4a");
+        narration("narration/Sleepwake button.m4a");
 
         hardwareButton.setOnAction(e -> {
             alertBox.display("Sleep/wake button", "Go ahead! Click the button", "Okay");
@@ -411,7 +411,7 @@ public class phoneController extends Application {
                 "\u2022 The navigation bar was created to enhance the user experience.\n" +
                 "\u2022 Makes it easier for users to complete actions on their phone. ");
 
-        narration("navigation bar.m4a");
+        narration("narration/Navigation bar.m4a");
 
         hardwareButton.setOnAction(e -> alertBox.display("No hardware", "we're sorry, there's no hardware available for this option", "Okay"));
     }
@@ -430,7 +430,7 @@ public class phoneController extends Application {
                 "\u2022 One of the main reasons is that they are cheaper than physical buttons.\n" +
                 "\u2022 They can be changed at any time with a software update");
 
-        narration("Back button.m4a");
+        narration("narration/Back button.m4a");
 
         hardwareButton.setOnAction(e -> alertBox.display("No hardware", "we're sorry, there's no hardware available for this option", "Okay"));
     }
@@ -449,7 +449,7 @@ public class phoneController extends Application {
                 "\u2022 Every flagship (flagship means the best product a company offers) phone has a home button.\n" +
                 "\u2022 Without it users would not be comfortable using a new device.\n");
 
-        narration("Home button.m4a");
+        narration("narration/Home button.m4a");
 
         hardwareButton.setOnAction(e -> alertBox.display("No hardware", "we're sorry, there's no hardware available for this option", "Okay"));
     }
@@ -468,7 +468,7 @@ public class phoneController extends Application {
                 "\u2022 Multitasking was introduced in 2010 and its now a huge part of any mobile phone.\n" +
                 "\u2022 The ability to navigation to and from applications with ease is a must for many users!\n");
 
-        narration("multitasking button.m4a");
+        narration("narration/multitasking button.m4a");
 
         hardwareButton.setOnAction(e -> alertBox.display("No hardware", "we're sorry, there's no hardware available for this option", "Okay"));
     }
@@ -491,7 +491,7 @@ public class phoneController extends Application {
                 "\u2022 The capacitor maintains the voltage supply into the load circuit, creating the DC.\n" +
                 "\u2022 A voltage regulator at the output side maintain the constant voltage throughout.");
 
-        narration("Charging port.m4a");
+        narration("narration/Charging port.m4a");
 
         hardwareButton.setOnAction(e -> alertBox.display("No hardware", "we're sorry, there's no hardware available for this option", "Okay"));
     }
@@ -511,7 +511,7 @@ public class phoneController extends Application {
                 "\u2022 1) The impact resistance of the case, because its meant to protect the internals of the phone.\n" +
                 "\u2022 2) temperature resistance.\n" +
                 "\u2022 While charging or while the phone is used a lot the materials may get hot. To make sure a user doesn't burn themselves, a material with good temperature resistance must be used.");
-        narration("Recording.m4a");
+        narration("narration/Recording.m4a");
         hardwareButton.setOnAction(e -> alertBox.display("No hardware", "we're sorry, there's no hardware available for this option", "Okay"));
     }
 
@@ -531,7 +531,7 @@ public class phoneController extends Application {
                 "\u2022 2) Capacitive fingerprint scanners work in the way we've just discussed.\n" +
                 "\u2022 3) Ultrasonic scanner is the latest type of fingerprint scanner.\n" +
                 "\u2022 Many of the larger phone manufactures are currently working on these technologies.");
-        narration("fingerprint scanner.m4a");
+        narration("narration/Fingerprint scanner.m4a");
         hardwareButton.setOnAction(e -> alertBox.display("No hardware", "we're sorry, there's no hardware available for this option", "Okay"));
     }
     public void rearSpeakerMouseOver() {
@@ -552,7 +552,7 @@ public class phoneController extends Application {
                         "\u2022 To make sound, electrical signals feed through the speaker cables into the coil.\n" +
                         "\u2022 electricity flows back and forth in the cables, the magnet electromagnet either attracts of repels the permanent magnet.\n" +
                         "\u2022 This moves the coil backward and forward, pulling and pushing the speakers cone. The moving cone pumps sounds out into the air\n ");
-        narration("speaker.m4a");
+        narration("narration/Speaker.m4a");
         hardwareButton.setOnAction(e -> Hardware.rearSpeakerOn());
     }
 
@@ -572,7 +572,7 @@ public class phoneController extends Application {
                         "\u2022 The sensor is set to shut off after a certain amount of time to make sure the right amount of light has entered.\n" +
                         "\u2022 Once all of the light information has been captured, it is sent too a signal image processor which will take all the information and turn it into an image.\n");
 
-        narration("CameraVocal.mp3");
+        narration("narration/Camera.mp3");
 
         hardwareButton.setOnAction(e -> alertBox.display("No hardware", "we're sorry, there's no hardware available for this option", "Okay"));
     }
@@ -584,7 +584,7 @@ public class phoneController extends Application {
 
     public void RearCameraBlackAndWhiteClicked() {
         // displays rear camera#2 description, plays narration, alert box displays for no hardware option
-        sensorDescription("Rear Camera 1", "That's the secondary camera. " +
+        sensorDescription("Rear Camera 1", "That's the secondary camera.\n" +
                 "\u2022 Smart phones these days often have two cameras.\n" +
                 "\u2022 The camera uses a lens to help light enter through the aperture (The aperture is basically a hole) and it lets light through to the sensor.\n" +
                 "\u2022 Secondary cameras are used for three primary purposes\n" +
@@ -596,7 +596,7 @@ public class phoneController extends Application {
                 "3) Optical zoom with no moving parts\n" +
                 "\u2022done by providing two vocal lengths\n");
 
-        narration("Secondary camera.m4a");
+        narration("narration/Secondary camera.m4a");
 
         hardwareButton.setOnAction(e -> alertBox.display("No hardware", "we're sorry, there's no hardware available for this option", "Okay"));
     }
@@ -614,7 +614,7 @@ public class phoneController extends Application {
                 "\u2022 Normal camera flashes use a tube filled with xenon gas.\n" +
                 "\u2022 Generally too expensive and too big for smart phone");
 
-        narration("flash.m4a");
+        narration("narration/Flash.m4a");
 
         hardwareButton.setOnAction(e -> Hardware.flashOn());
 
@@ -643,7 +643,7 @@ public class phoneController extends Application {
     public void start(Stage primaryStage)  {
     } //stat app
 
-    public void closePage() throws Exception {
+    public void closePage()  {
         //closes current window
         Window window = rootPane.getScene().getWindow();
         if (window instanceof Stage) {

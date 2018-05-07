@@ -291,7 +291,7 @@ public class Quiz extends Application {
     private static String factGenerator() throws FileNotFoundException {
         //takes lines from text file and storres in array, returns random line of text (fact)
         List<String> list = new LinkedList<>();
-        File factsFile = new File("Facts.txt"); //Loads question text file
+        File factsFile = new File("quizFiles/Facts.txt"); //Loads question text file
         Scanner scanner = new Scanner(factsFile);
 
         while (scanner.hasNextLine()) {

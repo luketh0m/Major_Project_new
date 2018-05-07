@@ -81,7 +81,7 @@
                   <Button fx:id="infoButton" layoutX="451.0" layoutY="553.0" mnemonicParsing="false" onAction="#infoButtonClicked" prefHeight="31.0" prefWidth="123.0" styleClass="Size" text="Info" />
                   <Text layoutX="347.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Controls">
                      <font>
-                        <Font name="Curlz MT" size="18.0" />
+                        <Font name="Curlz MT" size="22.0" />
                      </font>
                   </Text>
                   <Text fx:id="fontStyle" fill="#114b5f" layoutX="606.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Size" text="Font">

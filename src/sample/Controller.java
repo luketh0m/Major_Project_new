@@ -44,8 +44,6 @@ public class Controller {
         pane = FXMLLoader.load(getClass().getResource("Phone.fxml"));
         rootPane.getChildren().setAll(pane);
         Hardware.pingTest();
-
-        alertBox.display("No hardware Detected", "Sorry no hardware detected. Please plug in the arduino and restart this application", "    Okay");
         rootPane.getStylesheets().add(optionsController.fontSize);
     }
 

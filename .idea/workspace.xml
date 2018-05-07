@@ -2,52 +2,52 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/src/sample/optionsController.java" line="172" />
-    <bookmark url="file://$PROJECT_DIR$/easyQuestions.txt" line="8" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Plan.docx" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Trophy.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid10216.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid10244.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid10424.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid11768.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid13016.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid13348.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid13352.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid13660.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid14304.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid1580.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid17648.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid18684.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid2084.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid2248.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid2364.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid2404.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid27508.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid27960.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid28760.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid3896.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid4544.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid6392.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid7144.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid7644.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid7828.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid8152.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid9960.log" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Ambient light sensor.m4a" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Back button.m4a" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CameraVocal.mp3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Charging port.m4a" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Facts.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Home button.m4a" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Proximity sensor.m4a" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Recording.m4a" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Secondary camera.m4a" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Touch screen.m4a" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/easyQuestions.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/easyQuestionsAnswers.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/fingerprint scanner.m4a" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/flash.m4a" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/hardQuestions.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/hardQuestionsAnswers.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mediumQuestions.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mediumQuestionsAnswers.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mfz-rxtx-2.2-20081207-win-x86(1)/mfz-rxtx-2.2-20081207-win-x86/BuildProperties.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mfz-rxtx-2.2-20081207-win-x86(1)/mfz-rxtx-2.2-20081207-win-x86/Install.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mfz-rxtx-2.2-20081207-win-x86(1)/mfz-rxtx-2.2-20081207-win-x86/RXTXcomm.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mfz-rxtx-2.2-20081207-win-x86(1)/mfz-rxtx-2.2-20081207-win-x86/Readme.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mfz-rxtx-2.2-20081207-win-x86(1)/mfz-rxtx-2.2-20081207-win-x86/ReleaseNotes.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mfz-rxtx-2.2-20081207-win-x86(1)/mfz-rxtx-2.2-20081207-win-x86/rxtxParallel.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mfz-rxtx-2.2-20081207-win-x86(1)/mfz-rxtx-2.2-20081207-win-x86/rxtxSerial.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/microphone.m4a" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/multitasking button.m4a" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/navigation bar.m4a" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EducationalTool/sample/Hardware.class" afterPath="$PROJECT_DIR$/out/production/EducationalTool/sample/Hardware.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/EducationalTool/sample/Options.fxml" afterPath="$PROJECT_DIR$/out/production/EducationalTool/sample/Options.fxml" />
+      <change beforePath="$PROJECT_DIR$/out/production/EducationalTool/sample/Quiz.class" afterPath="$PROJECT_DIR$/out/production/EducationalTool/sample/Quiz.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/EducationalTool/sample/phoneController.class" afterPath="$PROJECT_DIR$/out/production/EducationalTool/sample/phoneController.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/EducationalTool/sample/quizMenu.class" afterPath="$PROJECT_DIR$/out/production/EducationalTool/sample/quizMenu.class" />
+      <change beforePath="$PROJECT_DIR$/sleepwake button.m4a" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/speaker.m4a" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="$PROJECT_DIR$/src/sample/Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/DBconnect.java" afterPath="$PROJECT_DIR$/src/sample/DBconnect.java" />
       <change beforePath="$PROJECT_DIR$/src/sample/Hardware.java" afterPath="$PROJECT_DIR$/src/sample/Hardware.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/sample/Main.java" />
       <change beforePath="$PROJECT_DIR$/src/sample/Options.fxml" afterPath="$PROJECT_DIR$/src/sample/Options.fxml" />
       <change beforePath="$PROJECT_DIR$/src/sample/Quiz.java" afterPath="$PROJECT_DIR$/src/sample/Quiz.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/fontLarge.css" afterPath="$PROJECT_DIR$/src/sample/fontLarge.css" />
-      <change beforePath="$PROJECT_DIR$/src/sample/fontLargeFamilyNormal.css" afterPath="$PROJECT_DIR$/src/sample/fontLargeFamilyNormal.css" />
-      <change beforePath="$PROJECT_DIR$/src/sample/fontMedium.css" afterPath="$PROJECT_DIR$/src/sample/fontMedium.css" />
-      <change beforePath="$PROJECT_DIR$/src/sample/fontMediumFamilyNormal.css" afterPath="$PROJECT_DIR$/src/sample/fontMediumFamilyNormal.css" />
-      <change beforePath="$PROJECT_DIR$/src/sample/optionsController.java" afterPath="$PROJECT_DIR$/src/sample/optionsController.java" />
       <change beforePath="$PROJECT_DIR$/src/sample/phoneController.java" afterPath="$PROJECT_DIR$/src/sample/phoneController.java" />
       <change beforePath="$PROJECT_DIR$/src/sample/quizMenu.java" afterPath="$PROJECT_DIR$/src/sample/quizMenu.java" />
+      <change beforePath="$PROJECT_DIR$/volume rocker.m4a" afterPath="" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -122,25 +122,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="alertBox.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/alertBox.java">
+      <file leaf-file-name="phoneController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/phoneController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+            <state relative-caret-position="690">
+              <caret line="540" column="55" lean-forward="true" selection-start-line="540" selection-start-column="55" selection-end-line="540" selection-end-column="55" />
+              <folding>
+                <element signature="e#31004#31005#0" expanded="true" />
+                <element signature="e#31039#31040#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="phoneController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/phoneController.java">
+      <file leaf-file-name="Quiz.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/Quiz.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-246">
-              <caret line="612" column="25" lean-forward="false" selection-start-line="612" selection-start-column="25" selection-end-line="612" selection-end-column="25" />
-              <folding>
-                <element signature="e#30821#30822#0" expanded="true" />
-                <element signature="e#30856#30857#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1268">
+              <caret line="303" column="0" lean-forward="true" selection-start-line="303" selection-start-column="0" selection-end-line="303" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="quizMenu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/quizMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="46" column="30" lean-forward="false" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -148,23 +168,23 @@
       <file leaf-file-name="optionsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/optionsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="995">
-              <caret line="272" column="31" lean-forward="false" selection-start-line="272" selection-start-column="31" selection-end-line="272" selection-end-column="31" />
+            <state relative-caret-position="4097">
+              <caret line="260" column="27" lean-forward="false" selection-start-line="260" selection-start-column="27" selection-end-line="260" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Options.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Options.fxml">
+      <file leaf-file-name="DBconnect.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/DBconnect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="88" lean-forward="false" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
-              <folding />
+            <state relative-caret-position="153">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding>
+                <marker date="1525434226221" expanded="true" signature="951:1009" ph="SELECT * FRO... userscore" />
+                <marker date="1525434226221" expanded="true" signature="2005:2105" ph="INSERT INTO userscore... " />
+              </folding>
             </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
           </provider>
         </entry>
       </file>
@@ -172,17 +192,27 @@
         <entry file="file://$PROJECT_DIR$/src/sample/fontLarge.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+              <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hardware.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Hardware.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Hardware.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+            <state relative-caret-position="384">
+              <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="58" column="115" lean-forward="true" selection-start-line="58" selection-start-column="115" selection-end-line="58" selection-end-column="115" />
               <folding />
             </state>
           </provider>
@@ -193,36 +223,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fontMedium.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/fontMedium.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fontMediumFamilyNormal.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/fontMediumFamilyNormal.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fontSmall.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/fontSmall.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -242,12 +242,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>styleshee</find>
-      <find>root</find>
-      <find>font</find>
-      <find>settings</find>
-      <find>normal</find>
-      <find>fontsize</find>
       <find>small</find>
       <find>Text</find>
       <find>appA</find>
@@ -270,8 +264,14 @@
       <find>fact</find>
       <find>gener</find>
       <find>questions</find>
-      <find>camera</find>
       <find>touch</find>
+      <find>proximity</find>
+      <find>camera</find>
+      <find>fingerp</find>
+      <find>.txt</find>
+      <find>alertbox</find>
+      <find>rear</find>
+      <find>rear SP</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -310,24 +310,24 @@
         <option value="$PROJECT_DIR$/src/sample/welcomeQuiz.fxml" />
         <option value="$PROJECT_DIR$/src/sample/alertBox.java" />
         <option value="$PROJECT_DIR$/Facts.txt" />
-        <option value="$PROJECT_DIR$/easyQuestions.txt" />
-        <option value="$PROJECT_DIR$/easyQuestionsAnswers.txt" />
         <option value="$PROJECT_DIR$/mediumQuestions.txt" />
         <option value="$PROJECT_DIR$/mediumQuestionsAnswers.txt" />
         <option value="$PROJECT_DIR$/hardQuestionsAnswers.txt" />
         <option value="$PROJECT_DIR$/hardQuestions.txt" />
-        <option value="$PROJECT_DIR$/src/sample/Quiz.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/sample/DBconnect.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/optionsController.java" />
-        <option value="$PROJECT_DIR$/src/sample/quizMenu.java" />
-        <option value="$PROJECT_DIR$/src/sample/phoneController.java" />
         <option value="$PROJECT_DIR$/src/sample/fontMediumFamilyNormal.css" />
         <option value="$PROJECT_DIR$/src/sample/fontMedium.css" />
         <option value="$PROJECT_DIR$/src/sample/fontLargeFamilyNormal.css" />
         <option value="$PROJECT_DIR$/src/sample/fontLarge.css" />
+        <option value="$PROJECT_DIR$/easyQuestions.txt" />
+        <option value="$PROJECT_DIR$/easyQuestionsAnswers.txt" />
+        <option value="$PROJECT_DIR$/src/sample/Quiz.java" />
+        <option value="$PROJECT_DIR$/src/sample/quizMenu.java" />
         <option value="$PROJECT_DIR$/src/sample/Hardware.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
+        <option value="$PROJECT_DIR$/src/sample/phoneController.java" />
       </list>
     </option>
   </component>
@@ -368,6 +368,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -386,18 +388,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="EducationalTool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -706,16 +702,17 @@
       <workItem from="1525208002364" duration="2315000" />
       <workItem from="1525260033207" duration="2799000" />
       <workItem from="1525372579013" duration="9007000" />
-      <workItem from="1525431305231" duration="6313000" />
+      <workItem from="1525431305231" duration="6400000" />
+      <workItem from="1525444001850" duration="1580000" />
+      <workItem from="1525445601363" duration="479000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="407139000" />
+    <option name="totallyTimeSpent" value="409285000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -726,13 +723,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32790446" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14072494" sideWeight="0.6703755" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14392324" sideWeight="0.6703755" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2489339" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -750,6 +746,7 @@
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1378,69 +1375,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Facts.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hs_err_pid28760.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/easyQuestions.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/easyQuestionsAnswers.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mediumQuestionsAnswers.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mediumQuestions.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hardQuestionsAnswers.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hardQuestions.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Facts.txt" />
+    <entry file="file://$PROJECT_DIR$/hs_err_pid28760.log" />
+    <entry file="file://$PROJECT_DIR$/mediumQuestionsAnswers.txt" />
+    <entry file="file://$PROJECT_DIR$/mediumQuestions.txt" />
+    <entry file="file://$PROJECT_DIR$/hardQuestionsAnswers.txt" />
+    <entry file="file://$PROJECT_DIR$/hardQuestions.txt" />
     <entry file="file://$PROJECT_DIR$/src/sample/fontSmallFamilyNormal.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1449,81 +1389,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="67" column="66" lean-forward="false" selection-start-line="67" selection-start-column="66" selection-end-line="67" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/DBconnect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="75" column="5" lean-forward="false" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
-          <folding>
-            <marker date="1525434226221" expanded="true" signature="951:1009" ph="SELECT * FRO... userscore" />
-            <marker date="1525434226221" expanded="true" signature="2005:2105" ph="INSERT INTO userscore... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1147#1148#0" expanded="true" />
-            <element signature="e#1197#1198#0" expanded="true" />
-            <element signature="e#1243#1244#0" expanded="true" />
-            <element signature="e#1292#1293#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Quiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1547">
-          <caret line="32" column="37" lean-forward="true" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/quizMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="92" column="25" lean-forward="false" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/alertBox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/phoneController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-246">
-          <caret line="612" column="25" lean-forward="false" selection-start-line="612" selection-start-column="25" selection-end-line="612" selection-end-column="25" />
-          <folding>
-            <element signature="e#30821#30822#0" expanded="true" />
-            <element signature="e#30856#30857#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/optionsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="995">
-          <caret line="272" column="31" lean-forward="false" selection-start-line="272" selection-start-column="31" selection-end-line="272" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1573,15 +1442,79 @@
     <entry file="file://$PROJECT_DIR$/src/sample/fontLarge.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/easyQuestions.txt" />
+    <entry file="file://$PROJECT_DIR$/easyQuestionsAnswers.txt" />
+    <entry file="file://$PROJECT_DIR$/src/sample/optionsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4097">
+          <caret line="260" column="27" lean-forward="false" selection-start-line="260" selection-start-column="27" selection-end-line="260" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/DBconnect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <marker date="1525434226221" expanded="true" signature="951:1009" ph="SELECT * FRO... userscore" />
+            <marker date="1525434226221" expanded="true" signature="2005:2105" ph="INSERT INTO userscore... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/quizMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="46" column="30" lean-forward="false" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="58" column="115" lean-forward="true" selection-start-line="58" selection-start-column="115" selection-end-line="58" selection-end-column="115" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Hardware.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+        <state relative-caret-position="384">
+          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/phoneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="540" column="55" lean-forward="true" selection-start-line="540" selection-start-column="55" selection-end-line="540" selection-end-column="55" />
+          <folding>
+            <element signature="e#31004#31005#0" expanded="true" />
+            <element signature="e#31039#31040#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Quiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1268">
+          <caret line="303" column="0" lean-forward="true" selection-start-line="303" selection-start-column="0" selection-end-line="303" selection-end-column="0" />
           <folding />
         </state>
       </provider>
